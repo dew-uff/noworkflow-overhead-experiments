@@ -92,18 +92,45 @@ conda activate $NOWORKFLOW_CONDA_ENV
 
 base_dir=$PATH_TO_GIT_REPOSITORY
 base_dataone_dir="${base_dir}/03dataoneexps"
+base_bench_dir="${base_dir}/04benchproglangs"
+base_msr_dir="${base_dir}/05msrgithubexps"
+base_menger_dir="${base_dir}/menger-sponge"
 
 exp_paths=("${base_dataone_dir}/03dataoneexps_exp01_32_Accessing_Hydrologic_Data"
            "${base_dataone_dir}/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data"
            "${base_dataone_dir}/03dataoneexps_exp03_46_A_Method_For_Calculating"
            "${base_dataone_dir}/03dataoneexps_exp04_49_Analysis_Of_Flow"
-           "${base_dataone_dir}/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data")
+           "${base_dataone_dir}/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data"
+
+           "${base_bench_dir}/04benchpl_exp09_iterative_solver_jacobi_OK"
+
+           "${base_msr_dir}/05msrgithubexps_exp01_mov_robots"
+           "${base_msr_dir}/05msrgithubexps_exp02_cvar"
+           "${base_msr_dir}/05msrgithubexps_exp03_eq_solver"
+           "${base_msr_dir}/05msrgithubexps_exp04_curves"
+           "${base_msr_dir}/05msrgithubexps_exp05_chunks"
+           "${base_msr_dir}/05msrgithubexps_exp06_find_gc"
+           "${base_msr_dir}/05msrgithubexps_exp07_median"
+
+           "${base_menger_dir}")
 
 exp_script_input_and_options=('main.py'
                               'export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z'
                               'main.py'
                               'main.py'
-                              'export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z')
+                              'export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z'
+
+                              'test_laplace_jacobi.py 105'
+
+                              'mov_robots.py'
+                              'cvar.py 500'
+                              'eq_solver.py 500'
+                              'curves.py 5000 5000 5000 5000 5000 5000 5000 5000'
+                              'chunks.py 500'
+                              'gc.py CR954253.fasta'
+                              'median.py 500'
+
+                              'menger_sponge.py')
 
 for i in "${!exp_paths[@]}"; do
     a_path="${exp_paths[$i]}"
