@@ -35,7 +35,7 @@ run_exp() {
   echo ''
 
   echo "Executing command: $exp_cmd"
-  eval "$exp_cmd"
+  eval "timeout 30m $exp_cmd"
 
   if [ -d ".noworkflow/" ]; then
     echo "Executing command: du .noworflow/"
@@ -87,6 +87,20 @@ run_exp_noworkflow_coarse_grain() {
   run_exp "$exp_path" "now run -cg ${script_input_and_options}"
 }
 
+run_exp_noworkflow_no_evaluation() {
+  local exp_path="$1"
+  local script_input_and_options="${2}"
+
+  run_exp "$exp_path" "now run -e none ${script_input_and_options}"
+}
+
+run_exp_noworkflow_relevant_evaluation() {
+  local exp_path="$1"
+  local script_input_and_options="${2}"
+
+  run_exp "$exp_path" "now run -e relevant ${script_input_and_options}"
+}
+
 
 conda activate $NOWORKFLOW_CONDA_ENV
 
@@ -120,7 +134,7 @@ exp_script_input_and_options=('main.py'
                               'main.py'
                               'export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z'
 
-                              'test_laplace_jacobi.py 105'
+                              'test_laplace_jacobi2.py 105'
 
                               'mov_robots.py'
                               'cvar.py 500'
@@ -130,7 +144,7 @@ exp_script_input_and_options=('main.py'
                               'gc.py CR954253.fasta'
                               'median.py 500'
 
-                              'menger_sponge.py')
+                              'menger_sponge2.py')
 
 for i in "${!exp_paths[@]}"; do
     a_path="${exp_paths[$i]}"
@@ -160,4 +174,16 @@ for i in "${!exp_paths[@]}"; do
     a_path="${exp_paths[$i]}"
     a_script_input_and_option="${exp_script_input_and_options[$i]}"
     run_exp_noworkflow_coarse_grain "$a_path" "$a_script_input_and_option"
+done
+
+for i in "${!exp_paths[@]}"; do
+    a_path="${exp_paths[$i]}"
+    a_script_input_and_option="${exp_script_input_and_options[$i]}"
+    run_exp_noworkflow_no_evaluation "$a_path" "$a_script_input_and_option"
+done
+
+for i in "${!exp_paths[@]}"; do
+    a_path="${exp_paths[$i]}"
+    a_script_input_and_option="${exp_script_input_and_options[$i]}"
+    run_exp_noworkflow_relevant_evaluation "$a_path" "$a_script_input_and_option"
 done
