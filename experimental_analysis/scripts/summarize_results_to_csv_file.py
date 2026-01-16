@@ -37,10 +37,10 @@ def extract_trial_info(data: List[str]):
     line = data[i].strip()
 
     if line == 'noWorkflow folder not found!':
-        time = data[i-1].strip()
+        time = data[i-1].strip().replace('.', ',')
 
     if line == 'Executing command: du .noworflow/':
-        time = data[i-1].strip()
+        time = data[i-1].strip().replace('.', ',')
         space = data[i+1].split()[0].strip()
 
     if line == 'Executing command: du -hs .noworflow/':
