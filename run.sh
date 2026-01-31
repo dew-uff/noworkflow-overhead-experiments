@@ -116,7 +116,14 @@ exp_paths=("${base_dataone_dir}/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
            "${base_dataone_dir}/03dataoneexps_exp04_49_Analysis_Of_Flow"
            "${base_dataone_dir}/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data"
 
+           "${base_bench_dir}/04benchpl_exp06_belief_propagation_OK"
+           "${base_bench_dir}/04benchpl_exp07_metropolis_hastings"
+           "${base_bench_dir}/04benchpl_exp08_fft_OK"
            "${base_bench_dir}/04benchpl_exp09_iterative_solver_jacobi_OK"
+           "${base_bench_dir}/04benchpl_exp10_square_root_matrix_OK"
+           "${base_bench_dir}/04benchpl_exp11_gauss_legendre_quadrature_OK"
+           "${base_bench_dir}/04benchpl_exp12_function_evaluation_OK"
+           "${base_bench_dir}/04benchpl_exp14_pernicious_numbers_OK"
 
            "${base_msr_dir}/05msrgithubexps_exp01_mov_robots"
            "${base_msr_dir}/05msrgithubexps_exp02_cvar"
@@ -134,7 +141,14 @@ exp_script_input_and_options=('main.py'
                               'main.py'
                               'export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z'
 
+                              'test_belief_propagation.py 20000'
+                              'metropolis_hastings.py 27000000'
+                              'test_compute_FFT.py 20000'
                               'test_laplace_jacobi2.py 105'
+                              'test_sqrt_matrix.py 6000'
+                              'gauss_legendre_quadrature_py3.py 10000'
+                              'test_evaluate_functions.py 80000'
+                              'test_pernicious_numbers.py 20000000'
 
                               'mov_robots.py'
                               'cvar.py 500'
