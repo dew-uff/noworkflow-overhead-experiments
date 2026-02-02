@@ -1413,3 +1413,463 @@ Executing command: du -hs .noworflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: python test_belief_propagation.py 20000
+132.52452339802403
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: python test_compute_FFT.py 20000
+34.829510338022374
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: python test_sqrt_matrix.py 6000
+44.34145372599596
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: python gauss_legendre_quadrature_py3.py 10000
+53.44135388795985
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: python test_evaluate_functions.py 80000
+84.61492945801001
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: now run test_belief_propagation.py 20000
+232.75664404698182
+Executing command: du .noworflow/
+469544	.noworkflow/
+Executing command: du -hs .noworflow/
+459M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: now run test_compute_FFT.py 20000
+34.919445007049944
+Executing command: du .noworflow/
+15512	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: now run test_sqrt_matrix.py 6000
+43.692551905987784
+Executing command: du .noworflow/
+65208	.noworkflow/
+Executing command: du -hs .noworflow/
+64M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: now run gauss_legendre_quadrature_py3.py 10000
+53.48000750900246
+Executing command: du .noworflow/
+15540	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: now run test_evaluate_functions.py 80000
+132.21194933902007
+Executing command: du .noworflow/
+264036	.noworkflow/
+Executing command: du -hs .noworflow/
+258M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: now run -d 2 test_belief_propagation.py 20000
+154.88088382798014
+Executing command: du .noworflow/
+44048	.noworkflow/
+Executing command: du -hs .noworflow/
+44M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: now run -d 2 test_compute_FFT.py 20000
+34.731716563983355
+Executing command: du .noworflow/
+15480	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: now run -d 2 test_sqrt_matrix.py 6000
+44.21455963101471
+Executing command: du .noworflow/
+65200	.noworkflow/
+Executing command: du -hs .noworflow/
+64M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: now run -d 2 gauss_legendre_quadrature_py3.py 10000
+53.382735679042526
+Executing command: du .noworflow/
+15488	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: now run -d 2 test_evaluate_functions.py 80000
+93.69754789501894
+Executing command: du .noworflow/
+29548	.noworkflow/
+Executing command: du -hs .noworflow/
+29M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: now run -d 3 test_belief_propagation.py 20000
+231.62715169601142
+Executing command: du .noworflow/
+469544	.noworkflow/
+Executing command: du -hs .noworflow/
+459M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: now run -d 3 test_compute_FFT.py 20000
+34.60964287200477
+Executing command: du .noworflow/
+15512	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: now run -d 3 test_sqrt_matrix.py 6000
+44.22043514595134
+Executing command: du .noworflow/
+65208	.noworkflow/
+Executing command: du -hs .noworflow/
+64M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: now run -d 3 gauss_legendre_quadrature_py3.py 10000
+53.316936674993485
+Executing command: du .noworflow/
+15532	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: now run -d 3 test_evaluate_functions.py 80000
+109.91111987899058
+Executing command: du .noworflow/
+264036	.noworkflow/
+Executing command: du -hs .noworflow/
+258M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: now run -cg test_belief_propagation.py 20000
+215.98920426797122
+Executing command: du .noworflow/
+420984	.noworkflow/
+Executing command: du -hs .noworflow/
+412M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: now run -cg test_compute_FFT.py 20000
+39.274148042022716
+Executing command: du .noworflow/
+15480	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: now run -cg test_sqrt_matrix.py 6000
+43.911093216971494
+Executing command: du .noworflow/
+32476	.noworkflow/
+Executing command: du -hs .noworflow/
+32M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: now run -cg gauss_legendre_quadrature_py3.py 10000
+53.44401683099568
+Executing command: du .noworflow/
+15480	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: now run -cg test_evaluate_functions.py 80000
+124.70754064695211
+Executing command: du .noworflow/
+235772	.noworkflow/
+Executing command: du -hs .noworflow/
+231M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: now run -e none test_belief_propagation.py 20000
+153.90547659998992
+Executing command: du .noworflow/
+422704	.noworkflow/
+Executing command: du -hs .noworflow/
+413M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: now run -e none test_compute_FFT.py 20000
+35.00013629399473
+Executing command: du .noworflow/
+15496	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: now run -e none test_sqrt_matrix.py 6000
+43.9974846119876
+Executing command: du .noworflow/
+63552	.noworkflow/
+Executing command: du -hs .noworflow/
+63M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: now run -e none gauss_legendre_quadrature_py3.py 10000
+53.371273565047886
+Executing command: du .noworflow/
+15536	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: now run -e none test_evaluate_functions.py 80000
+104.33567231398774
+Executing command: du .noworflow/
+240228	.noworkflow/
+Executing command: du -hs .noworflow/
+235M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: now run -e relevant test_belief_propagation.py 20000
+200.52606073301286
+Executing command: du .noworflow/
+449268	.noworkflow/
+Executing command: du -hs .noworflow/
+439M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: now run -e relevant test_compute_FFT.py 20000
+33.19371277303435
+Executing command: du .noworflow/
+15504	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: now run -e relevant test_sqrt_matrix.py 6000
+44.27531798998825
+Executing command: du .noworflow/
+63552	.noworkflow/
+Executing command: du -hs .noworflow/
+63M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: now run -e relevant gauss_legendre_quadrature_py3.py 10000
+53.52340638102032
+Executing command: du .noworflow/
+15536	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: now run -e relevant test_evaluate_functions.py 80000
+118.49228051200043
+Executing command: du .noworflow/
+251548	.noworkflow/
+Executing command: du -hs .noworflow/
+246M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
