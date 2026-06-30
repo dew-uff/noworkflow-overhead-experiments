@@ -1,14 +1,14 @@
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
 
 
 Executing command: python main.py
-1,0566796786151826
+1,039001465003821
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
 
 
 Executing command: python export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
@@ -19,27 +19,27 @@ End export: 2010-01-02 01:00:00
 Exporting 97measurements...
 Wrote output data to MOS_gage_data.csv
 
-0,010055469814687967
+0,009675606997916475
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
 
 
 Executing command: python main.py
-1,1825344008393586
+1,2322691890003625
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
 
 
 Executing command: python main.py
-0,42242382979020476
+0,41166065000288654
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
 
 
 Executing command: python export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
@@ -50,92 +50,130 @@ End export: 2010-01-02 01:00:00
 Exporting 289 measurements...
 Wrote output data to FOR_discharge_sharp.csv
 
-0,010921631939709187
+0,011248609000176657
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: python test_belief_propagation.py 20000
+135.550777233002
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: python test_compute_FFT.py 20000
+61.57796721500199
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
 
 
 Executing command: python test_laplace_jacobi2.py 105
-813.4259063769132
+832.5017271719989
+Executing command: du .noworflow/
+15296	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: python test_sqrt_matrix.py 6000
+44.71980927199911
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: python gauss_legendre_quadrature_py3.py 10000
+53.46679080499598
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: python test_evaluate_functions.py 80000
+84.64244939100172
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
 
 
 Executing command: python mov_robots.py
-0,002555635292083025
+0,0021170199979678728
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
 
 
 Executing command: python cvar.py 500
 959364222.88
-0,0007341038435697556
+0,0007675260058022104
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
 
 
 Executing command: python eq_solver.py 500
-0,02627796307206154
+0,02524825399450492
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
 
 
 Executing command: python curves.py 5000 5000 5000 5000 5000 5000 5000 5000
 [(5000, 5000)]
-4,102615639567375e-05
+3,18689999403432e-05
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
 
 
 Executing command: python chunks.py 500
 (424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
-0,004622957669198513
+0,004477690003113821
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
 
 
 Executing command: python gc.py CR954253.fasta
 6.987601519270889
-0,05961696291342378
+0,0691113079956267
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
 
 
 Executing command: python median.py 500
 500791958400.5
-0,0006633847951889038
+0,0006489549996331334
 noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/menger-sponge
-
-
-Executing command: python menger_sponge2.py
-483.23513793200254
-noWorkflow folder not found!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
 
 
 Executing command: now run main.py
-5,265246224123985
+5,397361347997503
 Executing command: du .noworflow/
 167176	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -145,7 +183,7 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
 
 
 Executing command: now run export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
@@ -156,9 +194,9 @@ End export: 2010-01-02 01:00:00
 Exporting 97measurements...
 Wrote output data to MOS_gage_data.csv
 
-0,1394494967535138
+0,14105501499579987
 Executing command: du .noworflow/
-25720	.noworkflow/
+25716	.noworkflow/
 Executing command: du -hs .noworflow/
 26M	.noworkflow/
 
@@ -166,13 +204,13 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
 
 
 Executing command: now run main.py
-794,8836372871883
+804,5745139339997
 Executing command: du .noworflow/
-23270728	.noworkflow/
+23270732	.noworkflow/
 Executing command: du -hs .noworflow/
 23G	.noworkflow/
 
@@ -180,11 +218,11 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
 
 
 Executing command: now run main.py
-0,9701927751302719
+0,9705063219953445
 Executing command: du .noworflow/
 72692	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -194,7 +232,7 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
 
 
 Executing command: now run export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
@@ -205,1261 +243,21 @@ End export: 2010-01-02 01:00:00
 Exporting 289 measurements...
 Wrote output data to FOR_discharge_sharp.csv
 
-0,4809027020819485
+0,5084006059987587
 Executing command: du .noworflow/
-35704	.noworkflow/
+35700	.noworkflow/
 Executing command: du -hs .noworflow/
 35M	.noworkflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
-
-
-Executing command: now run test_laplace_jacobi2.py 105
-925.252760917414
-Executing command: du .noworflow/
-808892	.noworkflow/
-Executing command: du -hs .noworflow/
-790M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
-
-
-Executing command: now run mov_robots.py
-0,2231211382895708
-Executing command: du .noworflow/
-37768	.noworkflow/
-Executing command: du -hs .noworflow/
-37M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
-
-
-Executing command: now run cvar.py 500
-959364222.88
-0,29784108931198716
-Executing command: du .noworflow/
-28992	.noworkflow/
-Executing command: du -hs .noworflow/
-29M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
-
-
-Executing command: now run eq_solver.py 500
-2,3575986390933394
-Executing command: du .noworflow/
-77284	.noworkflow/
-Executing command: du -hs .noworflow/
-76M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
-
-
-Executing command: now run curves.py 5000 5000 5000 5000 5000 5000 5000 5000
-[(5000, 5000)]
-0,062352577690035105
-Executing command: du .noworflow/
-1580	.noworkflow/
-Executing command: du -hs .noworflow/
-1.6M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
-
-
-Executing command: now run chunks.py 500
-(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
-0,08612370304763317
-Executing command: du .noworflow/
-5872	.noworkflow/
-Executing command: du -hs .noworflow/
-5.8M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
-
-
-Executing command: now run gc.py CR954253.fasta
-6.987601519270889
-52,75228392938152
-Executing command: du .noworflow/
-1941096	.noworkflow/
-Executing command: du -hs .noworflow/
-1.9G	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
-
-
-Executing command: now run median.py 500
-500791958400.5
-0,14345165202394128
-Executing command: du .noworflow/
-20824	.noworkflow/
-Executing command: du -hs .noworflow/
-21M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/menger-sponge
-
-
-Executing command: now run menger_sponge2.py
-Executing command: du .noworflow/
-33016	.noworkflow/
-Executing command: du -hs .noworflow/
-33M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
-
-
-Executing command: now run -d 2 main.py
-2,8308068830519915
-Executing command: du .noworflow/
-98100	.noworkflow/
-Executing command: du -hs .noworflow/
-96M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
-
-
-Executing command: now run -d 2 export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: MOS
-Dataset: MOS
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 97measurements...
-Wrote output data to MOS_gage_data.csv
-
-0,039085579570382833
-Executing command: du .noworflow/
-21812	.noworkflow/
-Executing command: du -hs .noworflow/
-22M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
-
-
-Executing command: now run -d 2 main.py
-3,764121538028121
-Executing command: du .noworflow/
-88924	.noworkflow/
-Executing command: du -hs .noworflow/
-87M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
-
-
-Executing command: now run -d 2 main.py
-0,8363399701192975
-Executing command: du .noworflow/
-67820	.noworkflow/
-Executing command: du -hs .noworflow/
-67M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
-
-
-Executing command: now run -d 2 export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: FOR
-Dataset: discharge_sharp
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 289 measurements...
-Wrote output data to FOR_discharge_sharp.csv
-
-0,07752727437764406
-Executing command: du .noworflow/
-21868	.noworkflow/
-Executing command: du -hs .noworflow/
-22M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
-
-
-Executing command: now run -d 2 test_laplace_jacobi2.py 105
-832.8159235096537
-Executing command: du .noworflow/
-27488	.noworkflow/
-Executing command: du -hs .noworflow/
-27M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
-
-
-Executing command: now run -d 2 mov_robots.py
-0,020916471257805824
-Executing command: du .noworflow/
-34076	.noworkflow/
-Executing command: du -hs .noworflow/
-34M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
-
-
-Executing command: now run -d 2 cvar.py 500
-959364222.88
-0,160520960111171
-Executing command: du .noworflow/
-19940	.noworkflow/
-Executing command: du -hs .noworflow/
-20M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
-
-
-Executing command: now run -d 2 eq_solver.py 500
-0,8315524593926966
-Executing command: du .noworflow/
-53260	.noworkflow/
-Executing command: du -hs .noworflow/
-53M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
-
-
-Executing command: now run -d 2 curves.py 5000 5000 5000 5000 5000 5000 5000 5000
-[(5000, 5000)]
-0,05931852804496884
-Executing command: du .noworflow/
-1344	.noworkflow/
-Executing command: du -hs .noworflow/
-1.4M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
-
-
-Executing command: now run -d 2 chunks.py 500
-(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
-0,08490164903923869
-Executing command: du .noworflow/
-5812	.noworkflow/
-Executing command: du -hs .noworflow/
-5.7M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
-
-
-Executing command: now run -d 2 gc.py CR954253.fasta
-0.0
-2,3762990147806704
-Executing command: du .noworflow/
-5396	.noworkflow/
-Executing command: du -hs .noworflow/
-5.3M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
-
-
-Executing command: now run -d 2 median.py 500
-500791958400.5
-0,14233452500775456
-Executing command: du .noworflow/
-20736	.noworkflow/
-Executing command: du -hs .noworflow/
-21M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/menger-sponge
-
-
-Executing command: now run -d 2 menger_sponge2.py
-Executing command: du .noworflow/
-33016	.noworkflow/
-Executing command: du -hs .noworflow/
-33M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
-
-
-Executing command: now run -d 3 main.py
-5,750980015378445
-Executing command: du .noworflow/
-167176	.noworkflow/
-Executing command: du -hs .noworflow/
-164M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
-
-
-Executing command: now run -d 3 export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: MOS
-Dataset: MOS
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 97measurements...
-Wrote output data to MOS_gage_data.csv
-
-0,1538658463396132
-Executing command: du .noworflow/
-25720	.noworkflow/
-Executing command: du -hs .noworflow/
-26M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
-
-
-Executing command: now run -d 3 main.py
-810,6584912217222
-Executing command: du .noworflow/
-23270728	.noworkflow/
-Executing command: du -hs .noworflow/
-23G	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
-
-
-Executing command: now run -d 3 main.py
-0,9824117813259363
-Executing command: du .noworflow/
-72692	.noworkflow/
-Executing command: du -hs .noworflow/
-71M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
-
-
-Executing command: now run -d 3 export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: FOR
-Dataset: discharge_sharp
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 289 measurements...
-Wrote output data to FOR_discharge_sharp.csv
-
-0,49177756905555725
-Executing command: du .noworflow/
-35708	.noworkflow/
-Executing command: du -hs .noworflow/
-35M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
-
-
-Executing command: now run -d 3 test_laplace_jacobi2.py 105
-924.4732752926648
-Executing command: du .noworflow/
-808892	.noworkflow/
-Executing command: du -hs .noworflow/
-790M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
-
-
-Executing command: now run -d 3 mov_robots.py
-0,2196240108460188
-Executing command: du .noworflow/
-37768	.noworkflow/
-Executing command: du -hs .noworflow/
-37M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
-
-
-Executing command: now run -d 3 cvar.py 500
-959364222.88
-0,29745582677423954
-Executing command: du .noworflow/
-28992	.noworkflow/
-Executing command: du -hs .noworflow/
-29M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
-
-
-Executing command: now run -d 3 eq_solver.py 500
-0,914751042611897
-Executing command: du .noworflow/
-54756	.noworkflow/
-Executing command: du -hs .noworflow/
-54M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
-
-
-Executing command: now run -d 3 curves.py 5000 5000 5000 5000 5000 5000 5000 5000
-[(5000, 5000)]
-0,05642500799149275
-Executing command: du .noworflow/
-1380	.noworkflow/
-Executing command: du -hs .noworflow/
-1.4M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
-
-
-Executing command: now run -d 3 chunks.py 500
-(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
-0,0856428500264883
-Executing command: du .noworflow/
-5872	.noworkflow/
-Executing command: du -hs .noworflow/
-5.8M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
-
-
-Executing command: now run -d 3 gc.py CR954253.fasta
-6.987601519270889
-51,87046177312732
-Executing command: du .noworflow/
-1941096	.noworkflow/
-Executing command: du -hs .noworflow/
-1.9G	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
-
-
-Executing command: now run -d 3 median.py 500
-500791958400.5
-0,1420000120997429
-Executing command: du .noworflow/
-20824	.noworkflow/
-Executing command: du -hs .noworflow/
-21M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/menger-sponge
-
-
-Executing command: now run -d 3 menger_sponge2.py
-Executing command: du .noworflow/
-33016	.noworkflow/
-Executing command: du -hs .noworflow/
-33M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
-
-
-Executing command: now run -cg main.py
-3,191120053175837
-Executing command: du .noworflow/
-110692	.noworkflow/
-Executing command: du -hs .noworflow/
-109M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
-
-
-Executing command: now run -cg export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: MOS
-Dataset: MOS
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 97measurements...
-Wrote output data to MOS_gage_data.csv
-
-0,06915931729599833
-Executing command: du .noworflow/
-23068	.noworkflow/
-Executing command: du -hs .noworflow/
-23M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
-
-
-Executing command: now run -cg main.py
-788,6639387267642
-Executing command: du .noworflow/
-23234008	.noworkflow/
-Executing command: du -hs .noworflow/
-23G	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
-
-
-Executing command: now run -cg main.py
-0,7936244350858033
-Executing command: du .noworflow/
-68820	.noworkflow/
-Executing command: du -hs .noworflow/
-68M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
-
-
-Executing command: now run -cg export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: FOR
-Dataset: discharge_sharp
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 289 measurements...
-Wrote output data to FOR_discharge_sharp.csv
-
-0,2255376260727644
-Executing command: du .noworflow/
-26492	.noworkflow/
-Executing command: du -hs .noworflow/
-26M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
-
-
-Executing command: now run -cg test_laplace_jacobi2.py 105
-776.6892372551374
-Executing command: du .noworflow/
-243600	.noworkflow/
-Executing command: du -hs .noworflow/
-238M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
-
-
-Executing command: now run -cg mov_robots.py
-0,16119875758886337
-Executing command: du .noworflow/
-35312	.noworkflow/
-Executing command: du -hs .noworflow/
-35M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
-
-
-Executing command: now run -cg cvar.py 500
-959364222.88
-0,19057760573923588
-Executing command: du .noworflow/
-23344	.noworkflow/
-Executing command: du -hs .noworflow/
-23M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
-
-
-Executing command: now run -cg eq_solver.py 500
-2,022400503978133
-Executing command: du .noworflow/
-73704	.noworkflow/
-Executing command: du -hs .noworflow/
-72M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
-
-
-Executing command: now run -cg curves.py 5000 5000 5000 5000 5000 5000 5000 5000
-[(5000, 5000)]
-0,0025602770037949085
-Executing command: du .noworflow/
-1052	.noworkflow/
-Executing command: du -hs .noworflow/
-1.1M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
-
-
-Executing command: now run -cg chunks.py 500
-(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
-0,06198919704183936
-Executing command: du .noworflow/
-4532	.noworkflow/
-Executing command: du -hs .noworflow/
-4.5M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
-
-
-Executing command: now run -cg gc.py CR954253.fasta
-6.987601519270889
-52,11198492301628
-Executing command: du .noworflow/
-1938072	.noworkflow/
-Executing command: du -hs .noworflow/
-1.9G	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
-
-
-Executing command: now run -cg median.py 500
-500791958400.5
-0,11619186587631702
-Executing command: du .noworflow/
-19468	.noworkflow/
-Executing command: du -hs .noworflow/
-20M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/menger-sponge
-
-
-Executing command: now run -cg menger_sponge2.py
-Executing command: du .noworflow/
-33016	.noworkflow/
-Executing command: du -hs .noworflow/
-33M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
-
-
-Executing command: now run -e none main.py
-1,4887924077920616
-Executing command: du .noworflow/
-79408	.noworkflow/
-Executing command: du -hs .noworflow/
-78M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
-
-
-Executing command: now run -e none export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: MOS
-Dataset: MOS
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 97measurements...
-Wrote output data to MOS_gage_data.csv
-
-0,08970962418243289
-Executing command: du .noworflow/
-25192	.noworkflow/
-Executing command: du -hs .noworflow/
-25M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
-
-
-Executing command: now run -e none main.py
-9,73994899308309
-Executing command: du .noworflow/
-352140	.noworkflow/
-Executing command: du -hs .noworflow/
-344M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
-
-
-Executing command: now run -e none main.py
-0,7439244859851897
-Executing command: du .noworflow/
-66496	.noworkflow/
-Executing command: du -hs .noworflow/
-65M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
-
-
-Executing command: now run -e none export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: FOR
-Dataset: discharge_sharp
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 289 measurements...
-Wrote output data to FOR_discharge_sharp.csv
-
-0,3130473210476339
-Executing command: du .noworflow/
-32432	.noworkflow/
-Executing command: du -hs .noworflow/
-32M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
-
-
-Executing command: now run -e none test_laplace_jacobi2.py 105
-739.0186045179144
-Executing command: du .noworflow/
-658324	.noworkflow/
-Executing command: du -hs .noworflow/
-643M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
-
-
-Executing command: now run -e none mov_robots.py
-0,13885982101783156
-Executing command: du .noworflow/
-37556	.noworkflow/
-Executing command: du -hs .noworflow/
-37M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
-
-
-Executing command: now run -e none cvar.py 500
-959364222.88
-0,192500454839319
-Executing command: du .noworflow/
-22952	.noworkflow/
-Executing command: du -hs .noworflow/
-23M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
-
-
-Executing command: now run -e none eq_solver.py 500
-0,6049780519679189
-Executing command: du .noworflow/
-74704	.noworkflow/
-Executing command: du -hs .noworflow/
-73M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
-
-
-Executing command: now run -e none curves.py 5000 5000 5000 5000 5000 5000 5000 5000
-[(5000, 5000)]
-0,05808105459436774
-Executing command: du .noworflow/
-1576	.noworkflow/
-Executing command: du -hs .noworflow/
-1.6M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
-
-
-Executing command: now run -e none chunks.py 500
-(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
-0,07267222879454494
-Executing command: du .noworflow/
-5672	.noworkflow/
-Executing command: du -hs .noworflow/
-5.6M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
-
-
-Executing command: now run -e none gc.py CR954253.fasta
-6.987601519270889
-46,68074891483411
-Executing command: du .noworflow/
-1922256	.noworkflow/
-Executing command: du -hs .noworflow/
-1.9G	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
-
-
-Executing command: now run -e none median.py 500
-500791958400.5
-0,12827121280133724
-Executing command: du .noworflow/
-20616	.noworkflow/
-Executing command: du -hs .noworflow/
-21M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/menger-sponge
-
-
-Executing command: now run -e none menger_sponge2.py
-Executing command: du .noworflow/
-33016	.noworkflow/
-Executing command: du -hs .noworflow/
-33M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
-
-
-Executing command: now run -e relevant main.py
-2,411370925139636
-Executing command: du .noworflow/
-104484	.noworkflow/
-Executing command: du -hs .noworflow/
-103M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
-
-
-Executing command: now run -e relevant export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: MOS
-Dataset: MOS
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 97measurements...
-Wrote output data to MOS_gage_data.csv
-
-0,09675263287499547
-Executing command: du .noworflow/
-25260	.noworkflow/
-Executing command: du -hs .noworflow/
-25M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
-
-
-Executing command: now run -e relevant main.py
-10,854890204034746
-Executing command: du .noworflow/
-363772	.noworkflow/
-Executing command: du -hs .noworflow/
-356M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
-
-
-Executing command: now run -e relevant main.py
-0,7773140058852732
-Executing command: du .noworflow/
-68400	.noworkflow/
-Executing command: du -hs .noworflow/
-67M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
-
-
-Executing command: now run -e relevant export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
-Site: FOR
-Dataset: discharge_sharp
-Start export: 2010-01-01 01:00:00
-End export: 2010-01-02 01:00:00
-Exporting 289 measurements...
-Wrote output data to FOR_discharge_sharp.csv
-
-0,339764520060271
-Executing command: du .noworflow/
-32584	.noworkflow/
-Executing command: du -hs .noworflow/
-32M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
-
-
-Executing command: now run -e relevant test_laplace_jacobi2.py 105
-880.223477828782
-Executing command: du .noworflow/
-740796	.noworkflow/
-Executing command: du -hs .noworflow/
-724M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
-
-
-Executing command: now run -e relevant mov_robots.py
-0,16157634742558002
-Executing command: du .noworflow/
-37616	.noworkflow/
-Executing command: du -hs .noworflow/
-37M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
-
-
-Executing command: now run -e relevant cvar.py 500
-959364222.88
-0,21278994111344218
-Executing command: du .noworflow/
-23072	.noworkflow/
-Executing command: du -hs .noworflow/
-23M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
-
-
-Executing command: now run -e relevant eq_solver.py 500
-0,7829464171081781
-Executing command: du .noworflow/
-74784	.noworkflow/
-Executing command: du -hs .noworflow/
-74M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
-
-
-Executing command: now run -e relevant curves.py 5000 5000 5000 5000 5000 5000 5000 5000
-[(5000, 5000)]
-0,05810682801529765
-Executing command: du .noworflow/
-1576	.noworkflow/
-Executing command: du -hs .noworflow/
-1.6M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
-
-
-Executing command: now run -e relevant chunks.py 500
-(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
-0,07866358105093241
-Executing command: du .noworflow/
-5732	.noworkflow/
-Executing command: du -hs .noworflow/
-5.6M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
-
-
-Executing command: now run -e relevant gc.py CR954253.fasta
-6.987601519270889
-46,73436278663576
-Executing command: du .noworflow/
-1926624	.noworkflow/
-Executing command: du -hs .noworflow/
-1.9G	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
-
-
-Executing command: now run -e relevant median.py 500
-500791958400.5
-0,1342150350101292
-Executing command: du .noworflow/
-20676	.noworkflow/
-Executing command: du -hs .noworflow/
-21M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /noworkflow-core-experiments/menger-sponge
-
-
-Executing command: now run -e relevant menger_sponge2.py
-Executing command: du .noworflow/
-33016	.noworkflow/
-Executing command: du -hs .noworflow/
-33M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
-
-
-Executing command: python test_belief_propagation.py 20000
-132.63328826398356
-noWorkflow folder not found!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
-
-
-Executing command: python test_compute_FFT.py 20000
-34.57108025602065
-noWorkflow folder not found!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
-
-
-Executing command: python test_sqrt_matrix.py 6000
-44.30942643497838
-noWorkflow folder not found!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
-
-
-Executing command: python gauss_legendre_quadrature_py3.py 10000
-53.39663875597762
-noWorkflow folder not found!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
-
-
-Executing command: python test_evaluate_functions.py 80000
-84.85323358495953
-noWorkflow folder not found!
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
 
 
 Executing command: now run test_belief_propagation.py 20000
-230.04240776202641
+232.73757937299524
 Executing command: du .noworflow/
 469544	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1473,7 +271,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run test_compute_FFT.py 20000
-34.86964780202834
+34.97793962000287
 Executing command: du .noworflow/
 15512	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1483,11 +281,25 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+
+
+Executing command: now run test_laplace_jacobi2.py 105
+931.1845497749964
+Executing command: du .noworflow/
+808892	.noworkflow/
+Executing command: du -hs .noworflow/
+790M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
 
 
 Executing command: now run test_sqrt_matrix.py 6000
-43.98364444001345
+44.62266406499839
 Executing command: du .noworflow/
 65208	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1501,7 +313,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run gauss_legendre_quadrature_py3.py 10000
-53.37573952798266
+53.48107469800016
 Executing command: du .noworflow/
 15540	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1515,7 +327,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run test_evaluate_functions.py 80000
-133.68619862297783
+131.44308217700018
 Executing command: du .noworflow/
 264036	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1525,11 +337,198 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
+
+
+Executing command: now run mov_robots.py
+0,14585466800053837
+Executing command: du .noworflow/
+37768	.noworkflow/
+Executing command: du -hs .noworflow/
+37M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
+
+
+Executing command: now run cvar.py 500
+959364222.88
+0,31049347299995134
+Executing command: du .noworflow/
+28992	.noworkflow/
+Executing command: du -hs .noworflow/
+29M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
+
+
+Executing command: now run eq_solver.py 500
+2,3671711639981368
+Executing command: du .noworflow/
+77284	.noworkflow/
+Executing command: du -hs .noworflow/
+76M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
+
+
+Executing command: now run curves.py 5000 5000 5000 5000 5000 5000 5000 5000
+[(5000, 5000)]
+0,007124832998670172
+Executing command: du .noworflow/
+1580	.noworkflow/
+Executing command: du -hs .noworflow/
+1.6M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
+
+
+Executing command: now run chunks.py 500
+(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
+0,08657904800202232
+Executing command: du .noworflow/
+5872	.noworkflow/
+Executing command: du -hs .noworflow/
+5.8M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
+
+
+Executing command: now run gc.py CR954253.fasta
+6.987601519270889
+52,609157833998324
+Executing command: du .noworflow/
+1941096	.noworkflow/
+Executing command: du -hs .noworflow/
+1.9G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
+
+
+Executing command: now run median.py 500
+500791958400.5
+0,1434321650012862
+Executing command: du .noworflow/
+20824	.noworkflow/
+Executing command: du -hs .noworflow/
+21M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+
+
+Executing command: now run -d 2 main.py
+2,8247511070003384
+Executing command: du .noworflow/
+98100	.noworkflow/
+Executing command: du -hs .noworflow/
+96M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+
+
+Executing command: now run -d 2 export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: MOS
+Dataset: MOS
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 97measurements...
+Wrote output data to MOS_gage_data.csv
+
+0,03934568499971647
+Executing command: du .noworflow/
+21812	.noworkflow/
+Executing command: du -hs .noworflow/
+22M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+
+
+Executing command: now run -d 2 main.py
+3,809130595996976
+Executing command: du .noworflow/
+88924	.noworkflow/
+Executing command: du -hs .noworflow/
+87M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+
+
+Executing command: now run -d 2 main.py
+0,8059102570041432
+Executing command: du .noworflow/
+67820	.noworkflow/
+Executing command: du -hs .noworflow/
+67M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+
+
+Executing command: now run -d 2 export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: FOR
+Dataset: discharge_sharp
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 289 measurements...
+Wrote output data to FOR_discharge_sharp.csv
+
+0,07814233399403747
+Executing command: du .noworflow/
+21868	.noworkflow/
+Executing command: du -hs .noworflow/
+22M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
 
 
 Executing command: now run -d 2 test_belief_propagation.py 20000
-155.14424239099026
+155.03335766300006
 Executing command: du .noworflow/
 44048	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1543,7 +542,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -d 2 test_compute_FFT.py 20000
-34.476533799024764
+34.39803140400181
 Executing command: du .noworflow/
 15480	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1553,11 +552,25 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+
+
+Executing command: now run -d 2 test_laplace_jacobi2.py 105
+843.6300307999991
+Executing command: du .noworflow/
+27488	.noworkflow/
+Executing command: du -hs .noworflow/
+27M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
 
 
 Executing command: now run -d 2 test_sqrt_matrix.py 6000
-43.719897154020146
+42.931356674998824
 Executing command: du .noworflow/
 65200	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1571,7 +584,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -d 2 gauss_legendre_quadrature_py3.py 10000
-53.55549990100553
+53.3437191990015
 Executing command: du .noworflow/
 15488	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1585,7 +598,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -d 2 test_evaluate_functions.py 80000
-93.33534319803584
+93.2922991749947
 Executing command: du .noworflow/
 29548	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1595,11 +608,198 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
+
+
+Executing command: now run -d 2 mov_robots.py
+0,012459288001991808
+Executing command: du .noworflow/
+34076	.noworkflow/
+Executing command: du -hs .noworflow/
+34M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
+
+
+Executing command: now run -d 2 cvar.py 500
+959364222.88
+0,16160381599911489
+Executing command: du .noworflow/
+19940	.noworkflow/
+Executing command: du -hs .noworflow/
+20M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
+
+
+Executing command: now run -d 2 eq_solver.py 500
+0,840652154001873
+Executing command: du .noworflow/
+53260	.noworkflow/
+Executing command: du -hs .noworflow/
+53M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
+
+
+Executing command: now run -d 2 curves.py 5000 5000 5000 5000 5000 5000 5000 5000
+[(5000, 5000)]
+0,0024714240062166937
+Executing command: du .noworflow/
+1344	.noworkflow/
+Executing command: du -hs .noworflow/
+1.4M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
+
+
+Executing command: now run -d 2 chunks.py 500
+(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
+0,08710103199700825
+Executing command: du .noworflow/
+5812	.noworkflow/
+Executing command: du -hs .noworflow/
+5.7M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
+
+
+Executing command: now run -d 2 gc.py CR954253.fasta
+0.0
+2,4206140430032974
+Executing command: du .noworflow/
+5396	.noworkflow/
+Executing command: du -hs .noworflow/
+5.3M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
+
+
+Executing command: now run -d 2 median.py 500
+500791958400.5
+0,14263970899628475
+Executing command: du .noworflow/
+20736	.noworkflow/
+Executing command: du -hs .noworflow/
+21M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+
+
+Executing command: now run -d 3 main.py
+5,31444550499873
+Executing command: du .noworflow/
+167176	.noworkflow/
+Executing command: du -hs .noworflow/
+164M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+
+
+Executing command: now run -d 3 export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: MOS
+Dataset: MOS
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 97measurements...
+Wrote output data to MOS_gage_data.csv
+
+0,1396440220050863
+Executing command: du .noworflow/
+25720	.noworkflow/
+Executing command: du -hs .noworflow/
+26M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+
+
+Executing command: now run -d 3 main.py
+793,8581165479991
+Executing command: du .noworflow/
+23270724	.noworkflow/
+Executing command: du -hs .noworflow/
+23G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+
+
+Executing command: now run -d 3 main.py
+0,9662779699938255
+Executing command: du .noworflow/
+72692	.noworkflow/
+Executing command: du -hs .noworflow/
+71M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+
+
+Executing command: now run -d 3 export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: FOR
+Dataset: discharge_sharp
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 289 measurements...
+Wrote output data to FOR_discharge_sharp.csv
+
+0,48604922000231454
+Executing command: du .noworflow/
+35708	.noworkflow/
+Executing command: du -hs .noworflow/
+35M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
 
 
 Executing command: now run -d 3 test_belief_propagation.py 20000
-229.57940964098088
+231.77716373599833
 Executing command: du .noworflow/
 469544	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1613,7 +813,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -d 3 test_compute_FFT.py 20000
-35.440814954054076
+35.018261274002725
 Executing command: du .noworflow/
 15512	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1623,11 +823,25 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+
+
+Executing command: now run -d 3 test_laplace_jacobi2.py 105
+931.3276539329963
+Executing command: du .noworflow/
+808892	.noworkflow/
+Executing command: du -hs .noworflow/
+790M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
 
 
 Executing command: now run -d 3 test_sqrt_matrix.py 6000
-43.84257979999529
+44.22566599899437
 Executing command: du .noworflow/
 65208	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1641,7 +855,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -d 3 gauss_legendre_quadrature_py3.py 10000
-53.43438415997662
+53.51289967900084
 Executing command: du .noworflow/
 15532	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1655,7 +869,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -d 3 test_evaluate_functions.py 80000
-131.129512769985
+132.68894513399573
 Executing command: du .noworflow/
 264036	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1665,11 +879,198 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
+
+
+Executing command: now run -d 3 mov_robots.py
+0,15493382500426378
+Executing command: du .noworflow/
+37768	.noworkflow/
+Executing command: du -hs .noworflow/
+37M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
+
+
+Executing command: now run -d 3 cvar.py 500
+959364222.88
+0,3053184830059763
+Executing command: du .noworflow/
+28992	.noworkflow/
+Executing command: du -hs .noworflow/
+29M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
+
+
+Executing command: now run -d 3 eq_solver.py 500
+0,9183989560115151
+Executing command: du .noworflow/
+54756	.noworkflow/
+Executing command: du -hs .noworflow/
+54M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
+
+
+Executing command: now run -d 3 curves.py 5000 5000 5000 5000 5000 5000 5000 5000
+[(5000, 5000)]
+0,003825373001745902
+Executing command: du .noworflow/
+1380	.noworkflow/
+Executing command: du -hs .noworflow/
+1.4M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
+
+
+Executing command: now run -d 3 chunks.py 500
+(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
+0,08631726400926709
+Executing command: du .noworflow/
+5872	.noworkflow/
+Executing command: du -hs .noworflow/
+5.8M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
+
+
+Executing command: now run -d 3 gc.py CR954253.fasta
+6.987601519270889
+53,98645167700306
+Executing command: du .noworflow/
+1941096	.noworkflow/
+Executing command: du -hs .noworflow/
+1.9G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
+
+
+Executing command: now run -d 3 median.py 500
+500791958400.5
+0,14309744800266344
+Executing command: du .noworflow/
+20824	.noworkflow/
+Executing command: du -hs .noworflow/
+21M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+
+
+Executing command: now run -cg main.py
+3,210699299990665
+Executing command: du .noworflow/
+110692	.noworkflow/
+Executing command: du -hs .noworflow/
+109M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+
+
+Executing command: now run -cg export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: MOS
+Dataset: MOS
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 97measurements...
+Wrote output data to MOS_gage_data.csv
+
+0,06778146600117907
+Executing command: du .noworflow/
+23064	.noworkflow/
+Executing command: du -hs .noworflow/
+23M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+
+
+Executing command: now run -cg main.py
+784,4653886419983
+Executing command: du .noworflow/
+23234008	.noworkflow/
+Executing command: du -hs .noworflow/
+23G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+
+
+Executing command: now run -cg main.py
+0,8818003140040673
+Executing command: du .noworflow/
+68820	.noworkflow/
+Executing command: du -hs .noworflow/
+68M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+
+
+Executing command: now run -cg export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: FOR
+Dataset: discharge_sharp
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 289 measurements...
+Wrote output data to FOR_discharge_sharp.csv
+
+0,2350783929869067
+Executing command: du .noworflow/
+26488	.noworkflow/
+Executing command: du -hs .noworflow/
+26M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
 
 
 Executing command: now run -cg test_belief_propagation.py 20000
-216.939685276011
+217.53883332799887
 Executing command: du .noworflow/
 420984	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1683,7 +1084,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -cg test_compute_FFT.py 20000
-35.55666124401614
+34.44655216499814
 Executing command: du .noworflow/
 15480	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1693,11 +1094,25 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+
+
+Executing command: now run -cg test_laplace_jacobi2.py 105
+877.9351831660024
+Executing command: du .noworflow/
+243600	.noworkflow/
+Executing command: du -hs .noworflow/
+238M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
 
 
 Executing command: now run -cg test_sqrt_matrix.py 6000
-44.38519949495094
+43.4417005990108
 Executing command: du .noworflow/
 32476	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1711,7 +1126,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -cg gauss_legendre_quadrature_py3.py 10000
-53.43702193396166
+53.49308693000057
 Executing command: du .noworflow/
 15480	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1725,7 +1140,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -cg test_evaluate_functions.py 80000
-124.85505070898216
+123.96476690100098
 Executing command: du .noworflow/
 235772	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1735,11 +1150,740 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
+
+
+Executing command: now run -cg mov_robots.py
+0,15367082599550486
+Executing command: du .noworflow/
+35312	.noworkflow/
+Executing command: du -hs .noworflow/
+35M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
+
+
+Executing command: now run -cg cvar.py 500
+959364222.88
+0,19927489499968942
+Executing command: du .noworflow/
+23344	.noworkflow/
+Executing command: du -hs .noworflow/
+23M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
+
+
+Executing command: now run -cg eq_solver.py 500
+2,12551348299894
+Executing command: du .noworflow/
+73704	.noworkflow/
+Executing command: du -hs .noworflow/
+72M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
+
+
+Executing command: now run -cg curves.py 5000 5000 5000 5000 5000 5000 5000 5000
+[(5000, 5000)]
+0,0028592529997695237
+Executing command: du .noworflow/
+1052	.noworkflow/
+Executing command: du -hs .noworflow/
+1.1M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
+
+
+Executing command: now run -cg chunks.py 500
+(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
+0,06213571700209286
+Executing command: du .noworflow/
+4532	.noworkflow/
+Executing command: du -hs .noworflow/
+4.5M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
+
+
+Executing command: now run -cg gc.py CR954253.fasta
+6.987601519270889
+56,437998777997564
+Executing command: du .noworflow/
+1938072	.noworkflow/
+Executing command: du -hs .noworflow/
+1.9G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
+
+
+Executing command: now run -cg median.py 500
+500791958400.5
+0,11810567800421268
+Executing command: du .noworflow/
+19468	.noworkflow/
+Executing command: du -hs .noworflow/
+20M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+
+
+Executing command: now run -cg -d 2 main.py
+2,5291342429991346
+Executing command: du .noworflow/
+91772	.noworkflow/
+Executing command: du -hs .noworflow/
+90M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+
+
+Executing command: now run -cg -d 2 export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: MOS
+Dataset: MOS
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 97measurements...
+Wrote output data to MOS_gage_data.csv
+
+0,04011778300628066
+Executing command: du .noworflow/
+21572	.noworkflow/
+Executing command: du -hs .noworflow/
+22M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+
+
+Executing command: now run -cg -d 2 main.py
+3,598853095987579
+Executing command: du .noworflow/
+86476	.noworkflow/
+Executing command: du -hs .noworflow/
+85M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+
+
+Executing command: now run -cg -d 2 main.py
+0,8178264019952621
+Executing command: du .noworflow/
+67292	.noworkflow/
+Executing command: du -hs .noworflow/
+66M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+
+
+Executing command: now run -cg -d 2 export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: FOR
+Dataset: discharge_sharp
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 289 measurements...
+Wrote output data to FOR_discharge_sharp.csv
+
+0,08689624899125192
+Executing command: du .noworflow/
+21896	.noworkflow/
+Executing command: du -hs .noworflow/
+22M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: now run -cg -d 2 test_belief_propagation.py 20000
+154.0943750449951
+Executing command: du .noworflow/
+44036	.noworkflow/
+Executing command: du -hs .noworflow/
+44M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: now run -cg -d 2 test_compute_FFT.py 20000
+34.77365503599867
+Executing command: du .noworflow/
+15464	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+
+
+Executing command: now run -cg -d 2 test_laplace_jacobi2.py 105
+840.2724635810009
+Executing command: du .noworflow/
+27400	.noworkflow/
+Executing command: du -hs .noworflow/
+27M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: now run -cg -d 2 test_sqrt_matrix.py 6000
+43.477114554989384
+Executing command: du .noworflow/
+32476	.noworkflow/
+Executing command: du -hs .noworflow/
+32M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: now run -cg -d 2 gauss_legendre_quadrature_py3.py 10000
+53.29759767699579
+Executing command: du .noworflow/
+15472	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: now run -cg -d 2 test_evaluate_functions.py 80000
+93.14247023200733
+Executing command: du .noworflow/
+29528	.noworkflow/
+Executing command: du -hs .noworflow/
+29M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
+
+
+Executing command: now run -cg -d 2 mov_robots.py
+0,04366907200892456
+Executing command: du .noworflow/
+34044	.noworkflow/
+Executing command: du -hs .noworflow/
+34M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
+
+
+Executing command: now run -cg -d 2 cvar.py 500
+959364222.88
+0,13806505998945795
+Executing command: du .noworflow/
+18600	.noworkflow/
+Executing command: du -hs .noworflow/
+19M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
+
+
+Executing command: now run -cg -d 2 eq_solver.py 500
+0,5259042200050317
+Executing command: du .noworflow/
+50744	.noworkflow/
+Executing command: du -hs .noworflow/
+50M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
+
+
+Executing command: now run -cg -d 2 curves.py 5000 5000 5000 5000 5000 5000 5000 5000
+[(5000, 5000)]
+0,0016575280023971573
+Executing command: du .noworflow/
+1016	.noworkflow/
+Executing command: du -hs .noworflow/
+1016K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
+
+
+Executing command: now run -cg -d 2 chunks.py 500
+(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
+0,06184576899977401
+Executing command: du .noworflow/
+4488	.noworkflow/
+Executing command: du -hs .noworflow/
+4.4M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
+
+
+Executing command: now run -cg -d 2 gc.py CR954253.fasta
+0.0
+2,4822807870077668
+Executing command: du .noworflow/
+4696	.noworkflow/
+Executing command: du -hs .noworflow/
+4.6M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
+
+
+Executing command: now run -cg -d 2 median.py 500
+500791958400.5
+0,12163381300342735
+Executing command: du .noworflow/
+19404	.noworkflow/
+Executing command: du -hs .noworflow/
+19M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+
+
+Executing command: now run -cg -d 3 main.py
+3,219816480996087
+Executing command: du .noworflow/
+110692	.noworkflow/
+Executing command: du -hs .noworflow/
+109M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+
+
+Executing command: now run -cg -d 3 export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: MOS
+Dataset: MOS
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 97measurements...
+Wrote output data to MOS_gage_data.csv
+
+0,06603857800655533
+Executing command: du .noworflow/
+23064	.noworkflow/
+Executing command: du -hs .noworflow/
+23M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+
+
+Executing command: now run -cg -d 3 main.py
+784,4903616429947
+Executing command: du .noworflow/
+23234008	.noworkflow/
+Executing command: du -hs .noworflow/
+23G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+
+
+Executing command: now run -cg -d 3 main.py
+0,870156755001517
+Executing command: du .noworflow/
+68820	.noworkflow/
+Executing command: du -hs .noworflow/
+68M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+
+
+Executing command: now run -cg -d 3 export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: FOR
+Dataset: discharge_sharp
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 289 measurements...
+Wrote output data to FOR_discharge_sharp.csv
+
+0,22756030500750057
+Executing command: du .noworflow/
+26488	.noworkflow/
+Executing command: du -hs .noworflow/
+26M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
+
+
+Executing command: now run -cg -d 3 test_belief_propagation.py 20000
+218.88263904800988
+Executing command: du .noworflow/
+420984	.noworkflow/
+Executing command: du -hs .noworflow/
+412M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp08_fft_OK
+
+
+Executing command: now run -cg -d 3 test_compute_FFT.py 20000
+34.57280390099913
+Executing command: du .noworflow/
+15480	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+
+
+Executing command: now run -cg -d 3 test_laplace_jacobi2.py 105
+885.011506684008
+Executing command: du .noworflow/
+243600	.noworkflow/
+Executing command: du -hs .noworflow/
+238M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
+
+
+Executing command: now run -cg -d 3 test_sqrt_matrix.py 6000
+43.92511758200999
+Executing command: du .noworflow/
+32476	.noworkflow/
+Executing command: du -hs .noworflow/
+32M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp11_gauss_legendre_quadrature_OK
+
+
+Executing command: now run -cg -d 3 gauss_legendre_quadrature_py3.py 10000
+53.430163248995086
+Executing command: du .noworflow/
+15480	.noworkflow/
+Executing command: du -hs .noworflow/
+16M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp12_function_evaluation_OK
+
+
+Executing command: now run -cg -d 3 test_evaluate_functions.py 80000
+125.12067241400655
+Executing command: du .noworflow/
+235772	.noworkflow/
+Executing command: du -hs .noworflow/
+231M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
+
+
+Executing command: now run -cg -d 3 mov_robots.py
+0,1569650460005505
+Executing command: du .noworflow/
+35312	.noworkflow/
+Executing command: du -hs .noworflow/
+35M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
+
+
+Executing command: now run -cg -d 3 cvar.py 500
+959364222.88
+0,20814492600038648
+Executing command: du .noworflow/
+23344	.noworkflow/
+Executing command: du -hs .noworflow/
+23M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
+
+
+Executing command: now run -cg -d 3 eq_solver.py 500
+0,5545467500051018
+Executing command: du .noworflow/
+52204	.noworkflow/
+Executing command: du -hs .noworflow/
+51M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
+
+
+Executing command: now run -cg -d 3 curves.py 5000 5000 5000 5000 5000 5000 5000 5000
+[(5000, 5000)]
+0,0018810559995472431
+Executing command: du .noworflow/
+1016	.noworkflow/
+Executing command: du -hs .noworflow/
+1016K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
+
+
+Executing command: now run -cg -d 3 chunks.py 500
+(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
+0,06207847999758087
+Executing command: du .noworflow/
+4532	.noworkflow/
+Executing command: du -hs .noworflow/
+4.5M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
+
+
+Executing command: now run -cg -d 3 gc.py CR954253.fasta
+6.987601519270889
+55,05804324800556
+Executing command: du .noworflow/
+1938072	.noworkflow/
+Executing command: du -hs .noworflow/
+1.9G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
+
+
+Executing command: now run -cg -d 3 median.py 500
+500791958400.5
+0,12330914899939671
+Executing command: du .noworflow/
+19468	.noworkflow/
+Executing command: du -hs .noworflow/
+20M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+
+
+Executing command: now run -e none main.py
+1,5006967109948164
+Executing command: du .noworflow/
+79408	.noworkflow/
+Executing command: du -hs .noworflow/
+78M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+
+
+Executing command: now run -e none export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: MOS
+Dataset: MOS
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 97measurements...
+Wrote output data to MOS_gage_data.csv
+
+0,09150403199600987
+Executing command: du .noworflow/
+25188	.noworkflow/
+Executing command: du -hs .noworflow/
+25M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+
+
+Executing command: now run -e none main.py
+9,44963515100244
+Executing command: du .noworflow/
+352140	.noworkflow/
+Executing command: du -hs .noworflow/
+344M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+
+
+Executing command: now run -e none main.py
+0,7288666200038278
+Executing command: du .noworflow/
+66496	.noworkflow/
+Executing command: du -hs .noworflow/
+65M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+
+
+Executing command: now run -e none export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: FOR
+Dataset: discharge_sharp
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 289 measurements...
+Wrote output data to FOR_discharge_sharp.csv
+
+0,3313967159920139
+Executing command: du .noworflow/
+32428	.noworkflow/
+Executing command: du -hs .noworflow/
+32M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
 
 
 Executing command: now run -e none test_belief_propagation.py 20000
-153.6942145039793
+153.99397675799264
 Executing command: du .noworflow/
 422704	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1753,7 +1897,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -e none test_compute_FFT.py 20000
-34.77796479896642
+34.93037407301017
 Executing command: du .noworflow/
 15496	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1763,11 +1907,25 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+
+
+Executing command: now run -e none test_laplace_jacobi2.py 105
+838.1580361520028
+Executing command: du .noworflow/
+658324	.noworkflow/
+Executing command: du -hs .noworflow/
+643M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
 
 
 Executing command: now run -e none test_sqrt_matrix.py 6000
-44.156620863999706
+44.14034596599231
 Executing command: du .noworflow/
 63552	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1781,7 +1939,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -e none gauss_legendre_quadrature_py3.py 10000
-53.30680041096639
+53.249850123000215
 Executing command: du .noworflow/
 15536	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1795,7 +1953,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -e none test_evaluate_functions.py 80000
-104.42976750899106
+104.59743250400061
 Executing command: du .noworflow/
 240228	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1805,11 +1963,198 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
+
+
+Executing command: now run -e none mov_robots.py
+0,06829414099047426
+Executing command: du .noworflow/
+37556	.noworkflow/
+Executing command: du -hs .noworflow/
+37M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
+
+
+Executing command: now run -e none cvar.py 500
+959364222.88
+0,20385224200435914
+Executing command: du .noworflow/
+22952	.noworkflow/
+Executing command: du -hs .noworflow/
+23M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
+
+
+Executing command: now run -e none eq_solver.py 500
+0,6091619960061507
+Executing command: du .noworflow/
+74704	.noworkflow/
+Executing command: du -hs .noworflow/
+73M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
+
+
+Executing command: now run -e none curves.py 5000 5000 5000 5000 5000 5000 5000 5000
+[(5000, 5000)]
+0,006267080010729842
+Executing command: du .noworflow/
+1576	.noworkflow/
+Executing command: du -hs .noworflow/
+1.6M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
+
+
+Executing command: now run -e none chunks.py 500
+(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
+0,07392671599518508
+Executing command: du .noworflow/
+5672	.noworkflow/
+Executing command: du -hs .noworflow/
+5.6M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
+
+
+Executing command: now run -e none gc.py CR954253.fasta
+6.987601519270889
+50,37540984599036
+Executing command: du .noworflow/
+1922256	.noworkflow/
+Executing command: du -hs .noworflow/
+1.9G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
+
+
+Executing command: now run -e none median.py 500
+500791958400.5
+0,1298857660003705
+Executing command: du .noworflow/
+20616	.noworkflow/
+Executing command: du -hs .noworflow/
+21M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data
+
+
+Executing command: now run -e relevant main.py
+2,4315316130087012
+Executing command: du .noworflow/
+104484	.noworkflow/
+Executing command: du -hs .noworflow/
+103M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp02_40_e_44_Agua_Salud_Rainfall_Data
+
+
+Executing command: now run -e relevant export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: MOS
+Dataset: MOS
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 97measurements...
+Wrote output data to MOS_gage_data.csv
+
+0,10070600600738544
+Executing command: du .noworflow/
+25256	.noworkflow/
+Executing command: du -hs .noworflow/
+25M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp03_46_A_Method_For_Calculating
+
+
+Executing command: now run -e relevant main.py
+10,273048570001265
+Executing command: du .noworflow/
+363772	.noworkflow/
+Executing command: du -hs .noworflow/
+356M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp04_49_Analysis_Of_Flow
+
+
+Executing command: now run -e relevant main.py
+0,7993124830099987
+Executing command: du .noworflow/
+68400	.noworkflow/
+Executing command: du -hs .noworflow/
+67M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data
+
+
+Executing command: now run -e relevant export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z
+Site: FOR
+Dataset: discharge_sharp
+Start export: 2010-01-01 01:00:00
+End export: 2010-01-02 01:00:00
+Exporting 289 measurements...
+Wrote output data to FOR_discharge_sharp.csv
+
+0,33318719700037036
+Executing command: du .noworflow/
+32580	.noworkflow/
+Executing command: du -hs .noworflow/
+32M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp06_belief_propagation_OK
 
 
 Executing command: now run -e relevant test_belief_propagation.py 20000
-201.12794147699606
+201.46966900899133
 Executing command: du .noworflow/
 449268	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1823,7 +2168,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -e relevant test_compute_FFT.py 20000
-34.8684595329687
+34.89912741500302
 Executing command: du .noworflow/
 15504	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1833,11 +2178,25 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp09_iterative_solver_jacobi_OK
+
+
+Executing command: now run -e relevant test_laplace_jacobi2.py 105
+875.0158794720046
+Executing command: du .noworflow/
+740796	.noworkflow/
+Executing command: du -hs .noworflow/
+724M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp10_square_root_matrix_OK
 
 
 Executing command: now run -e relevant test_sqrt_matrix.py 6000
-44.2546472469694
+42.91007611399982
 Executing command: du .noworflow/
 63552	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1851,7 +2210,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -e relevant gauss_legendre_quadrature_py3.py 10000
-53.450012845976744
+53.29755155200837
 Executing command: du .noworflow/
 15536	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1865,7 +2224,7 @@ Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthu
 
 
 Executing command: now run -e relevant test_evaluate_functions.py 80000
-119.75312342797406
+119.3996090599976
 Executing command: du .noworflow/
 251548	.noworkflow/
 Executing command: du -hs .noworflow/
@@ -1875,173 +2234,104 @@ Executing command: du -hs .noworflow/
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp01_mov_robots
 
 
-Executing command: python metropolis_hastings.py 27000000
-270.18542721203994
-noWorkflow folder not found!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
-
-
-Executing command: python test_pernicious_numbers.py 20000000
-62.89854085200932
-noWorkflow folder not found!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
-
-
-Executing command: now run metropolis_hastings.py 27000000
+Executing command: now run -e relevant mov_robots.py
+0,09708589900401421
 Executing command: du .noworflow/
-15292	.noworkflow/
+37616	.noworkflow/
 Executing command: du -hs .noworflow/
-15M	.noworkflow/
+37M	.noworkflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp02_cvar
 
 
-Executing command: now run test_pernicious_numbers.py 20000000
+Executing command: now run -e relevant cvar.py 500
+959364222.88
+0,22862394999538083
 Executing command: du .noworflow/
-480	.noworkflow/
+23072	.noworkflow/
 Executing command: du -hs .noworflow/
-480K	.noworkflow/
+23M	.noworkflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp03_eq_solver
 
 
-Executing command: now run -d 2 metropolis_hastings.py 27000000
+Executing command: now run -e relevant eq_solver.py 500
+0,8156786589970579
 Executing command: du .noworflow/
-15292	.noworkflow/
+74784	.noworkflow/
 Executing command: du -hs .noworflow/
-15M	.noworkflow/
+74M	.noworkflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp04_curves
 
 
-Executing command: now run -d 2 test_pernicious_numbers.py 20000000
+Executing command: now run -e relevant curves.py 5000 5000 5000 5000 5000 5000 5000 5000
+[(5000, 5000)]
+0,006713719994877465
 Executing command: du .noworflow/
-480	.noworkflow/
+1576	.noworkflow/
 Executing command: du -hs .noworflow/
-480K	.noworkflow/
+1.6M	.noworkflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp05_chunks
 
 
-Executing command: now run -d 3 metropolis_hastings.py 27000000
+Executing command: now run -e relevant chunks.py 500
+(424533559246, 978212965549, 44756014166, 534771852899, 913899456058, 392888992261, 981758150272, 240123516436, 152491468919, 151534339700, 106325369466, 878829203005, 588022882667, 777315144758, 664904820127, 162788563212, 108706256090, 80444014844, 935868384285, 363714941483, 616208160856, 386979565045, 345462137507, 702703408826, 227259652029, 609741931458, 487380045831, 574947128223, 65543315396, 98844556457, 926509076717, 779102014642, 862536141389, 690064463490, 670019806534, 908358000256, 368798545707, 799911506283, 774490855371, 72458122217, 242955608656, 881493143288, 158774376403, 600450083710, 100708262469, 963447298339, 540877402764, 331180881682, 320195254712, 136178644350, 367423460971, 225658799810, 880312983411, 603886083987, 316056408696, 100695461126, 878734360942, 349545488806, 264465407347, 203110418637, 902756561703, 35161735606, 286288172152, 75061129085, 743415134881, 144987804857, 166974457324, 42620596937, 89517685033, 772656770167, 914497675644, 749646168506, 920803605059, 578554786802, 572414489918, 261183956518, 239871715732, 746873505287, 908771276241, 463640709749, 303137481843, 543101033090, 707210368849, 773078040818, 394249329243, 356836074865, 127185934983, 646334356341, 367778682376, 209788010755, 18223699246, 299494465715, 773597201235, 408968763925, 188096301625, 469579667166, 67928829508, 859425565198, 936931475451, 243514641159, 897842443698, 698249437802, 663719326382, 80232519405, 133258648041, 208885734065, 913137270401, 131322717984, 100464479446, 916417772991, 128765338530, 665876233492, 210546325624, 786773463595, 524518135803, 799768336283, 67863689884, 747053594105, 597098304564, 680432851734, 915263974174, 74130791459, 78257865850, 333491006617, 478245871001, 65198968934, 513264210543, 653004159243, 769232599409, 433741167234, 284324068143, 993677428671, 518538266316, 991443063235, 626715108343, 765231851827, 226227268627, 845964885945, 863537753388, 174702956385, 179724730130, 581290806130, 129925712816, 732044164614, 13635745882, 749349925238, 989603008352, 960222027614, 714302221505, 426735717096, 725152233065, 168581472132, 758322003704, 502564587211, 89084383644, 813191569551, 597196719089, 147235272084, 838549974946, 532374636760, 671527695452, 739970801134, 650082819077, 983319473067, 939024796830, 144401425509, 342375978096, 822005274872, 912312978461, 88694651782, 652841575472, 765330141880, 173234936182, 245841419602, 492363881328, 779015361650, 742494289745, 960217898763, 36139600302, 959505430922, 625784593197, 847904826683, 780233190242, 180589543664, 70632249828, 769912517121, 490303530421, 972928518221, 998525202470, 663836179372, 3244782400, 42450920545, 358606501968, 920463281307, 53544894438, 905417957649, 458755828958, 602102880861, 919481489586, 144850153006, 17123267895, 458180733132, 1357970476, 13801983349, 832009571851, 742267979412, 672284126866, 206578410774, 666230619219, 217536938589, 334464796398, 757116760823, 201771186368, 520121315612, 688898564479, 21824212413, 878118854873, 127957132565, 282872386856, 717832575342, 899885265259, 711464696545, 126044632951, 171248351230, 933203664287, 43029449091, 223512946831, 286392700416, 345995503317, 403497156057, 626800821867, 935915684276, 927893344014, 668732098044, 543980637064, 707434189351, 506388284195, 479490755388, 959377364406, 195583914857, 413209544058, 320349264760, 150362068064, 297001383014, 370799165574, 407118331470, 101870179357, 856151290237, 41319896563, 296529708744)
+0,08010313099657651
 Executing command: du .noworflow/
-15292	.noworkflow/
+5732	.noworkflow/
 Executing command: du -hs .noworflow/
-15M	.noworkflow/
+5.6M	.noworkflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp06_find_gc
 
 
-Executing command: now run -d 3 test_pernicious_numbers.py 20000000
+Executing command: now run -e relevant gc.py CR954253.fasta
+6.987601519270889
+51,485144582009525
 Executing command: du .noworflow/
-480	.noworkflow/
+1926624	.noworkflow/
 Executing command: du -hs .noworflow/
-480K	.noworkflow/
+1.9G	.noworkflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/05msrgithubexps/05msrgithubexps_exp07_median
 
 
-Executing command: now run -cg metropolis_hastings.py 27000000
+Executing command: now run -e relevant median.py 500
+500791958400.5
+0,14438405600958504
 Executing command: du .noworflow/
-15292	.noworkflow/
+20676	.noworkflow/
 Executing command: du -hs .noworflow/
-15M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
-
-
-Executing command: now run -cg test_pernicious_numbers.py 20000000
-Executing command: du .noworflow/
-480	.noworkflow/
-Executing command: du -hs .noworflow/
-480K	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
-
-
-Executing command: now run -e none metropolis_hastings.py 27000000
-Executing command: du .noworflow/
-15292	.noworkflow/
-Executing command: du -hs .noworflow/
-15M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
-
-
-Executing command: now run -e none test_pernicious_numbers.py 20000000
-Executing command: du .noworflow/
-480	.noworkflow/
-Executing command: du -hs .noworflow/
-480K	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
-
-
-Executing command: now run -e relevant metropolis_hastings.py 27000000
-Executing command: du .noworflow/
-15292	.noworkflow/
-Executing command: du -hs .noworflow/
-15M	.noworkflow/
-
-
-Erasing noWorkflow: rm -rf .noworkflow/
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
-
-
-Executing command: now run -e relevant test_pernicious_numbers.py 20000000
-Executing command: du .noworflow/
-480	.noworkflow/
-Executing command: du -hs .noworflow/
-480K	.noworkflow/
+21M	.noworkflow/
 
 
 Erasing noWorkflow: rm -rf .noworkflow/
