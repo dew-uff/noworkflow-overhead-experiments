@@ -1,0 +1,336 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: python metropolis_hastings.py 27000000
+271.26603225502186
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: python test_pernicious_numbers.py 20000000
+58.99901118502021
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: python menger_sponge2.py
+443.8434491100488
+noWorkflow folder not found!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: now run metropolis_hastings.py 27000000
+Executing command: du .noworflow/
+15292	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: now run test_pernicious_numbers.py 20000000
+Executing command: du .noworflow/
+480	.noworkflow/
+Executing command: du -hs .noworflow/
+480K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: now run menger_sponge2.py
+Executing command: du .noworflow/
+33016	.noworkflow/
+Executing command: du -hs .noworflow/
+33M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: now run -d 2 metropolis_hastings.py 27000000
+Executing command: du .noworflow/
+15292	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: now run -d 2 test_pernicious_numbers.py 20000000
+Executing command: du .noworflow/
+480	.noworkflow/
+Executing command: du -hs .noworflow/
+480K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: now run -d 2 menger_sponge2.py
+Executing command: du .noworflow/
+33016	.noworkflow/
+Executing command: du -hs .noworflow/
+33M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: now run -d 3 metropolis_hastings.py 27000000
+Executing command: du .noworflow/
+15292	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: now run -d 3 test_pernicious_numbers.py 20000000
+Executing command: du .noworflow/
+480	.noworkflow/
+Executing command: du -hs .noworflow/
+480K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: now run -d 3 menger_sponge2.py
+Executing command: du .noworflow/
+33016	.noworkflow/
+Executing command: du -hs .noworflow/
+33M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: now run -cg metropolis_hastings.py 27000000
+Executing command: du .noworflow/
+15292	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: now run -cg test_pernicious_numbers.py 20000000
+Executing command: du .noworflow/
+480	.noworkflow/
+Executing command: du -hs .noworflow/
+480K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: now run -cg menger_sponge2.py
+Executing command: du .noworflow/
+33016	.noworkflow/
+Executing command: du -hs .noworflow/
+33M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: now run -cg -d 2 metropolis_hastings.py 27000000
+Executing command: du .noworflow/
+15292	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: now run -cg -d 2 test_pernicious_numbers.py 20000000
+Executing command: du .noworflow/
+480	.noworkflow/
+Executing command: du -hs .noworflow/
+480K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: now run -cg -d 2 menger_sponge2.py
+Executing command: du .noworflow/
+2115624	.noworkflow/
+Executing command: du -hs .noworflow/
+2.1G	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: now run -cg -d 3 metropolis_hastings.py 27000000
+Executing command: du .noworflow/
+15292	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: now run -cg -d 3 test_pernicious_numbers.py 20000000
+Executing command: du .noworflow/
+480	.noworkflow/
+Executing command: du -hs .noworflow/
+480K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: now run -cg -d 3 menger_sponge2.py
+Executing command: du .noworflow/
+33016	.noworkflow/
+Executing command: du -hs .noworflow/
+33M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: now run -e none metropolis_hastings.py 27000000
+Executing command: du .noworflow/
+15292	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: now run -e none test_pernicious_numbers.py 20000000
+Executing command: du .noworflow/
+480	.noworkflow/
+Executing command: du -hs .noworflow/
+480K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: now run -e none menger_sponge2.py
+Executing command: du .noworflow/
+33016	.noworkflow/
+Executing command: du -hs .noworflow/
+33M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp07_metropolis_hastings
+
+
+Executing command: now run -e relevant metropolis_hastings.py 27000000
+Executing command: du .noworflow/
+15292	.noworkflow/
+Executing command: du -hs .noworflow/
+15M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/04benchproglangs/04benchpl_exp14_pernicious_numbers_OK
+
+
+Executing command: now run -e relevant test_pernicious_numbers.py 20000000
+Executing command: du .noworflow/
+480	.noworkflow/
+Executing command: du -hs .noworflow/
+480K	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Entering experiment folder: /home/joaopedrolopez/Downloads/ArtigoNoWorkflowArthur/noworkflow-core-experiments/menger-sponge
+
+
+Executing command: now run -e relevant menger_sponge2.py
+Executing command: du .noworflow/
+33016	.noworkflow/
+Executing command: du -hs .noworflow/
+33M	.noworkflow/
+
+
+Erasing noWorkflow: rm -rf .noworkflow/
