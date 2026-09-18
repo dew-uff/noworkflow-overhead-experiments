@@ -87,6 +87,20 @@ run_exp_noworkflow_coarse_grain() {
   run_exp "$exp_path" "now run -cg ${script_input_and_options}"
 }
 
+run_exp_noworkflow_coarse_grain_depth_2() {
+  local exp_path="$1"
+  local script_input_and_options="${2}"
+
+  run_exp "$exp_path" "now run -cg -d 2 ${script_input_and_options}"
+}
+
+run_exp_noworkflow_coarse_grain_depth_3() {
+  local exp_path="$1"
+  local script_input_and_options="${2}"
+
+  run_exp "$exp_path" "now run -cg -d 3 ${script_input_and_options}"
+}
+
 run_exp_noworkflow_no_evaluation() {
   local exp_path="$1"
   local script_input_and_options="${2}"
@@ -188,6 +202,18 @@ for i in "${!exp_paths[@]}"; do
     a_path="${exp_paths[$i]}"
     a_script_input_and_option="${exp_script_input_and_options[$i]}"
     run_exp_noworkflow_coarse_grain "$a_path" "$a_script_input_and_option"
+done
+
+for i in "${!exp_paths[@]}"; do
+    a_path="${exp_paths[$i]}"
+    a_script_input_and_option="${exp_script_input_and_options[$i]}"
+    run_exp_noworkflow_coarse_grain_depth_2 "$a_path" "$a_script_input_and_option"
+done
+
+for i in "${!exp_paths[@]}"; do
+    a_path="${exp_paths[$i]}"
+    a_script_input_and_option="${exp_script_input_and_options[$i]}"
+    run_exp_noworkflow_coarse_grain_depth_3 "$a_path" "$a_script_input_and_option"
 done
 
 for i in "${!exp_paths[@]}"; do
