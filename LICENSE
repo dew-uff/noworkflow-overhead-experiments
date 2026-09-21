@@ -1,0 +1,35 @@
+MIT License
+
+Copyright (c) 2026 Universidade Federal Fluminense
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE ON THIRD-PARTY MATERIAL
+
+This license covers only the execution harness and the analysis scripts written
+by the authors of this repository (run.sh and experimental_analysis/).
+
+The Python scripts under 03dataoneexps/, 04benchproglangs/, 05msrgithubexps/,
+and menger-sponge/, as well as their input data, are third-party material
+collected from public repositories and research data sites. Each of them remains
+under the license and terms of its original authors and is included here only to
+make the measurements reported in the accompanying article reproducible. The
+Scripts section of README.md lists the origin and the license of each script.
