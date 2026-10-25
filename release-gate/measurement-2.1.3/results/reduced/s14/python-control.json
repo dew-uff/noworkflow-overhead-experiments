@@ -1,0 +1,57 @@
+{
+ "sid": "s14",
+ "config": "python-control",
+ "cmd": "python menger_sponge2.py",
+ "status": 0,
+ "elapsed": 2.1401590779423714,
+ "store_bytes": 0,
+ "peak_rss": 77266944,
+ "platform": "linux",
+ "stdout": "0.9297705343924463\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "90cea9fa2c66c468a54838b12d3fc5ba7f90abf8",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "55fa7e1c3646814ebbe3873aac96e4647b48fd1c",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "globals": {
+   "start": "3804614.470840391"
+  },
+  "returns": {
+   "<module>": [
+    2,
+    "dcfe382a46b7d4abd5cfa8f3"
+   ],
+   "cross_product": [
+    2,
+    "054f5fe9840b47a980f89ed8"
+   ],
+   "in_sponge": [
+    22500,
+    "6766f77612df344bb0a84c39"
+   ],
+   "length": [
+    2,
+    "81803bef6d2c960d7a87f34d"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "outside_unit_cube": [
+    22500,
+    "871c90cdeed419e2b5521e4d"
+   ],
+   "plot_slice": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ }
+}

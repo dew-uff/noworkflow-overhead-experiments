@@ -1,0 +1,66 @@
+{
+ "sid": "s2",
+ "config": "cg-d2",
+ "cmd": "run -cg -d 2 main.py",
+ "status": 0,
+ "elapsed": 5.045377927832305,
+ "store_bytes": 88055202,
+ "peak_rss": 300503040,
+ "platform": "linux",
+ "stdout": "1,2597582512535155\n",
+ "stderr": "",
+ "files": {
+  ".gitignore": "9aaae3fc7f669c65b7d62f4a52fc6d775ddd8e2e",
+  "DailyAverageWQStats.ipynb": "94ba5cd4241882712a0ca9cab81763e60921bde2",
+  "cee6440_ex3_loganriver.sqlite": "241e48bde5b6e8cc81b6cfda0ca87c3fe60a6f14",
+  "cee6440_ex3_loganriver.zip": "d9a56c20370d44d3186aa5ada2804b322f87986c",
+  "main.py": "4b9ce5ff87f533013690103232339916fe15d282",
+  "out.png": "f75569c76a54f6f01135c31ec5945f5c79d08555"
+ },
+ "digests": {
+  "globals": {
+   "start": "3800745.443674638"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "cell_1": [
+    1,
+    "23129c543d1926250f14003b"
+   ],
+   "cell_2": [
+    1,
+    "ed809c0da082c687e7a6bc82"
+   ],
+   "cell_3": [
+    1,
+    "9eb457d1c43a5b46529a9a45"
+   ],
+   "cell_4": [
+    1,
+    "0e4dfa69eae2522234d1610b"
+   ],
+   "cell_5": [
+    1,
+    "646d5cae769828689175329b"
+   ],
+   "cell_6": [
+    1,
+    "4684b5f42593cf7d9748228a"
+   ],
+   "cell_7": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/main.py"
+  ]
+ }
+}

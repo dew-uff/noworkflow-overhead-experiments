@@ -25,6 +25,7 @@ scripts, comparing pure Python execution against several provenance collection c
 | `experimental_analysis/results/` | Raw output of the 10 executions (`output_trial1.txt` … `output_trial10.txt`) |
 | `experimental_analysis/scripts/` | `summarize_results_to_csv_file.py`, which parses the raw output into CSV |
 | `noWorkflow 2 experiments.xlsx` | Spreadsheet with the consolidated measurements |
+| `release-gate/` | From noWorkflow 2.2.0 on: the evaluation run on each release candidate, which must compute what plain Python computes before the release is tagged (its README), and the measurement of 2.1.3 that led to it |
 
 ## Scripts
 

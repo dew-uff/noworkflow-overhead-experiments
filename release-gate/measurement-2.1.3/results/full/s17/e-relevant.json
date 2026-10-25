@@ -1,0 +1,35 @@
+{
+ "sid": "s17",
+ "config": "e-relevant",
+ "cmd": "run -e relevant test_sqrt_matrix.py 6000",
+ "status": 0,
+ "elapsed": 596.132651263848,
+ "store_bytes": 57635468,
+ "peak_rss": 1656107008,
+ "platform": "linux",
+ "stdout": "589.9004193833098\n",
+ "stderr": "",
+ "files": {
+  "test_sqrt_matrix.py": "e93bb74fb9aee0a32972680275581e941a468a0c"
+ },
+ "digests": {
+  "globals": {},
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "sqrt_matrix": [
+    1,
+    "05cdfe83e8686d82e759b77e"
+   ]
+  },
+  "seeded": [
+   "<run>/test_sqrt_matrix.py"
+  ]
+ }
+}

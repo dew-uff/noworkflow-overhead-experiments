@@ -1,0 +1,38 @@
+{
+ "sid": "s6",
+ "config": "d2",
+ "cmd": "run -d 2 cvar.py 500",
+ "status": 0,
+ "elapsed": 2.0180847882293165,
+ "store_bytes": 20989697,
+ "peak_rss": 96677888,
+ "platform": "linux",
+ "stdout": "959364222.88\n0,05069976719096303\n",
+ "stderr": "",
+ "files": {
+  "cvar.py": "0d23817510c5ad16acefdee026e9bd55a84834d3"
+ },
+ "digests": {
+  "globals": {
+   "n": "list[500]:bc3d46465543f30cef5106da",
+   "start": "3800769.787771065"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "get_empirical_CVaR": [
+    1,
+    "5772b0f726bc33028d17b867"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/cvar.py"
+  ]
+ }
+}

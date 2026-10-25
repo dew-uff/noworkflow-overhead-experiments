@@ -1,0 +1,35 @@
+{
+ "sid": "s17",
+ "config": "cg-d2",
+ "cmd": "run -cg -d 2 test_sqrt_matrix.py 6000",
+ "status": 0,
+ "elapsed": 341.18173998966813,
+ "store_bytes": 25813639,
+ "peak_rss": 1616306176,
+ "platform": "linux",
+ "stdout": "338.6536804190837\n",
+ "stderr": "",
+ "files": {
+  "test_sqrt_matrix.py": "e93bb74fb9aee0a32972680275581e941a468a0c"
+ },
+ "digests": {
+  "globals": {},
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "sqrt_matrix": [
+    1,
+    "05cdfe83e8686d82e759b77e"
+   ]
+  },
+  "seeded": [
+   "<run>/test_sqrt_matrix.py"
+  ]
+ }
+}

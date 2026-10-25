@@ -1,0 +1,38 @@
+{
+ "sid": "s16",
+ "config": "d2",
+ "cmd": "run -d 2 test_compute_FFT.py 20000",
+ "status": 0,
+ "elapsed": 21.131673326250166,
+ "store_bytes": 17066701,
+ "peak_rss": 19312324608,
+ "platform": "linux",
+ "stdout": "18.944594382774085\n",
+ "stderr": "",
+ "files": {
+  "test_compute_FFT.py": "6311dc06cbe13e6805fdf0c4ac9c64dd267b119d"
+ },
+ "digests": {
+  "globals": {
+   "dt1": "3800896.390519475",
+   "n": "20000"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "compute_FFT": [
+    1,
+    "30a3be3de757bae151f8c3c1"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/test_compute_FFT.py"
+  ]
+ }
+}

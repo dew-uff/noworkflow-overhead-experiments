@@ -1,0 +1,38 @@
+{
+ "sid": "s15",
+ "config": "cg-d3",
+ "cmd": "run -cg -d 3 test_belief_propagation.py 20000",
+ "status": 0,
+ "elapsed": 485.4327431721613,
+ "store_bytes": 445378907,
+ "peak_rss": 4668497920,
+ "platform": "linux",
+ "stdout": "441.9366935887374\n",
+ "stderr": "",
+ "files": {
+  "test_belief_propagation.py": "7908eae78c98d57a223909572dfa12a97ff58ada"
+ },
+ "digests": {
+  "globals": {
+   "N": "20000",
+   "dti": "3800208.913760513"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "belief_propagation": [
+    1,
+    "2ab7976f5ef6a9498164d9ff"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/test_belief_propagation.py"
+  ]
+ }
+}

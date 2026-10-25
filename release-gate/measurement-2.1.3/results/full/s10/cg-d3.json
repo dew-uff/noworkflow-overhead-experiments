@@ -1,0 +1,38 @@
+{
+ "sid": "s10",
+ "config": "cg-d3",
+ "cmd": "run -cg -d 3 median.py 500",
+ "status": 0,
+ "elapsed": 2.0435127266682684,
+ "store_bytes": 20510812,
+ "peak_rss": 100147200,
+ "platform": "linux",
+ "stdout": "500791958400.5\n0,09505914989858866\n",
+ "stderr": "",
+ "files": {
+  "median.py": "9e8bd9728e75af3449ed809889a004bf002eb6a3"
+ },
+ "digests": {
+  "globals": {
+   "start": "3800789.521375275",
+   "unsort_list": "list[500]:d5cf7adf295a6ed67d618894"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "median": [
+    1,
+    "debd89961bc7ce439cd87254"
+   ]
+  },
+  "seeded": [
+   "<run>/median.py"
+  ]
+ }
+}

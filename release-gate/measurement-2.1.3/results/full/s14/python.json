@@ -1,0 +1,20 @@
+{
+ "sid": "s14",
+ "config": "python",
+ "cmd": "python menger_sponge2.py",
+ "status": "timeout",
+ "elapsed": 1800.5617262418382,
+ "store_bytes": 0,
+ "peak_rss": 237068288,
+ "platform": "linux",
+ "stdout": "",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "f0c45eb1f861d7b66004c95aa3c1cccd14ff5bdb",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": null
+}

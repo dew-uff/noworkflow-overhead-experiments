@@ -1,0 +1,38 @@
+{
+ "sid": "s19",
+ "config": "python-control",
+ "cmd": "python test_evaluate_functions.py 80000",
+ "status": 0,
+ "elapsed": 93.82497202092782,
+ "store_bytes": 0,
+ "peak_rss": 36429824,
+ "platform": "linux",
+ "stdout": "92.93116120807827\n",
+ "stderr": "",
+ "files": {
+  "test_evaluate_functions.py": "da692205aec8300da922ba64f4f47e18c1bf097c"
+ },
+ "digests": {
+  "globals": {
+   "dti": "3800521.443518916",
+   "n": "80000"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "evaluate_functions": [
+    1,
+    "5b35dc46eb7fb98613aa6a2e"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/test_evaluate_functions.py"
+  ]
+ }
+}

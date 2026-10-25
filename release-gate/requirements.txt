@@ -1,0 +1,16 @@
+contourpy==1.4.0          # via matplotlib
+cycler==0.12.1            # via matplotlib
+fonttools==4.67.0         # via matplotlib
+h5py==3.16.0              # via -r requirements.in
+kiwisolver==1.5.1         # via matplotlib
+matplotlib==3.11.2        # via -r requirements.in
+numpy==2.5.4              # via contourpy, h5py, matplotlib, pandas, scipy, -r requirements.in
+packaging==26.3           # via matplotlib
+pandas==3.1.0             # via -r requirements.in
+pillow==13.0.0            # via matplotlib
+pyparsing==3.3.3          # via matplotlib
+python-dateutil==3.0.0    # via matplotlib, pandas
+scipy==1.18.1             # via -r requirements.in
+six==1.17.0               # via python-dateutil
+suds-community==1.2.0     # via -r requirements.in
+tzdata==2026.5            # via python-dateutil

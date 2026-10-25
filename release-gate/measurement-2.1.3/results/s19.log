@@ -1,0 +1,11 @@
+s19 python cached
+s19 python-control cached
+s19 now 0 43.2s
+s19 d2 cached
+s19 d3 0 43.2s
+s19 cg 0 40.2s
+s19 cg-d2 cached
+s19 cg-d3 0 39.2s
+s19 e-none 0 34.2s
+s19 e-relevant 0 38.2s
+DONE

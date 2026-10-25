@@ -1,0 +1,54 @@
+{
+ "sid": "s8",
+ "config": "now",
+ "cmd": "run curves.py 5000 5000 5000 5000 5000 5000 5000 5000",
+ "status": 0,
+ "elapsed": 2.01601284975186,
+ "store_bytes": 17474562,
+ "peak_rss": 106278912,
+ "platform": "linux",
+ "stdout": "[(5000, 5000)]\n0,005053561180830002\n",
+ "stderr": "",
+ "files": {
+  "curves.py": "87accd637e48af0e91561b14f3209a387861171a"
+ },
+ "digests": {
+  "globals": {
+   "curve_distance_epsilon": "1e-30",
+   "n1": "5000",
+   "n2": "5000",
+   "n3": "5000",
+   "n4": "5000",
+   "n5": "5000",
+   "n6": "5000",
+   "n7": "5000",
+   "n8": "5000",
+   "start": "3800779.695723626"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "calc_sq_distance": [
+    2,
+    "0bff1a89bbadcc6374ecd76b"
+   ],
+   "cubic": [
+    1,
+    "05a0c10be63342b5e992eb74"
+   ],
+   "cubic_recursive": [
+    1,
+    "05a0c10be63342b5e992eb74"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/curves.py"
+  ]
+ }
+}

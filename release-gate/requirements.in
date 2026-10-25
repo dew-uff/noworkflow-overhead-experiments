@@ -1,0 +1,9 @@
+# What the 21 scripts import, beyond the standard library and noWorkflow.
+# numpy, pandas and scipy at the versions of the measurement with 2.1.3
+# (gems-uff/noworkflow#467), so that the two measurements compare.
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+matplotlib
+h5py
+suds-community

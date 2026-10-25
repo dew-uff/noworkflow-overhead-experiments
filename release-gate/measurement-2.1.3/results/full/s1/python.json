@@ -1,0 +1,52 @@
+{
+ "sid": "s1",
+ "config": "python",
+ "cmd": "python main.py",
+ "status": 0,
+ "elapsed": 2.0192836369387805,
+ "store_bytes": 0,
+ "peak_rss": 167587840,
+ "platform": "linux",
+ "stdout": "0,6418383559212089\n",
+ "stderr": "",
+ "files": {
+  "Accessing_Web_Sources.ipynb": "26c2d5621db510899406d543d32cbbc7620b5983",
+  "input.bin": "50d81180722af6559907cff78a97b1158b8f62f7",
+  "main.py": "7ac636d02869ad35b72b45f26c6dea71e988ab0e",
+  "output.png": "22437ee1a0b81e56cd2bd419d77b0781f5f807a1"
+ },
+ "digests": {
+  "globals": {
+   "start": "3800726.808662016"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "cell_1": [
+    1,
+    "76aedbc06f7af3e78248e210"
+   ],
+   "cell_2": [
+    1,
+    "4caa13d33f19286727b2968e"
+   ],
+   "cell_3": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "get_input": [
+    1,
+    "a852e830ce20209de4102c51"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/main.py"
+  ]
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "sid": "s21",
+ "config": "d3",
+ "cmd": "run -d 3 test_pernicious_numbers.py 20000",
+ "status": 0,
+ "elapsed": 34.245147809851915,
+ "store_bytes": 715769430,
+ "peak_rss": 2151272448,
+ "platform": "linux",
+ "stdout": "12.69348113797605\n",
+ "stderr": "",
+ "files": {
+  "test_pernicious_numbers.py": "fd5a55a92ed500da107585437c7aa1e04a01f7e6"
+ },
+ "digests": {
+  "globals": {
+   "N": "20000",
+   "dti": "3804683.194539967"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "find_pernicious_numbers": [
+    1,
+    "3919a97a502c7ccfac3989b8"
+   ],
+   "get_number_of_ones": [
+    60925,
+    "7bccd9652f5eef3ed020f192"
+   ],
+   "is_prime_number": [
+    60925,
+    "4ab0ef019c9dc72147f66e46"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/test_pernicious_numbers.py"
+  ]
+ }
+}

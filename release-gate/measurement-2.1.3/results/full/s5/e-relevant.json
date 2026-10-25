@@ -1,0 +1,129 @@
+{
+ "sid": "s5",
+ "config": "e-relevant",
+ "cmd": "run -e relevant export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z",
+ "status": 0,
+ "elapsed": 3.014545545913279,
+ "store_bytes": 38741443,
+ "peak_rss": 141733888,
+ "platform": "linux",
+ "stdout": "Site: FOR\nDataset: discharge_sharp\nStart export: 2010-01-01 01:00:00\nEnd export: 2010-01-02 01:00:00\nExporting 289 measurements...\nWrote output data to FOR_discharge_sharp.csv\n\n0,13454869203269482\n",
+ "stderr": "",
+ "files": {
+  ".gitignore": "a4ef1a680591d3b95a9f44948d690395cacb59f3",
+  "AguaSaludDischarge.h5": "edf64722abe181a30daf7cad44db97d846f9d545",
+  "FOR_discharge_sharp.csv": "acff98fc2c4b56d84f161a539d173897c8cc4744",
+  "README.md": "3152f2197d29713e9afb8a96d90e6a134fc70a8b",
+  "export_discharge.py": "e9b1fa8e9d9e23e0bfc4c8ad994efe7d5b434ba1"
+ },
+ "digests": {
+  "globals": {
+   "start": "3800768.270988714"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "comment_1": [
+    1,
+    "db63a79e1a9ef613c44e9413"
+   ],
+   "comment_10": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "comment_11": [
+    1,
+    "7d0e005fa34382d39495ddfe"
+   ],
+   "comment_12": [
+    1,
+    "dc169425e7b9b4eb6374830d"
+   ],
+   "comment_13": [
+    1,
+    "fc74330c9023c3eccb061287"
+   ],
+   "comment_14": [
+    1,
+    "a4979a3a7835eb61a1ce2471"
+   ],
+   "comment_15": [
+    1,
+    "a01a136cbcb12ae124ff1e0c"
+   ],
+   "comment_16": [
+    1,
+    "8eb4a95d80b2bd1084155a69"
+   ],
+   "comment_17": [
+    1,
+    "719af3e81cb037c8573d6469"
+   ],
+   "comment_18": [
+    1,
+    "54f6a68e5f80c02088863374"
+   ],
+   "comment_19": [
+    1,
+    "25827ada27d0fe3726b1c986"
+   ],
+   "comment_2": [
+    1,
+    "7a9e3984b265b1f14c990333"
+   ],
+   "comment_20": [
+    1,
+    "5b391e0ed4d5c1dbd72e7df3"
+   ],
+   "comment_21": [
+    1,
+    "5b391e0ed4d5c1dbd72e7df3"
+   ],
+   "comment_22": [
+    1,
+    "63caa1952a4e661b8cb87d0b"
+   ],
+   "comment_23": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "comment_3": [
+    1,
+    "00073ca36e45f0f971eb75d6"
+   ],
+   "comment_4": [
+    1,
+    "45b9d0ee6dc5720b062af9e0"
+   ],
+   "comment_5": [
+    1,
+    "85cc9fe09cf6552edebbd1d9"
+   ],
+   "comment_6": [
+    1,
+    "0ca5159f6d25f53ce31a757b"
+   ],
+   "comment_7": [
+    1,
+    "968c2b13adb0cd3185e8a423"
+   ],
+   "comment_8": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "comment_9": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/export_discharge.py"
+  ]
+ }
+}

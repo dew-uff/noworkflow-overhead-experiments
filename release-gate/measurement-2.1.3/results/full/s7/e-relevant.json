@@ -1,0 +1,42 @@
+{
+ "sid": "s7",
+ "config": "e-relevant",
+ "cmd": "run -e relevant eq_solver.py 500",
+ "status": 0,
+ "elapsed": 4.03506044158712,
+ "store_bytes": 83781885,
+ "peak_rss": 219451392,
+ "platform": "linux",
+ "stdout": "0,32530667493119836\n",
+ "stderr": "",
+ "files": {
+  "eq_solver.py": "0cb02dbb67b6a0fcbdb4ed9efce00f463d24ae48"
+ },
+ "digests": {
+  "globals": {
+   "F_solution": "50.0",
+   "start": "3800779.017283427"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "main": [
+    1,
+    "f44668a27a2b6ced3f024524"
+   ],
+   "solve": [
+    200,
+    "f6deeba4b08f69ffc0af2597"
+   ],
+   "solve.<locals>.<lambda>": [
+    1245,
+    "0286588448127d2f60269f67"
+   ]
+  },
+  "seeded": [
+   "<run>/eq_solver.py"
+  ]
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "sid": "s11",
+ "config": "python",
+ "cmd": "python gc.py CR954253.fasta",
+ "status": 0,
+ "elapsed": 1.0098712928593159,
+ "store_bytes": 0,
+ "peak_rss": 13934592,
+ "platform": "linux",
+ "stdout": "6.987601519270889\n0,007412567734718323\n",
+ "stderr": "",
+ "files": {
+  "CR954253.fasta": "c8ce208679c6a08939a5ecdaf9d30a9b6ae95a5e",
+  "gc.py": "b28ab2cc12fa68e67031b00c3fdd0d2a300efca2"
+ },
+ "digests": {
+  "globals": {
+   "f": "_io.TextIOWrapper:unpicklable",
+   "start": "3800789.168398381",
+   "texto": "str:c0f465195cb098450942f400"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "find_gc": [
+    1,
+    "2af9f68a8d8cc86f514777c5"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/gc.py"
+  ]
+ }
+}

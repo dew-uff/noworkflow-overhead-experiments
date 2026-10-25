@@ -1,0 +1,53 @@
+{
+ "sid": "s12",
+ "config": "e-none",
+ "cmd": "run -e none mov_robots.py",
+ "status": 0,
+ "elapsed": 3.02361720521003,
+ "store_bytes": 41105259,
+ "peak_rss": 168501248,
+ "platform": "linux",
+ "stdout": "0,02748517505824566\n",
+ "stderr": "",
+ "files": {
+  "mov_robots.py": "933acdab99197b7d1e0815211376098aa02718b5",
+  "source/leftWheelPositions.csv": "5f3401604c46566a356199cf816795f7df0e4a29",
+  "source/rightWheelPositions.csv": "02f91bbe4ee5d512773e981548c317bf5190bc72",
+  "source/straightWheelPositions.csv": "4df0e210721801c88213e2dc64575f00d8e5cf99"
+ },
+ "digests": {
+  "globals": {
+   "iteration": "nd:float64(1, 20):ebc62d931008496626ac11cd",
+   "t1": "3800873.883654558"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "finalPoseEstimation": [
+    3,
+    "1e018ab84b3b6736ada034b7"
+   ],
+   "finalVisualization": [
+    1,
+    "3a6f1b1f9e2c38b578293883"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "readData": [
+    12,
+    "2f1ad89dce0c636deae1e80a"
+   ],
+   "typeConverter": [
+    12,
+    "c84e8cd204a569c2aa033bfb"
+   ]
+  },
+  "seeded": [
+   "<run>/mov_robots.py"
+  ]
+ }
+}

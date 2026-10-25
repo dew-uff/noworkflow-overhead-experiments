@@ -1,0 +1,51 @@
+{
+ "sid": "s3",
+ "config": "e-relevant",
+ "cmd": "run -e relevant main.py",
+ "status": 0,
+ "elapsed": 4.020326136145741,
+ "store_bytes": 69465618,
+ "peak_rss": 208248832,
+ "platform": "linux",
+ "stdout": "0,24916973384097219\n",
+ "stderr": "",
+ "files": {
+  "main.py": "0d7edbd719bee2fc626fd2e22f62aae39ad28b2d",
+  "main_speedupy.bin": "0874f4893dd2765b9ca75ab3833f54c18171cb97",
+  "out.png": "72931faab7fa673808ca267fcdadab3ba57349f8"
+ },
+ "digests": {
+  "globals": {
+   "start": "3800759.626495501"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "cell_1": [
+    1,
+    "34ba89b8bbe22719943fa416"
+   ],
+   "cell_2": [
+    1,
+    "4644487141b4f9156944a847"
+   ],
+   "cell_3": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "get_input": [
+    1,
+    "a3aa39b6c2485821f9f1f422"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ]
+  },
+  "seeded": [
+   "<run>/main.py"
+  ]
+ }
+}

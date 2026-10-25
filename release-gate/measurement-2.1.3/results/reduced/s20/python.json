@@ -1,0 +1,42 @@
+{
+ "sid": "s20",
+ "config": "python",
+ "cmd": "python metropolis_hastings.py 20000",
+ "status": 0,
+ "elapsed": 1.0095047047361732,
+ "store_bytes": 0,
+ "peak_rss": 12607488,
+ "platform": "linux",
+ "stdout": "0.4628191217780113\n",
+ "stderr": "",
+ "files": {
+  "metropolis_hastings.py": "e08ac534a2416de85c8163fd3191e2ea366e6aed"
+ },
+ "digests": {
+  "globals": {
+   "N": "20000",
+   "start": "3804626.665117009"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "f": [
+    20001,
+    "f947998ee51ad2d3a1b45d3a"
+   ],
+   "main": [
+    1,
+    "a19280af6ef721393ea1abb2"
+   ],
+   "markov_chain_function": [
+    1,
+    "da0eaa556efaae53186df4bc"
+   ]
+  },
+  "seeded": [
+   "<run>/metropolis_hastings.py"
+  ]
+ }
+}

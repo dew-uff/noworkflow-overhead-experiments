@@ -1,0 +1,16 @@
+{
+ "sid": "s21",
+ "config": "python-control",
+ "cmd": "python test_pernicious_numbers.py 20000000",
+ "status": "timeout",
+ "elapsed": 1800.5851557170972,
+ "store_bytes": 0,
+ "peak_rss": 34299904,
+ "platform": "linux",
+ "stdout": "",
+ "stderr": "",
+ "files": {
+  "test_pernicious_numbers.py": "fd5a55a92ed500da107585437c7aa1e04a01f7e6"
+ },
+ "digests": null
+}
