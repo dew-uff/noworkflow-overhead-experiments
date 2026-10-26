@@ -238,8 +238,8 @@ def cmd_check(a):
         print("\napply would refuse:", exc)
     if "cpuset" not in (d["cgroup_controllers"] or ""):
         print("\nWARNING: no cpuset controller in cgroup v2: AllowedCPUs= would do nothing")
-    if shutil.which("bench"):
-        print("\nbench status:", run("bench", "status", check=False))
+    if shutil.which("lock"):
+        print("\nlock status:", run("lock", "status", check=False))
     s = state()
     print("\nprepared now:", "yes, since " + s["applied_at"] if s else "no")
 
@@ -258,8 +258,8 @@ def cmd_apply(a):
     busy = [u for u in BUSY_UNITS if run("systemctl", "is-active", u, check=False) == "active"]
     if busy:
         raise SystemExit(f"{', '.join(busy)} running now: wait for it to end")
-    if shutil.which("bench") and subprocess.run(["bench", "status"], capture_output=True).returncode != 0:
-        print("WARNING: `bench status` does not report a reservation", file=sys.stderr)
+    if shutil.which("lock") and "Reserva ativa" not in run("lock", "status", check=False):
+        print("WARNING: `lock status` does not report a reservation", file=sys.stderr)
     c = choose(a.run_cpu, a.harness_cpu, a.others)
     t = turbo()
     s = dict(c)

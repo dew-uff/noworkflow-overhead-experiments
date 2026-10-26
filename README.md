@@ -26,6 +26,7 @@ scripts, comparing pure Python execution against several provenance collection c
 | `experimental_analysis/scripts/` | `summarize_results_to_csv_file.py`, which parses the raw output into CSV |
 | `noWorkflow 2 experiments.xlsx` | Spreadsheet with the consolidated measurements |
 | `release-gate/` | From noWorkflow 2.2.0 on: the evaluation run on each release candidate, which must compute what plain Python computes before the release is tagged (its README), and the measurement of 2.1.3 that led to it |
+| `beyond-python/` | `overhead.py`: the overhead of the case study of the paper's section "Beyond Python" (the three trials of `noworkflow-analysis/beyond-python/run.sh` without noWorkflow, with `--external-tracer none` and with the default `argv`), fresh directory per repetition, order of the configurations rotated |
 
 ## Scripts
 

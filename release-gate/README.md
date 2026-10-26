@@ -33,7 +33,7 @@ cd release-gate
 python3 setup.py $W ~/gate/env-$V-$H --python python3.12
 ```
 
-**2. The machine is reserved** with the lab's own tool, outside this repository: no other
+**2. The machine is reserved** with the lab's own tool ([`lock`](https://github.com/gems-uff/lock)), outside this repository: no other
 users while either pass runs.
 
 **3. The correctness pass**, in parallel. `prepare.py launch` runs the gate as the calling user
