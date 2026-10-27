@@ -2,7 +2,7 @@
 candidate wheel, stopping at the first run that computes something other than plain Python.
 
   python3 gate.py correctness RESULTS --env ENV [--workers 6] [--budget 110] [--only s1,s2] [--configs now,d2]
-  python3 gate.py timing RESULTS --env ENV [--repetitions 10] [--retries 2] [--only ...] [--configs ...]
+  python3 gate.py timing RESULTS --env ENV [--repetitions 10] [--retries 2] [--rest 600] [--only ...] [--configs ...]
 
 ENV is what setup.py made for the candidate. RESULTS gets correctness/ and timing/, one JSON per
 run; a run already recorded is skipped, so the same command resumes a pass, on the same
@@ -22,7 +22,10 @@ repetition. Each run is compared with the plain run of the correctness pass on s
 and files (the hook only seeds: its digests would weigh on the times). On a machine prepared
 by prepare.py the runs are pinned to its run CPU and the harness to its own; interference
 (other work, the run CPU's frequency, throttling) is recorded with each run, and a disturbed
-run is repeated, up to --retries more times.
+run is repeated, up to --retries more times. With --rest S, the gate waits S seconds before the
+first run of each repetition that has runs left, so that the disk settles after the stores the
+previous repetition wrote and deleted (hundreds of GiB); each run records the rest it came after
+("rest_s").
 
 No run is ever interrupted for its duration. A run that the kernel kills for memory (the cap
 of the unit prepare.py launches) is a result, "oom", recorded and not repeated.
@@ -559,7 +562,7 @@ class Gate:
 
     # ------------------------------------------------------------ timing
 
-    def timing(self, repetitions, retries, partial):
+    def timing(self, repetitions, retries, partial, rest=0):
         base = self.results / "correctness"
         clean = base / "CLEAN.json"
         if not clean.exists():
@@ -580,9 +583,16 @@ class Gate:
         unfinished = set(clean["unfinished"])
         configs = ["python"] + self.configs
         log(f"timing of {self.candidate['wheel']} ({self.candidate['sha256'][:12]}): {repetitions} repetitions, "
-            f"run CPU {run_cpu}" + (f"; not timed, out of memory in the correctness pass: {sorted(unfinished)}" if unfinished else ""))
+            f"run CPU {run_cpu}" + (f", {rest} s of rest before each repetition" if rest else "")
+            + (f"; not timed, out of memory in the correctness pass: {sorted(unfinished)}" if unfinished else ""))
         try:
             for rep in range(1, repetitions + 1):
+                left = [(sid, config) for sid, _, _ in self.scripts for config in configs
+                        if f"{sid} {config}" not in unfinished
+                        and not (self.pdir / sid / config / f"rep{rep:02d}.json").exists()]
+                if rest and left:
+                    log(f"rep {rep}: {len(left)} runs left; resting {rest} s before the first")
+                    time.sleep(rest)
                 for sid, folder, args in self.scripts:
                     plain = json.loads((base / sid / "python.json").read_text())
                     ignore = compare.noise(plain, json.loads((base / sid / "python-control.json").read_text()), deep=False)
@@ -604,7 +614,7 @@ class Gate:
                                 if rec["status"] in compare.UNFINISHED or not rec["disturbed"] or attempt == retries:
                                     break
                                 log(f"{sid} {config} rep {rep}: disturbed ({'; '.join(rec['disturbed'])}), again")
-                            rec["repetition"], rec["attempts"] = rep, attempts
+                            rec["repetition"], rec["attempts"], rec["rest_s"] = rep, attempts, rest
                             write_json(path, rec)
                             log(f"{sid} {config} rep {rep}: {rec['status']} {rec['wall']:.2f}s "
                                 f"(reported {rec['reported']}) peak {rec['peak_rss'] / 2**30:.1f} GiB"
@@ -643,6 +653,8 @@ def main():
     t.add_argument("--repetitions", type=int, default=10)
     t.add_argument("--retries", type=int, default=2, help="more runs of a disturbed repetition")
     t.add_argument("--partial", action="store_true", help="accept a correctness pass of a subset")
+    t.add_argument("--rest", type=int, default=0,
+                   help="seconds to wait before the first run of each repetition, for the disk to settle")
     a = ap.parse_args()
     gate = Gate(a, a.pass_)
 
@@ -655,7 +667,7 @@ def main():
         if a.pass_ == "correctness":
             gate.correctness(a.workers, a.budget)
         else:
-            gate.timing(a.repetitions, a.retries, a.partial)
+            gate.timing(a.repetitions, a.retries, a.partial, a.rest)
     except Stop:
         sys.exit(EXIT_DIFFERS)
     except KeyboardInterrupt:

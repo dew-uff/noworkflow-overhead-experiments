@@ -108,6 +108,12 @@ each run) and the paper's methodology states them.
   the like), in both passes.
 - **The order of the configurations rotates** in each repetition of the timing pass (10 by
   default, as in the paper), plain Python included.
+- **A rest before each repetition** (`--rest 600`, off by default): a repetition writes and
+  deletes hundreds of GiB of stores, and the start of the next one, with noWorkflow writing a
+  new store per run, was measured a few hundredths of a second slower on the SSD. The gate
+  waits that long before the first run of each repetition that still has runs, and each run
+  records the rest it came after (`rest_s`), so that runs made before and after the option
+  was turned on can be told apart.
 - **Interference** is sampled every second during a timing run: other work on the run's CPU
   (its busy time beyond the run's own CPU time), the CPUs busy elsewhere, the run CPU's
   frequency against its maximum, thermal throttling, and the processes that used the CPU
