@@ -1,9 +1,13 @@
 """Overhead of the Beyond Python case study: the three trials of run.sh
-without noWorkflow, with `now run --external-tracer none` and with
-`now run` (argv, the default). Fresh directory per repetition and
+without noWorkflow, with `now run --external-tracer none`, with
+`now run` (argv, the default) and, on Linux, with
+`now run --external-tracer strace`. Fresh directory per repetition and
 configuration, order of the configurations rotated per repetition.
 
-usage: overhead.py <checkout> <analysis>/beyond-python <dataset> <workdir> [reps]
+<venv> is an environment with the noWorkflow under measurement and pandas
+(the wheel of a release candidate, or a checkout's .venv).
+
+usage: overhead.py <venv> <analysis>/beyond-python <dataset> <workdir> [reps]
 """
 import hashlib
 import json
@@ -14,15 +18,17 @@ import subprocess
 import sys
 import time
 
-checkout, case, dataset, work = sys.argv[1:5]
+venv, case, dataset, work = sys.argv[1:5]
 reps = int(sys.argv[5]) if len(sys.argv) > 5 else 3
-py = os.path.join(checkout, ".venv/bin/python")
-now = os.path.join(checkout, ".venv/bin/now")
+py = os.path.join(venv, "bin/python")
+now = os.path.join(venv, "bin/now")
 CFGS = {
     "plain": [py, "fraud_pipeline.py"],
     "none": [now, "run", "--external-tracer", "none", "fraud_pipeline.py"],
     "argv": [now, "run", "fraud_pipeline.py"],
 }
+if sys.platform == "linux":
+    CFGS["strace"] = [now, "run", "--external-tracer", "strace", "fraud_pipeline.py"]
 PATCHES = [None, "patch_2_threshold.patch", "patch_3_accuracy.patch"]
 
 
