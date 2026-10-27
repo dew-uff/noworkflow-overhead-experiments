@@ -203,10 +203,16 @@ def describe():
     return d
 
 
-def units():
-    """The units apply stops: the active timers and DAEMONS"""
+def active_timers():
     timers = run("systemctl", "list-units", "--type=timer", "--state=active", "--plain", "--no-legend", check=False)
-    return [line.split()[0] for line in timers.splitlines() if line.strip()] + DAEMONS
+    return [line.split()[0] for line in timers.splitlines() if line.strip()]
+
+
+def units():
+    """The units apply stops: the active timers and DAEMONS. A transient timer (one that
+    `systemd-run --on-calendar` made, such as the one that ends the lab's reservation) is left
+    alone: stopping it destroys it, and restore could not start it again."""
+    return [u for u in active_timers() if systemctl_show(u, "Transient") != "yes"] + DAEMONS
 
 
 def effective(unit):
@@ -231,6 +237,9 @@ def cmd_check(a):
     print("\nswap:", run("swapon", "--show", check=False) or "none")
     print("\ntimers (apply stops the active ones):")
     print(run("systemctl", "list-timers", "--no-pager", check=False))
+    left = [u for u in active_timers() if u not in units()]
+    if left:
+        print("left alone, transient (stopping would destroy them):", ", ".join(left))
     try:
         c = choose(a.run_cpu, a.harness_cpu, a.others)
         print("\napply would: runs on CPU", c["run_cpu"], "with", c["offline"] or "no sibling", "offline;",
