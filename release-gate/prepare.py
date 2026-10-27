@@ -143,7 +143,10 @@ def turbo():
 
 
 def governors():
-    return {p.split("/")[5]: read(p) for p in sorted(glob.glob(str(CPU / "cpu[0-9]*/cpufreq/scaling_governor")))}
+    """The governor of each online CPU. An offline CPU keeps its cpufreq entry, which
+    reads as nothing: it is left out, so that describe() and apply() see online CPUs only."""
+    found = {p.split("/")[5]: read(p) for p in sorted(glob.glob(str(CPU / "cpu[0-9]*/cpufreq/scaling_governor")))}
+    return {name: gov for name, gov in found.items() if gov is not None}
 
 
 def os_release():
