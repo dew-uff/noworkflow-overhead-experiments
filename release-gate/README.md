@@ -17,6 +17,7 @@ measurement of 2.1.3 that led here.
 | `hook/sitecustomize.py` | Loaded into every run: seeds, and records what the script's functions returned |
 | `compare.py` | The verdicts and the times, per script and configuration |
 | `prepare.py` | The measurement machine: checks it, prepares it for timing, launches a pass, undoes it all |
+| `paper_tables.py` | The four tables of the paper's Section 7.3 from a results directory, as LaTeX fragments, with the numbers its prose cites; `test_paper_tables.py` shows the same arithmetic on the evaluation of 2.1.3 reproduces the submitted paper |
 
 ## Running the gate
 
@@ -70,6 +71,21 @@ sudo python3 prepare.py restore          # when it ends, before the reservation 
 
 **5. The results**: `python3 compare.py $R`, and `$R` committed here, run records and machine
 records included (they hold no user or host name).
+
+**6. The paper's tables** (needs numpy and scipy):
+
+```bash
+uv run --with scipy python3 paper_tables.py $R --out <paper>/tables --min-repetitions 10
+```
+
+writes the bodies of the four tables of Section 7.3 (times with the slowdown shading, store
+sizes, and the two tables of paired tests) and `overhead-summary.json`, the numbers the prose
+of the section cites. The docstring of `paper_tables.py` states each computation: the time is
+the one the script prints (`reported`), the median over the complete repetitions; a run the
+memory cap ended is marked, not timed; the paired comparisons use the Wilcoxon signed-rank
+test with Holm's adjustment and the rank-biserial correlation.
+`uv run --with pytest --with scipy python3 -m pytest test_paper_tables.py` checks the
+arithmetic against the tables of the submitted paper, from `../experimental_analysis/results`.
 
 ## What is compared
 

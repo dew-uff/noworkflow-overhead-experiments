@@ -1,0 +1,442 @@
+"""The four tables of the paper's Section 7.3, from a results directory of the gate.
+
+usage: python3 paper_tables.py RESULTS --out DIR [--min-repetitions N] [--correction holm|bonferroni]
+       python3 paper_tables.py --legacy ../experimental_analysis/results --out DIR --correction bonferroni
+
+Needs numpy and scipy (`uv run --with scipy python3 paper_tables.py ...`).
+
+RESULTS is a directory gate.py wrote (`correctness/<sid>/<config>.json` and
+`timing/<sid>/<config>/rep<NN>.json`); `--legacy` reads instead the `output_trialN.txt` files of
+the evaluation of 2.1.3, whose numbers the submitted paper reports, so that the arithmetic can
+be checked against it (`test_paper_tables.py`). DIR receives four LaTeX fragments, each the
+body of one table of the paper, which `main.tex` includes with `\\input`:
+
+  overhead-times.tex        tab:experimentsTableTimes          times, shading, markers
+  overhead-times-tests.tex  tab:statisticalTestTimeOverhead1   five paired comparisons, with n
+  overhead-space.tex        tab:experimentsTableProvenanceStored  store sizes in MiB
+  overhead-space-tests.tex  tab:statisticalTestSpaceOverhead   three paired comparisons
+
+and `overhead-summary.json`, the numbers the prose of the section cites (ranks, extremes,
+counts, the runs that did not finish), so that the text can be checked against the data.
+
+What the tables hold, and how it is computed (the same for both sources):
+
+- The time of a run is the one the script prints on its last line (`reported`), measured by
+  the script around its own body with `perf_counter`: it excludes the start of noWorkflow and
+  the writing of the store. A script and configuration pair gets the median over the
+  complete repetitions: a repetition counts only when it holds every pair the pass timed
+  (the pairs that did not finish in the correctness pass are not timed). The table prints
+  three decimals, `$<$ 0.001` below 0.0005, and marks with a dagger the plain Python times
+  that print below 0.010, whose slowdown factors are inflated by the short baseline.
+- The slowdown factor of a cell is its time over the plain Python time of the same script,
+  both unrounded; the shading is `\\ovhA` from 2x, `\\ovhB` from 10x and `\\ovhC` from 100x.
+- A pair that did not finish is marked instead of a number: `--` for the 30-minute limit of
+  the evaluation of 2.1.3, `$\\ddagger$` for a run the memory cap ended (status `oom`).
+- The store of a pair is the size of `.noworkflow/` in bytes (`store_bytes` of the run of
+  the correctness pass; the `du -s` of the legacy output, in KiB), which does not depend on
+  the repetition (a run of the timing pass that differs by more than 0.1% is reported); the
+  table prints it in MiB rounded to the nearest integer, `$<$1` when it rounds to zero, and
+  the tests use the unrounded sizes. The accessed data size column is a property of the
+  scripts (`DATA_MIB`), not of a run.
+- The average rank of a configuration (overall analysis of the paper) ranks the eight
+  configurations of each script from 1 (lowest time, or store) to 8, ties averaged, over
+  the scripts that finished under all eight, and averages the ranks per configuration.
+- The paired comparisons follow the paper's methodology: n = the scripts that finished under
+  both configurations; Shapiro-Wilk on the paired differences; Wilcoxon signed-rank test,
+  two-sided, with the normal approximation and no continuity correction, zero differences
+  kept in the ranking (Pratt), which is the variant that reproduces the p-values of the
+  storage table of the submitted paper; the p-values are adjusted for the comparisons of
+  each table (five for time, three for storage) with Holm's step-down procedure, which
+  controls the family-wise error rate as Bonferroni does and rejects at least as much
+  (`--correction bonferroni` gives the submitted paper's adjustment); the effect size is the
+  rank-biserial correlation
+  r = (W+ - W-) / (W+ + W-) over the non-zero differences, labelled small below 0.3, medium
+  below 0.5 and large from 0.5. The Wilcoxon test is used because the differences are not
+  normal (the Shapiro-Wilk column shows it) and the sample is small; it is a test of the
+  consistency of the sign of the differences across scripts, not of their magnitude, which is
+  why the paper reports the effect size next to it.
+"""
+
+import argparse
+import datetime
+import json
+import math
+import pathlib
+import re
+import statistics
+import sys
+
+import numpy as np
+from scipy import stats
+
+HERE = pathlib.Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from compare import UNFINISHED  # noqa: E402
+from scripts import CONFIGS, SCRIPTS  # noqa: E402
+
+SIDS = [sid for sid, _, _ in SCRIPTS]
+# Columns of the tables, after plain Python, in the paper's order.
+COLUMNS = ["now", "d3", "d2", "cg", "cg-d3", "cg-d2", "e-relevant", "e-none"]
+# The comparisons of the two tests tables: label, left, right.
+TIME_PAIRS = [
+    ("fine-grained versus coarse-grained", "now", "cg"),
+    ("fine-grained-depth-3 versus coarse-grained-depth-3", "d3", "cg-d3"),
+    ("fine-grained-depth-2 versus coarse-grained-depth-2", "d2", "cg-d2"),
+    ("fine-grained versus baseline", "now", "python"),
+    ("coarse-grained-depth-2 versus baseline", "cg-d2", "python"),
+]
+SPACE_PAIRS = TIME_PAIRS[:3]
+# Size of the data each script reads, in MiB (Table 1 of the paper, "Accessed Data Size").
+DATA_MIB = {"s1": "14", "s2": "144", "s3": "$<$1", "s4": "18", "s5": "155", "s11": "$<$1", "s12": "$<$1"}
+UNFINISHED_MARK = {"timeout": "-", "oom": r"$\ddagger$"}
+SHADE = [(100, r"\ovhC"), (10, r"\ovhB"), (2, r"\ovhA")]
+MIB = 2**20
+TIME = re.compile(r"^-?\d+[.,]\d+(e-?\d+)?$")
+
+
+class Cell:
+    """One script and configuration pair: its times, its store, or why it did not finish."""
+
+    def __init__(self, times=(), store_bytes=None, unfinished=None, wall=None, peak_rss=None):
+        self.times = list(times)
+        self.store_bytes = store_bytes
+        self.unfinished = unfinished  # None, "timeout" or "oom"
+        self.wall = wall  # of the unfinished run
+        self.peak_rss = peak_rss
+
+    @property
+    def time(self):
+        return statistics.median(self.times) if self.times else None
+
+    @property
+    def store_mib(self):
+        return None if self.store_bytes is None else self.store_bytes / MIB
+
+
+class Dataset:
+    def __init__(self, source, cells, repetitions, note=""):
+        self.source = source
+        self.cells = cells  # sid -> config -> Cell
+        self.repetitions = repetitions  # the complete repetitions the medians are over
+        self.note = note
+
+    def cell(self, sid, cfg):
+        return self.cells[sid][cfg]
+
+    def finished(self, *cfgs):
+        return [sid for sid in SIDS if all(self.cell(sid, c).unfinished is None for c in cfgs)]
+
+
+# ----------------------------------------------------------------------------- loading
+
+def load_gate(root, min_repetitions=1):
+    """A results directory of gate.py: the timing pass for the times, the correctness pass
+    for the stores and for the runs that did not finish."""
+    root = pathlib.Path(root)
+    cells = {sid: {} for sid in SIDS}
+    for sid in SIDS:
+        for cfg in ["python"] + COLUMNS:
+            p = root / "correctness" / sid / f"{cfg}.json"
+            r = json.loads(p.read_text())
+            if r["status"] in UNFINISHED:
+                cells[sid][cfg] = Cell(unfinished="oom", wall=r["wall"], peak_rss=r["peak_rss"],
+                                       store_bytes=r["store_bytes"])
+            else:
+                cells[sid][cfg] = Cell(store_bytes=r["store_bytes"] if cfg != "python" else None)
+    timed = [(sid, cfg) for sid in SIDS for cfg in ["python"] + COLUMNS if cells[sid][cfg].unfinished is None]
+    by_rep = {}  # repetition -> {(sid, cfg): record}
+    for sid, cfg in timed:
+        d = root / "timing" / sid / cfg
+        for p in sorted(d.glob("rep*.json")) if d.is_dir() else []:
+            r = json.loads(p.read_text())
+            if r["status"] in UNFINISHED:
+                continue
+            if r["reported"] is None:
+                raise SystemExit(f"{p}: no reported time")
+            by_rep.setdefault(r["repetition"], {})[(sid, cfg)] = r
+    complete = sorted(n for n, recs in by_rep.items() if len(recs) == len(timed))
+    if len(complete) < min_repetitions:
+        raise SystemExit(f"{len(complete)} complete repetitions ({len(timed)} pairs each), {min_repetitions} required")
+    for sid, cfg in timed:
+        cell = cells[sid][cfg]
+        cell.times = [by_rep[n][(sid, cfg)]["reported"] for n in complete]
+        if cfg != "python":
+            stores = {by_rep[n][(sid, cfg)]["store_bytes"] for n in complete}
+            if any(abs(b - cell.store_bytes) > 0.001 * cell.store_bytes for b in stores):
+                print(f"warning: {sid} {cfg}: store of the correctness pass {cell.store_bytes}, of the timing pass {sorted(stores)}",
+                      file=sys.stderr)
+    cand = json.loads((root / "candidate.json").read_text())
+    note = f"{cand['version']} ({cand['sha256'][:12]}), Python {cand['python']}"
+    return Dataset(str(root), cells, complete, note)
+
+
+def load_legacy(root):
+    """The output_trialN.txt files of the evaluation of 2.1.3 (`run.sh` of this repository):
+    one block per run, the script's time on the line before `noWorkflow folder not found!`
+    (plain Python) or before `Executing command: du .noworflow/`, the store on the line after;
+    a run the 30-minute limit ended prints no time."""
+    root = pathlib.Path(root)
+    folder_to_sid = {folder: sid for sid, folder, _ in SCRIPTS}
+    cells = {sid: {cfg: Cell() for cfg in ["python"] + COLUMNS} for sid in SIDS}
+    files = sorted(root.glob("output_trial*.txt"), key=lambda p: int(re.search(r"(\d+)", p.stem).group(1)))
+    for p in files:
+        for block in p.read_text().split(">" * 38)[1:]:
+            lines = [ln.strip() for ln in block.splitlines()]
+            folder = next(ln for ln in lines if ln.startswith("Entering experiment folder: ")).split("/noworkflow-core-experiments/")[1]
+            cmd = next(ln for ln in lines if ln.startswith("Executing command: ") and " du " not in ln)
+            cell = cells[folder_to_sid[folder]][_legacy_config(cmd[len("Executing command: "):])]
+            for i, ln in enumerate(lines):
+                if ln in ("noWorkflow folder not found!", "Executing command: du .noworflow/"):
+                    if TIME.match(lines[i - 1]):
+                        cell.times.append(float(lines[i - 1].replace(",", ".")))
+                    else:
+                        cell.unfinished = "timeout"
+                    if ln.startswith("Executing command: du"):
+                        cell.store_bytes = int(lines[i + 1].split()[0]) * 1024
+    for sid in SIDS:
+        for cfg, cell in cells[sid].items():
+            if cell.unfinished:
+                cell.times = []
+    return Dataset(str(root), cells, list(range(1, len(files) + 1)), "noWorkflow 2.1.3, the evaluation of the submitted paper")
+
+
+def _legacy_config(cmd):
+    toks = cmd.split()
+    if toks[0] == "python":
+        return "python"
+    opts, i = [], 2
+    while i < len(toks) and toks[i].startswith("-"):
+        opts.append(toks[i])
+        if toks[i] in ("-d", "-e"):
+            opts.append(toks[i + 1])
+            i += 1
+        i += 1
+    for cfg in COLUMNS:
+        if CONFIGS[cfg][1:] == opts:
+            return cfg
+    raise ValueError(cmd)
+
+
+# ----------------------------------------------------------------------------- numbers
+
+def fmt_time(t):
+    return r"$<$ 0.001" if t < 0.0005 else f"{t:.3f}"
+
+
+def fmt_mib(mib):
+    n = int(math.floor(mib + 0.5))
+    return r"$<$1" if n == 0 else f"{n:,}"
+
+
+def shade(factor):
+    for threshold, macro in SHADE:
+        if factor >= threshold:
+            return macro + " "
+    return ""
+
+
+def effect_label(r):
+    r = abs(r)
+    return "small" if r < 0.3 else "medium" if r < 0.5 else "large"
+
+
+def fmt_p(p):
+    return r"$<$ 0.001" if p < 0.0005 else f"{p:.3f}"
+
+
+def paired_test(x, y):
+    """Shapiro-Wilk p on the differences, the raw Wilcoxon p, the rank-biserial r."""
+    d = np.asarray(x, dtype=float) - np.asarray(y, dtype=float)
+    shapiro = float(stats.shapiro(d).pvalue)
+    wilcoxon = float(stats.wilcoxon(x, y, zero_method="pratt", correction=False, method="approx").pvalue)
+    nz = d[d != 0]
+    ranks = stats.rankdata(np.abs(nz))
+    plus, minus = ranks[nz > 0].sum(), ranks[nz < 0].sum()
+    r = float((plus - minus) / (plus + minus)) if plus + minus else 0.0
+    return {"n": len(d), "shapiro": shapiro, "wilcoxon_raw": wilcoxon, "r": r, "label": effect_label(r)}
+
+
+def adjust(pvalues, method):
+    """The p-values of one family, adjusted: Holm's step-down (each sorted p times the number
+    of hypotheses not yet rejected, made monotone) or Bonferroni (each times the family size)."""
+    m = len(pvalues)
+    if method == "bonferroni":
+        return [min(1.0, p * m) for p in pvalues]
+    order = sorted(range(m), key=lambda i: pvalues[i])
+    adjusted, running = [0.0] * m, 0.0
+    for rank, i in enumerate(order):
+        running = max(running, pvalues[i] * (m - rank))
+        adjusted[i] = min(1.0, running)
+    return adjusted
+
+
+def average_ranks(ds, value):
+    """Per configuration, the average over the scripts that finished under all eight of the
+    rank of its value among the eight (1 = lowest, ties averaged)."""
+    sids = ds.finished(*COLUMNS)
+    total = {c: 0.0 for c in COLUMNS}
+    for sid in sids:
+        ranks = stats.rankdata([value(ds.cell(sid, c)) for c in COLUMNS])
+        for c, rk in zip(COLUMNS, ranks):
+            total[c] += rk
+    return {c: total[c] / len(sids) for c in COLUMNS}, sids
+
+
+# ----------------------------------------------------------------------------- tables
+
+def header(first):
+    return (
+        r"    \begin{tabular}{@{} l r r r r r r r r r r}" "\n"
+        r"      \toprule" "\n"
+        r"      \multicolumn{1}{c}{ID} & \multicolumn{1}{c}{" + first[0] + r"}  &  \multicolumn{1}{c}{fg}  & \multicolumn{1}{c}{fg} & \multicolumn{1}{c}{fg} & \multicolumn{1}{c}{cg} & \multicolumn{1}{c}{cg} & \multicolumn{1}{c}{cg} & \multicolumn{1}{c}{fv} & \multicolumn{1}{c}{nv}   \\" "\n"
+        r"      \multicolumn{1}{c}{}   & \multicolumn{1}{c}{" + first[1] + r"} &  \multicolumn{1}{c}{}            & \multicolumn{1}{c}{(-d3)}      & \multicolumn{1}{c}{(-d2)}     & \multicolumn{1}{c}{(-cg)}        & \multicolumn{1}{c}{(-cg -d3)}    & \multicolumn{1}{c}{(-cg -d2)}    & \multicolumn{1}{c}{(-e relevant)} & \multicolumn{1}{c}{(-e none)} \\" "\n"
+        r"      \midrule" "\n"
+    )
+
+
+FOOTER = "      \\bottomrule\n    \\end{tabular}\n"
+
+
+def times_table(ds):
+    out = header(("Plain", "Python"))
+    for sid in SIDS:
+        plain = ds.cell(sid, "python").time
+        cells = [fmt_time(plain) + (r"$^\dagger$" if round(plain, 3) < 0.01 else "")]
+        for cfg in COLUMNS:
+            c = ds.cell(sid, cfg)
+            if c.unfinished:
+                cells.append(UNFINISHED_MARK[c.unfinished])
+            else:
+                cells.append(shade(c.time / plain) + fmt_time(c.time))
+        out += f"        ${sid}$ & " + " & ".join(cells) + " \\\\\n"
+    out += FOOTER
+    out += (
+        "    \\begin{tabular}{lcccc}\n"
+        "    Slowdown: & $<2\\times$ & \\ovhA $2$--$10\\times$ & \\ovhB $10$--$100\\times$ & \\ovhC $\\geq 100\\times$ \\\\\n"
+        "    \\end{tabular}\n"
+    )
+    return out
+
+
+def space_table(ds):
+    out = header(("Accessed", "Data Size"))
+    for sid in SIDS:
+        cells = [DATA_MIB.get(sid, "0")]
+        for cfg in COLUMNS:
+            c = ds.cell(sid, cfg)
+            cells.append(UNFINISHED_MARK[c.unfinished] if c.unfinished else fmt_mib(c.store_mib))
+        out += f"        ${sid}$ & " + " & ".join(cells) + " \\\\\n"
+    return out + FOOTER
+
+
+def tests(ds, pairs, value, correction):
+    rows = []
+    for label, a, b in pairs:
+        sids = ds.finished(a, b)
+        t = paired_test([value(ds.cell(s, a)) for s in sids], [value(ds.cell(s, b)) for s in sids])
+        rows.append({"comparison": label, "left": a, "right": b, **t})
+    for row, p in zip(rows, adjust([r["wilcoxon_raw"] for r in rows], correction)):
+        row["wilcoxon"] = p
+        row["correction"] = correction
+    return rows
+
+
+def tests_table(rows, baseline_rule=True):
+    out = (
+        r"    \begin{tabular}{@{} c c c c c @{}}" "\n"
+        r"      \toprule" "\n"
+        r"        Comparison  & $n$ & Shapiro-Wilk test  &  Wilcoxon test  & Effect Size \\" "\n"
+        r"      \midrule" "\n"
+    )
+    for i, row in enumerate(rows):
+        if baseline_rule and i == 3:
+            out += "      \\midrule\n"
+        out += f"        {row['comparison']} & {row['n']} & {fmt_p(row['shapiro'])} & {fmt_p(row['wilcoxon'])} & {row['r']:.3f} ({row['label']}) \\\\\n"
+    return out + FOOTER
+
+
+# ----------------------------------------------------------------------------- summary
+
+def summary(ds, time_tests, space_tests):
+    time_ranks, ranked = average_ranks(ds, lambda c: c.time)
+    space_ranks, _ = average_ranks(ds, lambda c: c.store_mib)
+    short = [sid for sid in SIDS[:12]]
+    cells = {sid: {cfg: ds.cell(sid, cfg) for cfg in ["python"] + COLUMNS} for sid in SIDS}
+    factors = {sid: {cfg: cells[sid][cfg].time / cells[sid]["python"].time for cfg in COLUMNS if cells[sid][cfg].time is not None}
+               for sid in SIDS}
+    overhead_s = {sid: {cfg: cells[sid][cfg].time - cells[sid]["python"].time for cfg in COLUMNS if cells[sid][cfg].time is not None}
+                  for sid in SIDS}
+    under_1s = [(sid, cfg) for sid in short for cfg, o in overhead_s[sid].items() if o < 1]
+    heavy = {"s1", "s2", "s11"}
+    under_1s_rest = [(s, c) for s, c in under_1s if s not in heavy]
+    runs_rest = sum(len(overhead_s[s]) for s in short if s not in heavy)
+    fg_cg = {sid: 1 - cells[sid]["cg"].time / cells[sid]["now"].time for sid in ds.finished("now", "cg")}
+    store_reduction = {sid: (cells[sid]["now"].store_mib - cells[sid]["cg"].store_mib) for sid in ds.finished("now", "cg")}
+    unfinished = [{"sid": sid, "config": cfg, "wall_s": c.wall, "peak_gib": c.peak_rss / 2**30 if c.peak_rss else None,
+                   "store_mib": c.store_mib}
+                  for sid in SIDS for cfg in COLUMNS for c in [cells[sid][cfg]] if c.unfinished]
+    return {
+        "source": ds.source, "note": ds.note, "generated": datetime.datetime.now().isoformat(timespec="seconds"),
+        "repetitions": ds.repetitions,
+        "scripts_finished_under_all": ranked,
+        "average_rank_time": time_ranks, "average_rank_space": space_ranks,
+        "slowdown": factors, "overhead_s": overhead_s,
+        "max_slowdown": max((f, s, c) for s in SIDS for c, f in factors[s].items()),
+        "max_slowdown_long_scripts_finished": max((f, s, c) for s in SIDS[12:] for c, f in factors[s].items()) if any(factors[s] for s in SIDS[12:]) else None,
+        "max_overhead_s_long_scripts_finished": max((o, s, c) for s in SIDS[12:] for c, o in overhead_s[s].items()) if any(overhead_s[s] for s in SIDS[12:]) else None,
+        "short_scripts_runs": sum(len(overhead_s[s]) for s in short),
+        "short_scripts_runs_under_1s": len(under_1s),
+        "short_scripts_runs_without_s1_s2_s11": runs_rest,
+        "short_scripts_runs_under_1s_without_s1_s2_s11": len(under_1s_rest),
+        "median_time_reduction_fg_to_cg": statistics.median(fg_cg.values()),
+        "store_mib": {sid: {cfg: cells[sid][cfg].store_mib for cfg in COLUMNS} for sid in SIDS},
+        "store_reduction_fg_minus_cg_mib": dict(sorted(store_reduction.items(), key=lambda kv: -kv[1])),
+        "unfinished": unfinished,
+        "time_tests": time_tests, "space_tests": space_tests,
+    }
+
+
+# ----------------------------------------------------------------------------- main
+
+def generate(ds, out, correction="holm"):
+    out = pathlib.Path(out)
+    out.mkdir(parents=True, exist_ok=True)
+    stamp = (f"% Generated by release-gate/paper_tables.py of noworkflow-overhead-experiments from {ds.source}\n"
+             f"% ({ds.note}; median over {len(ds.repetitions)} complete repetitions). Do not edit: regenerate.\n")
+    time_tests = tests(ds, TIME_PAIRS, lambda c: c.time, correction)
+    space_tests = tests(ds, SPACE_PAIRS, lambda c: c.store_mib, correction)
+    fragments = {
+        "overhead-times.tex": times_table(ds),
+        "overhead-times-tests.tex": tests_table(time_tests),
+        "overhead-space.tex": space_table(ds),
+        "overhead-space-tests.tex": tests_table(space_tests, baseline_rule=False),
+    }
+    for name, body in fragments.items():
+        (out / name).write_text(stamp + body)
+    s = summary(ds, time_tests, space_tests)
+    (out / "overhead-summary.json").write_text(json.dumps(s, indent=1, default=str) + "\n")
+    return s
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    ap.add_argument("results", help="a results directory of gate.py, or of output_trialN.txt files with --legacy")
+    ap.add_argument("--out", required=True, help="where the fragments go (the paper's tables/ directory)")
+    ap.add_argument("--legacy", action="store_true", help="read the output_trialN.txt files of the evaluation of 2.1.3")
+    ap.add_argument("--min-repetitions", type=int, default=1, help="refuse fewer complete repetitions (gate results)")
+    ap.add_argument("--correction", choices=["holm", "bonferroni"], default="holm", help="adjustment of the p-values of each table")
+    args = ap.parse_args()
+    ds = load_legacy(args.results) if args.legacy else load_gate(args.results, args.min_repetitions)
+    s = generate(ds, args.out, args.correction)
+    print(f"{ds.note}: median over repetitions {ds.repetitions}; {len(s['scripts_finished_under_all'])} scripts finished under all configurations")
+    for u in s["unfinished"]:
+        print(f"  did not finish: {u['sid']} {u['config']}" + (f" after {u['wall_s']:.0f} s at {u['peak_gib']:.1f} GiB" if u["wall_s"] else ""))
+    print("average rank, time: " + ", ".join(f"{c} {r:.2f}" for c, r in sorted(s["average_rank_time"].items(), key=lambda kv: kv[1])))
+    print("average rank, space: " + ", ".join(f"{c} {r:.2f}" for c, r in sorted(s["average_rank_space"].items(), key=lambda kv: kv[1])))
+    for t in s["time_tests"] + s["space_tests"]:
+        print(f"  {t['comparison']}: n={t['n']} shapiro={t['shapiro']:.3f} wilcoxon={t['wilcoxon']:.3f} r={t['r']:.3f} ({t['label']})")
+    print(f"fragments in {args.out}")
+
+
+if __name__ == "__main__":
+    main()
