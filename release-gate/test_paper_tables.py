@@ -12,16 +12,19 @@ paper's, on the `output_trialN.txt` files it was made from. What does not reprod
   accepts the paper's cell as a rounding of the plain time.
 - the largest slowdown the prose cites, 908.7x: it is s11 unrestricted over its plain time
   rounded to 0.061, as the table prints it; over the unrounded median it is 911.3x.
-- the Wilcoxon p-value and the effect size of the depth-2 storage comparison, 0.026 and
-  1.000: they come out on the sizes rounded to MiB, as the table prints them
-  (`test_space_tests_on_rounded_sizes`); on the sizes in bytes, where one script's store
-  is larger under `-cg -d 2` than under `-d 2`, they are 0.001 and 0.942. The other two
-  storage comparisons are the same either way.
-- the Wilcoxon p-values of the time table, except the first (0.004): no standard variant of
-  the test gives 0.016, 0.416 and 0.002 from the medians (the normal approximation gives
-  0.011, 0.248 and 0.003; the exact test 0.009, 0.265 and 0.002, before any correction), and
-  the spreadsheet that produced the submitted tables holds no test. The test asserts the
-  verdicts at 0.05 and the effect sizes, which do reproduce.
+- the tests: every p-value and effect size of the two tests tables of the submitted paper
+  (`test_submitted_tests`) comes out of the procedure of the notebook that produced them
+  ("Analise Estatistica.ipynb", 2026, found after this generator was written), and only of
+  it: the values as the tables print them (times rounded to 0.001 s, sizes to the MiB);
+  `scipy.stats.wilcoxon(differences, alternative="greater")`, a one-sided test with scipy's
+  defaults (zero differences dropped); Bonferroni within each set of comparisons, three for
+  granularity and two against plain Python, not over the five of the table; the
+  rank-biserial correlation over the non-zero differences. The paper's text says none of the
+  three choices that matter (one-sided, rounded values, two families). The notebook's saved
+  outputs hold the storage numbers in the place of the time granularity numbers, because its
+  second cell redefines the lists of the first; the time rows were run before that cell.
+  The same procedure on the unrounded medians gives the same verdicts and slightly different
+  p-values (`test_time_tests`, `test_space_tests`).
 """
 
 import pathlib
@@ -104,7 +107,7 @@ def rows(body):
 def legacy(tmp_path_factory):
     ds = pt.load_legacy(LEGACY)
     out = tmp_path_factory.mktemp("tables")
-    summary = pt.generate(ds, out, correction="bonferroni")
+    summary = pt.generate(ds, out, correction="bonferroni", method="approx", scale="linear")
     return ds, out, summary
 
 
@@ -160,7 +163,32 @@ def test_time_tests(legacy):
         assert pt.fmt_p(row["shapiro"]).replace("$", "").replace(" ", "") == shapiro
         assert row["r"] == pytest.approx(r, abs=0.0015)
         assert row["label"] == label
+    assert [row["family_size"] for row in s["time_tests"]] == [3, 3, 3, 2, 2]
     assert [round(row["wilcoxon_raw"], 3) for row in s["time_tests"]] == [0.004, 0.011, 0.248, 0.001, 0.003]
+    assert [row["wilcoxon"] < 0.05 for row in s["time_tests"]] == [p < 0.05 for _, p, _, _ in TIME_TESTS]
+
+
+def _submitted(ds, families, value):
+    """The notebook's procedure: rounded values, one-sided scipy defaults, Bonferroni per family;
+    the p-values as the tables print them, the effect sizes and their labels."""
+    sids = ds.finished(*pt.COLUMNS)
+    rows = []
+    for family in families:
+        fam = [pt.paired_test([value(ds.cell(s, a)) for s in sids], [value(ds.cell(s, b)) for s in sids],
+                              method="scipy", scale="linear", alternative="greater") for _, a, b in family]
+        for t, p in zip(fam, pt.adjust([t["wilcoxon_raw"] for t in fam], "bonferroni")):
+            rows.append((pt.fmt_p(p).replace("$", "").replace(" ", ""), round(t["r"], 3), t["label"]))
+    return rows
+
+
+def test_submitted_tests(legacy):
+    ds, _, _ = legacy
+    time = _submitted(ds, pt.TIME_FAMILIES, lambda c: round(c.time, 3))
+    space = _submitted(ds, pt.SPACE_FAMILIES, lambda c: round(c.store_mib))
+    # Tables 6 and 8 of the submitted paper, as printed.
+    assert time == [("0.004", 0.778, "large"), ("0.016", 0.684, "large"), ("0.416", 0.309, "medium"),
+                    ("<0.001", 0.871, "large"), ("0.002", 0.801, "large")]
+    assert space == [("0.001", 1.0, "large"), ("0.001", 1.0, "large"), ("0.026", 1.0, "large")]
 
 
 def test_space_tests(legacy):
@@ -174,16 +202,6 @@ def test_space_tests(legacy):
     assert round(s["space_tests"][2]["wilcoxon"], 3) == 0.001
     assert round(s["space_tests"][2]["r"], 3) == 0.942  # the paper: 1.000 on the rounded sizes
 
-
-def test_space_tests_on_rounded_sizes(legacy):
-    ds, _, _ = legacy
-    sids = ds.finished(*pt.COLUMNS)
-    raw = []
-    for _, a, b in pt.SPACE_PAIRS:
-        t = pt.paired_test([round(ds.cell(s, a).store_mib) for s in sids], [round(ds.cell(s, b).store_mib) for s in sids])
-        raw.append(t["wilcoxon_raw"])
-        assert round(t["r"], 3) == 1.0
-    assert [round(p, 3) for p in pt.adjust(raw, "bonferroni")] == [0.001, 0.001, 0.026]
 
 
 def test_holm_never_rejects_less_than_bonferroni():

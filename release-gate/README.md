@@ -82,8 +82,12 @@ writes the bodies of the four tables of Section 7.3 (times with the slowdown sha
 sizes, and the two tables of paired tests) and `overhead-summary.json`, the numbers the prose
 of the section cites. The docstring of `paper_tables.py` states each computation: the time is
 the one the script prints (`reported`), the median over the complete repetitions; a run the
-memory cap ended is marked, not timed; the paired comparisons use the Wilcoxon signed-rank
-test with Holm's adjustment and the rank-biserial correlation.
+memory cap ended is marked, not timed; the paired comparisons use the two-sided Wilcoxon
+signed-rank test on the exact distribution, applied to the logarithms of the times and of the
+store sizes (that is, to the ratio between the two configurations), with Holm's adjustment
+within each set of comparisons and the rank-biserial correlation as effect size;
+`--scale linear --method scipy --alternative greater --correction bonferroni` is the procedure
+of the submitted paper.
 `uv run --with pytest --with scipy python3 -m pytest test_paper_tables.py` checks the
 arithmetic against the tables of the submitted paper, from `../experimental_analysis/results`.
 

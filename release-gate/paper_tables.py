@@ -43,13 +43,21 @@ What the tables hold, and how it is computed (the same for both sources):
   the scripts that finished under all eight, and averages the ranks per configuration.
 - The paired comparisons follow the paper's methodology: n = the scripts that finished under
   both configurations; Shapiro-Wilk on the paired differences; Wilcoxon signed-rank test,
-  two-sided, with the normal approximation and no continuity correction, zero differences
-  kept in the ranking (Pratt), which is the variant that reproduces the p-values of the
-  storage table of the submitted paper; the p-values are adjusted for the comparisons of
-  each table (five for time, three for storage) with Holm's step-down procedure, which
-  controls the family-wise error rate as Bonferroni does and rejects at least as much
-  (`--correction bonferroni` gives the submitted paper's adjustment); the effect size is the
-  rank-biserial correlation
+  two-sided by default (`--alternative greater` tests that the first configuration of each
+  pair is the slower, or the larger, as the submitted paper did), on the exact distribution
+  of the statistic (`--method approx` is the normal approximation without continuity
+  correction and with the zero differences kept in the ranking; `--method scipy` is
+  `scipy.stats.wilcoxon` with its defaults, zero differences dropped, which is what the
+  submitted paper used); on the differences of the logarithms, that is, on the ratio between
+  the two configurations: a halving and a doubling are then the same distance from no change,
+  and the test is about the slowdown factors the tables show rather than about seconds, where
+  the longest scripts would dominate (`--scale linear` tests the differences as they are, as
+  the submitted paper did). The p-values are
+  adjusted within each set of comparisons the paper describes: the three that contrast fine-
+  and coarse-grained collection, and the two against plain Python (time only), with Holm's
+  step-down procedure, which controls the family-wise error rate as Bonferroni does and
+  rejects at least as much (`--correction bonferroni` gives the submitted paper's
+  adjustment). The effect size is the rank-biserial correlation
   r = (W+ - W-) / (W+ + W-) over the non-zero differences, labelled small below 0.3, medium
   below 0.5 and large from 0.5. The Wilcoxon test is used because the differences are not
   normal (the Shapiro-Wilk column shows it) and the sample is small; it is a test of the
@@ -86,6 +94,10 @@ TIME_PAIRS = [
     ("coarse-grained-depth-2 versus baseline", "cg-d2", "python"),
 ]
 SPACE_PAIRS = TIME_PAIRS[:3]
+# The sets of comparisons whose p-values are adjusted together (the paper's two sets of pairwise
+# comparisons: granularity, and the range against plain Python).
+TIME_FAMILIES = [TIME_PAIRS[:3], TIME_PAIRS[3:]]
+SPACE_FAMILIES = [SPACE_PAIRS]
 # Size of the data each script reads, in MiB (Table 1 of the paper, "Accessed Data Size").
 DATA_MIB = {"s1": "14", "s2": "144", "s3": "$<$1", "s4": "18", "s5": "155", "s11": "$<$1", "s12": "$<$1"}
 UNFINISHED_MARK = {"timeout": "-", "oom": r"$\ddagger$"}
@@ -244,11 +256,30 @@ def fmt_p(p):
     return r"$<$ 0.001" if p < 0.0005 else f"{p:.3f}"
 
 
-def paired_test(x, y):
-    """Shapiro-Wilk p on the differences, the raw Wilcoxon p, the rank-biserial r."""
-    d = np.asarray(x, dtype=float) - np.asarray(y, dtype=float)
+def paired_test(x, y, method="exact", scale="log", alternative="two-sided"):
+    """Shapiro-Wilk p on the differences, the raw Wilcoxon p, the rank-biserial r.
+
+    method: "exact" enumerates the 2^n sign assignments of the ranks (no ties, no zeros);
+    "approx" is the normal approximation without continuity correction, zeros kept (Pratt);
+    "scipy" is scipy.stats.wilcoxon with its defaults (zeros dropped, the exact distribution
+    or the normal approximation as scipy chooses), the call of the notebook that produced the
+    tests of the submitted paper. alternative: "two-sided", or "greater" (x > y, the one-sided
+    test of the submitted paper). scale: "log" tests the differences of the logarithms,
+    that is, the ratio between the two configurations, on the scale where a halving and a
+    doubling are the same distance from no change; "linear" tests the differences as they are.
+    """
+    x, y = np.asarray(x, dtype=float), np.asarray(y, dtype=float)
+    if scale == "log":
+        x, y = np.log(x), np.log(y)
+    d = x - y
     shapiro = float(stats.shapiro(d).pvalue)
-    wilcoxon = float(stats.wilcoxon(x, y, zero_method="pratt", correction=False, method="approx").pvalue)
+    if method == "exact":
+        wilcoxon = float(stats.wilcoxon(x, y, zero_method="wilcox", method="exact", alternative=alternative).pvalue)
+    elif method == "scipy":
+        wilcoxon = float(stats.wilcoxon(d, alternative=alternative).pvalue)
+    else:
+        wilcoxon = float(stats.wilcoxon(x, y, zero_method="pratt", correction=False, method="approx",
+                                        alternative=alternative).pvalue)
     nz = d[d != 0]
     ranks = stats.rankdata(np.abs(nz))
     plus, minus = ranks[nz > 0].sum(), ranks[nz < 0].sum()
@@ -329,15 +360,21 @@ def space_table(ds):
     return out + FOOTER
 
 
-def tests(ds, pairs, value, correction):
+def tests(ds, families, value, correction, method="exact", scale="log", alternative="two-sided"):
+    """The rows of one tests table: families is a list of lists of pairs, and the p-values are
+    adjusted within each family (the paper's sets of comparisons)."""
     rows = []
-    for label, a, b in pairs:
-        sids = ds.finished(a, b)
-        t = paired_test([value(ds.cell(s, a)) for s in sids], [value(ds.cell(s, b)) for s in sids])
-        rows.append({"comparison": label, "left": a, "right": b, **t})
-    for row, p in zip(rows, adjust([r["wilcoxon_raw"] for r in rows], correction)):
-        row["wilcoxon"] = p
-        row["correction"] = correction
+    for family in families:
+        fam = []
+        for label, a, b in family:
+            sids = ds.finished(a, b)
+            t = paired_test([value(ds.cell(s, a)) for s in sids], [value(ds.cell(s, b)) for s in sids],
+                            method, scale, alternative)
+            fam.append({"comparison": label, "left": a, "right": b, "scripts": sids, "family_size": len(family), **t})
+        for row, p in zip(fam, adjust([r["wilcoxon_raw"] for r in fam], correction)):
+            row["wilcoxon"] = p
+            row.update(correction=correction, method=method, scale=scale, alternative=alternative)
+        rows += fam
     return rows
 
 
@@ -398,13 +435,13 @@ def summary(ds, time_tests, space_tests):
 
 # ----------------------------------------------------------------------------- main
 
-def generate(ds, out, correction="holm"):
+def generate(ds, out, correction="holm", method="exact", scale="log", alternative="two-sided"):
     out = pathlib.Path(out)
     out.mkdir(parents=True, exist_ok=True)
     stamp = (f"% Generated by release-gate/paper_tables.py of noworkflow-overhead-experiments from {ds.source}\n"
-             f"% ({ds.note}; median over {len(ds.repetitions)} complete repetitions). Do not edit: regenerate.\n")
-    time_tests = tests(ds, TIME_PAIRS, lambda c: c.time, correction)
-    space_tests = tests(ds, SPACE_PAIRS, lambda c: c.store_mib, correction)
+             f"% ({ds.note}; median over {len(ds.repetitions)} complete repetitions; Wilcoxon {method}, {alternative}, on the {scale} scale, p-values adjusted by {correction} within each set of comparisons). Do not edit: regenerate.\n")
+    time_tests = tests(ds, TIME_FAMILIES, lambda c: c.time, correction, method, scale, alternative)
+    space_tests = tests(ds, SPACE_FAMILIES, lambda c: c.store_mib, correction, method, scale, alternative)
     fragments = {
         "overhead-times.tex": times_table(ds),
         "overhead-times-tests.tex": tests_table(time_tests),
@@ -425,9 +462,12 @@ def main():
     ap.add_argument("--legacy", action="store_true", help="read the output_trialN.txt files of the evaluation of 2.1.3")
     ap.add_argument("--min-repetitions", type=int, default=1, help="refuse fewer complete repetitions (gate results)")
     ap.add_argument("--correction", choices=["holm", "bonferroni"], default="holm", help="adjustment of the p-values of each table")
+    ap.add_argument("--method", choices=["exact", "approx", "scipy"], default="exact", help="the Wilcoxon p-value: the exact distribution, the normal approximation, or scipy's defaults (the submitted paper)")
+    ap.add_argument("--alternative", choices=["two-sided", "greater"], default="two-sided", help="two-sided, or one-sided: the first configuration of each pair is the slower or larger (the submitted paper)")
+    ap.add_argument("--scale", choices=["linear", "log"], default="log", help="test the differences of the logarithms (the ratio between configurations), or the differences as they are (the submitted paper)")
     args = ap.parse_args()
     ds = load_legacy(args.results) if args.legacy else load_gate(args.results, args.min_repetitions)
-    s = generate(ds, args.out, args.correction)
+    s = generate(ds, args.out, args.correction, args.method, args.scale, args.alternative)
     print(f"{ds.note}: median over repetitions {ds.repetitions}; {len(s['scripts_finished_under_all'])} scripts finished under all configurations")
     for u in s["unfinished"]:
         print(f"  did not finish: {u['sid']} {u['config']}" + (f" after {u['wall_s']:.0f} s at {u['peak_gib']:.1f} GiB" if u["wall_s"] else ""))
