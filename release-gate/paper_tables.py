@@ -1,4 +1,4 @@
-"""The four tables of the paper's Section 7.3, from a results directory of the gate.
+"""The tables of the paper's Section 7.3, from a results directory of the gate.
 
 usage: python3 paper_tables.py RESULTS --out DIR [--min-repetitions N] [--correction holm|bonferroni]
        python3 paper_tables.py --legacy ../experimental_analysis/results --out DIR --correction bonferroni
@@ -8,13 +8,15 @@ Needs numpy and scipy (`uv run --with scipy python3 paper_tables.py ...`).
 RESULTS is a directory gate.py wrote (`correctness/<sid>/<config>.json` and
 `timing/<sid>/<config>/rep<NN>.json`); `--legacy` reads instead the `output_trialN.txt` files of
 the evaluation of 2.1.3, whose numbers the submitted paper reports, so that the arithmetic can
-be checked against it (`test_paper_tables.py`). DIR receives four LaTeX fragments, each the
+be checked against it (`test_paper_tables.py`). DIR receives LaTeX fragments, each the
 body of one table of the paper, which `main.tex` includes with `\\input`:
 
   overhead-times.tex        tab:experimentsTableTimes          times, shading, markers
   overhead-times-tests.tex  tab:statisticalTestTimeOverhead1   five paired comparisons, with n
   overhead-space.tex        tab:experimentsTableProvenanceStored  store sizes in MiB
   overhead-space-tests.tex  tab:statisticalTestSpaceOverhead   three paired comparisons
+  overhead-process-times.tex tab:experimentsTableProcessTimes  wall-clock time of the whole
+                                                               process (gate results only)
 
 and `overhead-summary.json`, the numbers the prose of the section cites (ranks, extremes,
 counts, the runs that did not finish), so that the text can be checked against the data.
@@ -22,9 +24,12 @@ counts, the runs that did not finish), so that the text can be checked against t
 What the tables hold, and how it is computed (the same for both sources):
 
 - The time of a run is the one the script prints on its last line (`reported`), measured by
-  the script around its own body with `perf_counter`: it excludes the start of noWorkflow and
-  the writing of the store. A script and configuration pair gets the median over the
-  complete repetitions: a repetition counts only when it holds every pair the pass timed
+  the script around its own body with `perf_counter`: it excludes the start of the interpreter
+  and of noWorkflow and the writing of the store. The gate also records the wall-clock time of
+  the whole process (`wall`), which includes them; `overhead-process-times.tex` is the same
+  table for that time, and the summary holds its tests and its difference to the reported time
+  (the legacy source has no wall-clock time, so that fragment is not written for it). A script
+  and configuration pair gets the median over the complete repetitions: a repetition counts only when it holds every pair the pass timed
   (the pairs that did not finish in the correctness pass are not timed). The table prints
   three decimals, `$<$ 0.001` below 0.0005, and marks with a dagger the plain Python times
   that print below 0.010, whose slowdown factors are inflated by the short baseline.
@@ -109,8 +114,9 @@ TIME = re.compile(r"^-?\d+[.,]\d+(e-?\d+)?$")
 class Cell:
     """One script and configuration pair: its times, its store, or why it did not finish."""
 
-    def __init__(self, times=(), store_bytes=None, unfinished=None, wall=None, peak_rss=None):
+    def __init__(self, times=(), store_bytes=None, unfinished=None, wall=None, peak_rss=None, walls=()):
         self.times = list(times)
+        self.walls = list(walls)  # wall-clock of the whole process, same repetitions as times
         self.store_bytes = store_bytes
         self.unfinished = unfinished  # None, "timeout" or "oom"
         self.wall = wall  # of the unfinished run
@@ -119,6 +125,10 @@ class Cell:
     @property
     def time(self):
         return statistics.median(self.times) if self.times else None
+
+    @property
+    def process_time(self):
+        return statistics.median(self.walls) if self.walls else None
 
     @property
     def store_mib(self):
@@ -172,6 +182,7 @@ def load_gate(root, min_repetitions=1):
     for sid, cfg in timed:
         cell = cells[sid][cfg]
         cell.times = [by_rep[n][(sid, cfg)]["reported"] for n in complete]
+        cell.walls = [by_rep[n][(sid, cfg)]["wall"] for n in complete]
         if cfg != "python":
             stores = {by_rep[n][(sid, cfg)]["store_bytes"] for n in complete}
             if any(abs(b - cell.store_bytes) > 0.001 * cell.store_bytes for b in stores):
@@ -328,17 +339,17 @@ def header(first):
 FOOTER = "      \\bottomrule\n    \\end{tabular}\n"
 
 
-def times_table(ds):
+def times_table(ds, value=lambda c: c.time):
     out = header(("Plain", "Python"))
     for sid in SIDS:
-        plain = ds.cell(sid, "python").time
+        plain = value(ds.cell(sid, "python"))
         cells = [fmt_time(plain) + (r"$^\dagger$" if round(plain, 3) < 0.01 else "")]
         for cfg in COLUMNS:
             c = ds.cell(sid, cfg)
             if c.unfinished:
                 cells.append(UNFINISHED_MARK[c.unfinished])
             else:
-                cells.append(shade(c.time / plain) + fmt_time(c.time))
+                cells.append(shade(value(c) / plain) + fmt_time(value(c)))
         out += f"        ${sid}$ & " + " & ".join(cells) + " \\\\\n"
     out += FOOTER
     out += (
@@ -394,7 +405,7 @@ def tests_table(rows, baseline_rule=True):
 
 # ----------------------------------------------------------------------------- summary
 
-def summary(ds, time_tests, space_tests):
+def summary(ds, time_tests, space_tests, process_tests=None):
     time_ranks, ranked = average_ranks(ds, lambda c: c.time)
     space_ranks, _ = average_ranks(ds, lambda c: c.store_mib)
     short = [sid for sid in SIDS[:12]]
@@ -412,6 +423,25 @@ def summary(ds, time_tests, space_tests):
     unfinished = [{"sid": sid, "config": cfg, "wall_s": c.wall, "peak_gib": c.peak_rss / 2**30 if c.peak_rss else None,
                    "store_mib": c.store_mib}
                   for sid in SIDS for cfg in COLUMNS for c in [cells[sid][cfg]] if c.unfinished]
+    has_wall = all(cells[sid][cfg].process_time is not None for sid in SIDS for cfg in ["python"] + COLUMNS
+                   if cells[sid][cfg].unfinished is None)
+    process = {}
+    if has_wall:
+        extra = {sid: {cfg: cells[sid][cfg].process_time - cells[sid][cfg].time for cfg in ["python"] + COLUMNS
+                       if cells[sid][cfg].process_time is not None} for sid in SIDS}
+        by_cfg = {cfg: sorted((extra[sid][cfg], sid) for sid in SIDS if cfg in extra[sid]) for cfg in ["python"] + COLUMNS}
+        process = {
+            "process_time_s": {sid: {cfg: cells[sid][cfg].process_time for cfg in ["python"] + COLUMNS
+                                     if cells[sid][cfg].process_time is not None} for sid in SIDS},
+            "process_slowdown": {sid: {cfg: cells[sid][cfg].process_time / cells[sid]["python"].process_time
+                                       for cfg in COLUMNS if cells[sid][cfg].process_time is not None} for sid in SIDS},
+            # what the whole process adds to the script's own time: start-up and the writing of the store
+            "process_minus_reported_s": extra,
+            "process_minus_reported_by_config": {cfg: {"median": statistics.median(v for v, _ in xs), "min": xs[0], "max": xs[-1]}
+                                                 for cfg, xs in by_cfg.items()},
+            "median_process_slowdown": {cfg: statistics.median(cells[sid][cfg].process_time / cells[sid]["python"].process_time
+                                                              for sid in ds.finished(cfg)) for cfg in COLUMNS},
+        }
     return {
         "source": ds.source, "note": ds.note, "generated": datetime.datetime.now().isoformat(timespec="seconds"),
         "repetitions": ds.repetitions,
@@ -428,8 +458,9 @@ def summary(ds, time_tests, space_tests):
         "median_time_reduction_fg_to_cg": statistics.median(fg_cg.values()),
         "store_mib": {sid: {cfg: cells[sid][cfg].store_mib for cfg in COLUMNS} for sid in SIDS},
         "store_reduction_fg_minus_cg_mib": dict(sorted(store_reduction.items(), key=lambda kv: -kv[1])),
-        "unfinished": unfinished,
+        "unfinished": unfinished, "process_time_tests": process_tests,
         "time_tests": time_tests, "space_tests": space_tests,
+        **process,
     }
 
 
@@ -448,9 +479,14 @@ def generate(ds, out, correction="holm", method="exact", scale="log", alternativ
         "overhead-space.tex": space_table(ds),
         "overhead-space-tests.tex": tests_table(space_tests, baseline_rule=False),
     }
+    process_tests = None
+    if all(ds.cell(sid, cfg).process_time is not None for sid in SIDS for cfg in ["python"] + COLUMNS
+           if ds.cell(sid, cfg).unfinished is None):
+        fragments["overhead-process-times.tex"] = times_table(ds, lambda c: c.process_time)
+        process_tests = tests(ds, TIME_FAMILIES, lambda c: c.process_time, correction, method, scale, alternative)
     for name, body in fragments.items():
         (out / name).write_text(stamp + body)
-    s = summary(ds, time_tests, space_tests)
+    s = summary(ds, time_tests, space_tests, process_tests)
     (out / "overhead-summary.json").write_text(json.dumps(s, indent=1, default=str) + "\n")
     return s
 

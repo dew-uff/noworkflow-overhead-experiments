@@ -17,7 +17,7 @@ measurement of 2.1.3 that led here.
 | `hook/sitecustomize.py` | Loaded into every run: seeds, and records what the script's functions returned |
 | `compare.py` | The verdicts and the times, per script and configuration |
 | `prepare.py` | The measurement machine: checks it, prepares it for timing, launches a pass, undoes it all |
-| `paper_tables.py` | The four tables of the paper's Section 7.3 from a results directory, as LaTeX fragments, with the numbers its prose cites; `test_paper_tables.py` shows the same arithmetic on the evaluation of 2.1.3 reproduces the submitted paper |
+| `paper_tables.py` | The tables of the paper's Section 7.3 from a results directory, as LaTeX fragments (the scripts' own times, the wall-clock times of the processes, the stores and the paired tests), with the numbers its prose cites; `test_paper_tables.py` shows the same arithmetic on the evaluation of 2.1.3 reproduces the submitted paper |
 
 ## Running the gate
 
@@ -78,11 +78,14 @@ records included (they hold no user or host name).
 uv run --with scipy python3 paper_tables.py $R --out <paper>/tables --min-repetitions 10
 ```
 
-writes the bodies of the four tables of Section 7.3 (times with the slowdown shading, store
-sizes, and the two tables of paired tests) and `overhead-summary.json`, the numbers the prose
-of the section cites. The docstring of `paper_tables.py` states each computation: the time is
-the one the script prints (`reported`), the median over the complete repetitions; a run the
-memory cap ended is marked, not timed; the paired comparisons use the two-sided Wilcoxon
+writes the bodies of the tables of Section 7.3 (the times the scripts report, with the
+slowdown shading; the wall-clock times of the whole processes, in the same layout; store
+sizes; and the two tables of paired tests) and `overhead-summary.json`, the numbers the prose
+of the section cites, among them what the whole process adds to the script's own time (the
+start-up and the writing of the store) and the paired tests repeated on the wall-clock times.
+The docstring of `paper_tables.py` states each computation: the time is the one the script
+prints (`reported`), the median over the complete repetitions, and the wall-clock time of the
+process (`wall`) is reported next to it; a run the memory cap ended is marked, not timed; the paired comparisons use the two-sided Wilcoxon
 signed-rank test on the exact distribution, applied to the logarithms of the times and of the
 store sizes (that is, to the ratio between the two configurations), with Holm's adjustment
 within each set of comparisons and the rank-biserial correlation as effect size;
