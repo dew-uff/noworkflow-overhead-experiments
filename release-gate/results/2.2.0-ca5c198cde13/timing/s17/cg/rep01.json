@@ -1,0 +1,89 @@
+{
+ "sid": "s17",
+ "config": "cg",
+ "cmd": "now run -cg test_sqrt_matrix.py 6000",
+ "status": 0,
+ "wall": 229.5037541299971,
+ "reported": 228.32207899799687,
+ "user": 228.60397,
+ "sys": 0.514285,
+ "peak_rss": 1591103488,
+ "store_bytes": 26383981,
+ "store_disk_bytes": 26992640,
+ "started_at": "2026-10-27T13:01:43+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 228,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3095871,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 33.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.007631578947368421,
+   "max": 0.07
+  },
+  "foreign_on_run_cpu_s": 0.052,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    20.39
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    15.27
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    15.27
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    8.15
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    8.14
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "228.32207899799687\n",
+ "stderr": "",
+ "files": {
+  "test_sqrt_matrix.py": "e93bb74fb9aee0a32972680275581e941a468a0c"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/test_sqrt_matrix.py"
+  ]
+ },
+ "repetition": 1,
+ "attempts": [
+  {
+   "started_at": "2026-10-27T13:01:43+00:00",
+   "status": 0,
+   "wall": 229.5037541299971,
+   "reported": 228.32207899799687,
+   "disturbed": []
+  }
+ ]
+}

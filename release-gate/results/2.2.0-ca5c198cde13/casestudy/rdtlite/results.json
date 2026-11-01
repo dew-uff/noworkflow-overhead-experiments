@@ -1,0 +1,92 @@
+[
+ {
+  "rep": 1,
+  "measure": "trial4",
+  "wall": 352.401,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197982
+ },
+ {
+  "rep": 1,
+  "measure": "r",
+  "wall": 20.69,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 1,
+  "measure": "r-rdtlite",
+  "wall": 294.489,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 2,
+  "measure": "r",
+  "wall": 22.616,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 2,
+  "measure": "r-rdtlite",
+  "wall": 341.036,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 2,
+  "measure": "trial4",
+  "wall": 352.622,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197984
+ },
+ {
+  "rep": 3,
+  "measure": "r-rdtlite",
+  "wall": 299.026,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 3,
+  "measure": "trial4",
+  "wall": 355.726,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197983
+ },
+ {
+  "rep": 3,
+  "measure": "r",
+  "wall": 20.817,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ }
+]

@@ -1,0 +1,48 @@
+{
+ "summary": "clean: 148 runs under noWorkflow compute what plain Python computes; not finished for memory: s14 cg, s14 cg-d3, s14 d3, s14 e-none, s14 e-relevant, s14 now, s20 cg, s20 cg-d3, s20 d3, s20 e-none, s20 e-relevant, s20 now, s21 cg, s21 cg-d2, s21 cg-d3, s21 d2, s21 d3, s21 e-none, s21 e-relevant, s21 now",
+ "complete": true,
+ "candidate": {
+  "wheel": "noworkflow-2.2.0-py3-none-any.whl",
+  "sha256": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+  "version": "noWorkflow 2.2.0",
+  "python": "3.12.15",
+  "scripts_commit": "e08cbef717653f63345e61393edb94ce8cd7eb52",
+  "scripts_dirty": false
+ },
+ "unfinished": [
+  "s14 cg",
+  "s14 cg-d3",
+  "s14 d3",
+  "s14 e-none",
+  "s14 e-relevant",
+  "s14 now",
+  "s20 cg",
+  "s20 cg-d3",
+  "s20 d3",
+  "s20 e-none",
+  "s20 e-relevant",
+  "s20 now",
+  "s21 cg",
+  "s21 cg-d2",
+  "s21 cg-d3",
+  "s21 d2",
+  "s21 d3",
+  "s21 e-none",
+  "s21 e-relevant",
+  "s21 now"
+ ],
+ "at": "2026-10-27T10:10:32+00:00",
+ "estimate_s": {
+  "python": 820,
+  "python-control": 732,
+  "now": 5684,
+  "d2": 7794,
+  "d3": 6168,
+  "cg": 4984,
+  "cg-d2": 6391,
+  "cg-d3": 5278,
+  "e-none": 3286,
+  "e-relevant": 3646
+ },
+ "timing_repetition_h": 4.7
+}

@@ -1,0 +1,141 @@
+{
+ "sid": "s4",
+ "config": "e-none",
+ "cmd": "now run -e none export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z",
+ "status": 0,
+ "wall": 1.5349596720006957,
+ "reported": 0.0355895300017437,
+ "user": 1.047095,
+ "sys": 0.122205,
+ "peak_rss": 139845632,
+ "store_bytes": 31032922,
+ "store_disk_bytes": 31428608,
+ "started_at": "2026-10-26T20:26:13+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "Site: MOS\nDataset: MOS\nStart export: 2010-01-01 01:00:00\nEnd export: 2010-01-02 01:00:00\nExporting 97measurements...\nWrote output data to MOS_gage_data.csv\n\n0,0355895300017437\n",
+ "stderr": "",
+ "files": {
+  ".gitignore": "fc2272edce7781a3808a4f54aa074737103107a8",
+  "AguaSaludRainfall.h5": "7a6fe59a6771c8613f97f9390a999f37456d115b",
+  "MOS_gage_data.csv": "a3361c4ca54af0161de99d5c71e8bdedf815fb0f",
+  "README.md": "ee9fde5fea18b0616dde64d5567d84ea7039a262",
+  "export_rainfall.py": "4ecd7393ebd6d40eaf92460ffa6defb92351b739"
+ },
+ "digests": {
+  "globals": {
+   "start": "27758.415536185"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "comment_1": [
+    1,
+    "ad98682c6106aceb6646032e"
+   ],
+   "comment_10": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "comment_11": [
+    1,
+    "ffa63a0c6180b196681ebf8e"
+   ],
+   "comment_12": [
+    1,
+    "67674c9d9b448f58dd4d9776"
+   ],
+   "comment_13": [
+    1,
+    "123ef05543ee31dca2882ec4"
+   ],
+   "comment_14": [
+    1,
+    "d89609d35634ea4f5b3cb4a3"
+   ],
+   "comment_15": [
+    1,
+    "c16237bedf1c04e192c2f00f"
+   ],
+   "comment_16": [
+    1,
+    "6b9437482025d28ee4b60b52"
+   ],
+   "comment_17": [
+    1,
+    "576da551300fbe42d286425d"
+   ],
+   "comment_18": [
+    1,
+    "9ba9505c167479c6a0594735"
+   ],
+   "comment_19": [
+    1,
+    "6b0345e406e9ef5a71437113"
+   ],
+   "comment_2": [
+    1,
+    "a790616b51d35a7b3665955b"
+   ],
+   "comment_20": [
+    1,
+    "63792c3d7565e94a5c08706a"
+   ],
+   "comment_21": [
+    1,
+    "63792c3d7565e94a5c08706a"
+   ],
+   "comment_22": [
+    1,
+    "2242cfbce9ded3f909e58661"
+   ],
+   "comment_23": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "comment_3": [
+    1,
+    "b19236279a875cc6890f3c91"
+   ],
+   "comment_4": [
+    1,
+    "05fc5be1d403d8e8b5955dc4"
+   ],
+   "comment_5": [
+    1,
+    "2581a89846a59ab030a98d1b"
+   ],
+   "comment_6": [
+    1,
+    "f02f6e62f79833c5514e71c1"
+   ],
+   "comment_7": [
+    1,
+    "2f43450d526a4dadb24673ac"
+   ],
+   "comment_8": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "comment_9": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/export_rainfall.py"
+  ]
+ }
+}

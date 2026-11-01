@@ -1,0 +1,31 @@
+{
+ "sid": "s14",
+ "config": "cg",
+ "cmd": "now run -cg menger_sponge2.py",
+ "status": "oom",
+ "wall": 1516.3414760400046,
+ "reported": null,
+ "user": 1486.723198,
+ "sys": 28.911785,
+ "peak_rss": 128615362560,
+ "store_bytes": 38781358,
+ "store_disk_bytes": 39567360,
+ "started_at": "2026-10-27T02:02:35+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": true,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "6d13f7c026cc4a4ecacb431df56c1faa907da1c8",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": null
+}

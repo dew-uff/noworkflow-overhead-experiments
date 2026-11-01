@@ -1,0 +1,69 @@
+{
+ "sid": "s14",
+ "config": "python",
+ "cmd": "python menger_sponge2.py",
+ "status": 0,
+ "wall": 96.59758422300001,
+ "reported": 96.27462934300274,
+ "user": 96.069445,
+ "sys": 0.520964,
+ "peak_rss": 801820672,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-26T20:08:56+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "96.27462934300274\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "8adc31cc65a673bda57f42eb00e77fa96860d73b",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "globals": {
+   "start": "26721.524645322"
+  },
+  "returns": {
+   "<module>": [
+    2,
+    "82c87f822b872395716065ae"
+   ],
+   "cross_product": [
+    2,
+    "c10f65f32fef450a7ce7d244"
+   ],
+   "in_sponge": [
+    100000,
+    "75614dcb7c5227f7f7e1f8fa"
+   ],
+   "length": [
+    2,
+    "a1cb67853f88a539aafd2a43"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "outside_unit_cube": [
+    100000,
+    "6ee70fd49676a1887bdee890"
+   ],
+   "plot_slice": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "sid": "s19",
+ "config": "d2",
+ "cmd": "now run -d 2 test_evaluate_functions.py 80000",
+ "status": 0,
+ "wall": 34.55073227699904,
+ "reported": 33.15498974600632,
+ "user": 34.108225,
+ "sys": 0.09272699999999999,
+ "peak_rss": 134766592,
+ "store_bytes": 30717794,
+ "store_disk_bytes": 30949376,
+ "started_at": "2026-10-27T13:33:24+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 34,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199967,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 36.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.006470588235294118,
+   "max": 0.03
+  },
+  "foreign_on_run_cpu_s": -0.011,
+  "top_others": [
+   [
+    "root:kworker/u128:2-thermal_events",
+    0.68
+   ],
+   [
+    "root:kworker/u128:2-flush-259:1",
+    0.34
+   ],
+   [
+    "root:kworker/u128:3-flush-259:1",
+    0.18
+   ],
+   [
+    "root:kworker/31:0-mm_percpu_wq",
+    0.1
+   ],
+   [
+    "root:kworker/31:0-events",
+    0.1
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "33.15498974600632\n",
+ "stderr": "",
+ "files": {
+  "test_evaluate_functions.py": "da692205aec8300da922ba64f4f47e18c1bf097c"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/test_evaluate_functions.py"
+  ]
+ },
+ "repetition": 1,
+ "attempts": [
+  {
+   "started_at": "2026-10-27T13:33:24+00:00",
+   "status": 0,
+   "wall": 34.55073227699904,
+   "reported": 33.15498974600632,
+   "disturbed": []
+  }
+ ]
+}

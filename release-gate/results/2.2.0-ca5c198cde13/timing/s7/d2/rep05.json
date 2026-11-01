@@ -1,0 +1,69 @@
+{
+ "sid": "s7",
+ "config": "d2",
+ "cmd": "now run -d 2 eq_solver.py 500",
+ "status": 0,
+ "wall": 1.9595439469849225,
+ "reported": 0.4665232060069684,
+ "user": 1.485589,
+ "sys": 0.12847799999999998,
+ "peak_rss": 193466368,
+ "store_bytes": 62307422,
+ "store_disk_bytes": 63475712,
+ "started_at": "2026-10-28T11:52:30+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3200031,
+   "median": 3200031,
+   "max": 3200031
+  },
+  "temp_c_max": 34.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.01,
+   "max": 0.01
+  },
+  "foreign_on_run_cpu_s": -0.004,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "0,4665232060069684\n",
+ "stderr": "",
+ "files": {
+  "eq_solver.py": "0cb02dbb67b6a0fcbdb4ed9efce00f463d24ae48"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/eq_solver.py"
+  ]
+ },
+ "repetition": 5,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T11:52:30+00:00",
+   "status": 0,
+   "wall": 1.9595439469849225,
+   "reported": 0.4665232060069684,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

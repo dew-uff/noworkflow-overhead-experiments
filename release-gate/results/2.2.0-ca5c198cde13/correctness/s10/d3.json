@@ -1,0 +1,50 @@
+{
+ "sid": "s10",
+ "config": "d3",
+ "cmd": "now run -d 3 median.py 500",
+ "status": 0,
+ "wall": 1.3043396600005508,
+ "reported": 0.07255674099724274,
+ "user": 0.743451,
+ "sys": 0.107069,
+ "peak_rss": 149381120,
+ "store_bytes": 21794275,
+ "store_disk_bytes": 22024192,
+ "started_at": "2026-10-26T20:27:08+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "500791958400.5\n0,07255674099724274\n",
+ "stderr": "",
+ "files": {
+  "median.py": "9e8bd9728e75af3449ed809889a004bf002eb6a3"
+ },
+ "digests": {
+  "globals": {
+   "start": "27814.107319972",
+   "unsort_list": "list[500]:d5cf7adf295a6ed67d618894"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "median": [
+    1,
+    "602da36a07a14e3d2af1d683"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/median.py"
+  ]
+ }
+}

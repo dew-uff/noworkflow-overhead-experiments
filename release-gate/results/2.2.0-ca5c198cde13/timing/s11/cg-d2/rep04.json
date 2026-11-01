@@ -1,0 +1,70 @@
+{
+ "sid": "s11",
+ "config": "cg-d2",
+ "cmd": "now run -cg -d 2 gc.py CR954253.fasta",
+ "status": 0,
+ "wall": 3.750835817976622,
+ "reported": 2.7109748809889425,
+ "user": 3.244307,
+ "sys": 0.089548,
+ "peak_rss": 111099904,
+ "store_bytes": 20527506,
+ "store_disk_bytes": 20762624,
+ "started_at": "2026-10-28T05:37:02+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 3,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3200000,
+   "median": 3200000,
+   "max": 3200031
+  },
+  "temp_c_max": 35.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.016666666666666666,
+   "max": 0.05
+  },
+  "foreign_on_run_cpu_s": 0.016,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "6.987601519270889\n2,7109748809889425\n",
+ "stderr": "",
+ "files": {
+  "CR954253.fasta": "c8ce208679c6a08939a5ecdaf9d30a9b6ae95a5e",
+  "gc.py": "b28ab2cc12fa68e67031b00c3fdd0d2a300efca2"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/gc.py"
+  ]
+ },
+ "repetition": 4,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T05:37:02+00:00",
+   "status": 0,
+   "wall": 3.750835817976622,
+   "reported": 2.7109748809889425,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

@@ -1,0 +1,66 @@
+{
+ "sid": "s8",
+ "config": "e-none",
+ "cmd": "now run -e none curves.py 5000 5000 5000 5000 5000 5000 5000 5000",
+ "status": 0,
+ "wall": 1.2113419189990964,
+ "reported": 0.0034757049979816657,
+ "user": 0.633842,
+ "sys": 0.09597399999999999,
+ "peak_rss": 112369664,
+ "store_bytes": 17328527,
+ "store_disk_bytes": 17563648,
+ "started_at": "2026-10-26T20:27:03+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "[(5000, 5000)]\n0,0034757049979816657\n",
+ "stderr": "",
+ "files": {
+  "curves.py": "87accd637e48af0e91561b14f3209a387861171a"
+ },
+ "digests": {
+  "globals": {
+   "curve_distance_epsilon": "1e-30",
+   "n1": "5000",
+   "n2": "5000",
+   "n3": "5000",
+   "n4": "5000",
+   "n5": "5000",
+   "n6": "5000",
+   "n7": "5000",
+   "n8": "5000",
+   "start": "27808.797807961"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "calc_sq_distance": [
+    2,
+    "d7dbf10507ef2a32fcbabd69"
+   ],
+   "cubic": [
+    1,
+    "3baa673f73fac679a274f77b"
+   ],
+   "cubic_recursive": [
+    1,
+    "3baa673f73fac679a274f77b"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/curves.py"
+  ]
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "sid": "s20",
+ "config": "python",
+ "cmd": "python metropolis_hastings.py 27000000",
+ "status": 0,
+ "wall": 70.30069435300538,
+ "reported": 70.2285871990025,
+ "user": 70.280204,
+ "sys": 0.004998,
+ "peak_rss": 44482560,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-27T13:39:51+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 69,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199967,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 34.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.007391304347826087,
+   "max": 0.05
+  },
+  "foreign_on_run_cpu_s": 0.015,
+  "top_others": [
+   [
+    "root:kworker/10:0-mm_percpu_wq",
+    10.74
+   ],
+   [
+    "root:kworker/14:0-events",
+    10.04
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    7.88
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    7.88
+   ],
+   [
+    "root:kworker/10:0-events",
+    7.16
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "70.2285871990025\n",
+ "stderr": "",
+ "files": {
+  "metropolis_hastings.py": "e08ac534a2416de85c8163fd3191e2ea366e6aed"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/metropolis_hastings.py"
+  ]
+ },
+ "repetition": 1,
+ "attempts": [
+  {
+   "started_at": "2026-10-27T13:39:51+00:00",
+   "status": 0,
+   "wall": 70.30069435300538,
+   "reported": 70.2285871990025,
+   "disturbed": []
+  }
+ ]
+}

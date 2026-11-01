@@ -1,0 +1,47 @@
+{
+ "sid": "s17",
+ "config": "python-control",
+ "cmd": "python test_sqrt_matrix.py 6000",
+ "status": 0,
+ "wall": 187.47336363200156,
+ "reported": 187.29596017000222,
+ "user": 187.068912,
+ "sys": 0.38397899999999996,
+ "peak_rss": 1524047872,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-26T20:12:24+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "187.29596017000222\n",
+ "stderr": "",
+ "files": {
+  "test_sqrt_matrix.py": "e93bb74fb9aee0a32972680275581e941a468a0c"
+ },
+ "digests": {
+  "globals": {},
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "sqrt_matrix": [
+    1,
+    "28dfaaa212e1f71849011f87"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/test_sqrt_matrix.py"
+  ]
+ }
+}

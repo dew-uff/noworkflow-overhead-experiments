@@ -1,0 +1,94 @@
+{
+ "sid": "s14",
+ "config": "d2",
+ "cmd": "now run -d 2 menger_sponge2.py",
+ "status": 0,
+ "wall": 1761.9777258949762,
+ "reported": 1417.898171645007,
+ "user": 1745.875972,
+ "sys": 14.429054,
+ "peak_rss": 29429137408,
+ "store_bytes": 10891576380,
+ "store_disk_bytes": 10892374016,
+ "started_at": "2026-10-28T06:40:32+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1752,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 2600000,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 38.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.03250570776255708,
+   "max": 1.05
+  },
+  "foreign_on_run_cpu_s": 0.405,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    1144.49
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    630.3
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    469.34
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    301.07
+   ],
+   [
+    "root:kworker/u128:1-flush-259:1",
+    290.65
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "1417.898171645007\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "cbd955194f2390efca078f1fc87fa8135a0d8d72",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ },
+ "repetition": 4,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T06:40:32+00:00",
+   "status": 0,
+   "wall": 1761.9777258949762,
+   "reported": 1417.898171645007,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

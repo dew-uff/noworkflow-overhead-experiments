@@ -1,0 +1,95 @@
+{
+ "sid": "s2",
+ "config": "now",
+ "cmd": "now run main.py",
+ "status": 0,
+ "wall": 328.6310947879974,
+ "reported": 298.1484004689846,
+ "user": 308.749292,
+ "sys": 18.227536,
+ "peak_rss": 24506859520,
+ "store_bytes": 23829494553,
+ "store_disk_bytes": 23830876160,
+ "started_at": "2026-10-28T05:26:03+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 326,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3094878,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 38.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.04003067484662577,
+   "max": 1.35
+  },
+  "foreign_on_run_cpu_s": 0.053,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    164.53
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    82.31
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    68.45
+   ],
+   [
+    "root:kworker/u128:1-flush-259:1",
+    61.85
+   ],
+   [
+    "root:kworker/u128:1-thermal_events",
+    54.96
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "298,1484004689846\n",
+ "stderr": "",
+ "files": {
+  ".gitignore": "9aaae3fc7f669c65b7d62f4a52fc6d775ddd8e2e",
+  "DailyAverageWQStats.ipynb": "94ba5cd4241882712a0ca9cab81763e60921bde2",
+  "cee6440_ex3_loganriver.sqlite": "241e48bde5b6e8cc81b6cfda0ca87c3fe60a6f14",
+  "cee6440_ex3_loganriver.zip": "d9a56c20370d44d3186aa5ada2804b322f87986c",
+  "main.py": "4b9ce5ff87f533013690103232339916fe15d282",
+  "out.png": "f75569c76a54f6f01135c31ec5945f5c79d08555"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/main.py"
+  ]
+ },
+ "repetition": 4,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T05:26:03+00:00",
+   "status": 0,
+   "wall": 328.6310947879974,
+   "reported": 298.1484004689846,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

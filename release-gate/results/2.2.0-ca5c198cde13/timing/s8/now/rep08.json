@@ -1,0 +1,78 @@
+{
+ "sid": "s8",
+ "config": "now",
+ "cmd": "now run curves.py 5000 5000 5000 5000 5000 5000 5000 5000",
+ "status": 0,
+ "wall": 1.1247234769980423,
+ "reported": 0.004367931018350646,
+ "user": 0.7007899999999999,
+ "sys": 0.080647,
+ "peak_rss": 112316416,
+ "store_bytes": 17332074,
+ "store_disk_bytes": 17567744,
+ "started_at": "2026-10-29T06:51:09+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3200059,
+   "median": 3200059,
+   "max": 3200059
+  },
+  "temp_c_max": 34.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.02,
+   "max": 0.02
+  },
+  "foreign_on_run_cpu_s": -0.001,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "[(5000, 5000)]\n0,004367931018350646\n",
+ "stderr": "",
+ "files": {
+  "curves.py": "87accd637e48af0e91561b14f3209a387861171a"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/curves.py"
+  ]
+ },
+ "repetition": 8,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T06:51:08+00:00",
+   "status": 0,
+   "wall": 1.1421581830072682,
+   "reported": 0.004410336987348273,
+   "disturbed": [
+    "run CPU at 3125143 kHz, not 3200000"
+   ]
+  },
+  {
+   "started_at": "2026-10-29T06:51:09+00:00",
+   "status": 0,
+   "wall": 1.1247234769980423,
+   "reported": 0.004367931018350646,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

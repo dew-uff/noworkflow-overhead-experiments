@@ -1,0 +1,94 @@
+{
+ "sid": "s14",
+ "config": "cg-d2",
+ "cmd": "now run -cg -d 2 menger_sponge2.py",
+ "status": 0,
+ "wall": 910.712821795998,
+ "reported": 529.0311185190076,
+ "user": 893.943615,
+ "sys": 15.080929,
+ "peak_rss": 29434646528,
+ "store_bytes": 10893341759,
+ "store_disk_bytes": 10894139392,
+ "started_at": "2026-10-28T00:30:44+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 905,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 2599973,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 38.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.016961325966850828,
+   "max": 1.04
+  },
+  "foreign_on_run_cpu_s": 0.235,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    317.35
+   ],
+   [
+    "root:kworker/u128:4-flush-259:1",
+    206.66
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    204.51
+   ],
+   [
+    "root:kworker/u128:4-thermal_events",
+    163.26
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    133.25
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "529.0311185190076\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "7045223be10492e548c258a1b3d58ab4e52761da",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ },
+ "repetition": 3,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T00:30:44+00:00",
+   "status": 0,
+   "wall": 910.712821795998,
+   "reported": 529.0311185190076,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

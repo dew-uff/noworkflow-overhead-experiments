@@ -1,0 +1,73 @@
+{
+ "sid": "s5",
+ "config": "d3",
+ "cmd": "now run -d 3 export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z",
+ "status": 0,
+ "wall": 2.120445178996306,
+ "reported": 0.27802432602038607,
+ "user": 1.443662,
+ "sys": 0.10521499999999999,
+ "peak_rss": 154402816,
+ "store_bytes": 41944061,
+ "store_disk_bytes": 42340352,
+ "started_at": "2026-10-29T13:11:10+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 2,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3100272,
+   "median": 3200000,
+   "max": 3200000
+  },
+  "temp_c_max": 34.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.025,
+   "max": 0.05
+  },
+  "foreign_on_run_cpu_s": 0.001,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "Site: FOR\nDataset: discharge_sharp\nStart export: 2010-01-01 01:00:00\nEnd export: 2010-01-02 01:00:00\nExporting 289 measurements...\nWrote output data to FOR_discharge_sharp.csv\n\n0,27802432602038607\n",
+ "stderr": "",
+ "files": {
+  ".gitignore": "a4ef1a680591d3b95a9f44948d690395cacb59f3",
+  "AguaSaludDischarge.h5": "edf64722abe181a30daf7cad44db97d846f9d545",
+  "FOR_discharge_sharp.csv": "acff98fc2c4b56d84f161a539d173897c8cc4744",
+  "README.md": "3152f2197d29713e9afb8a96d90e6a134fc70a8b",
+  "export_discharge.py": "e9b1fa8e9d9e23e0bfc4c8ad994efe7d5b434ba1"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/export_discharge.py"
+  ]
+ },
+ "repetition": 9,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T13:11:10+00:00",
+   "status": 0,
+   "wall": 2.120445178996306,
+   "reported": 0.27802432602038607,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

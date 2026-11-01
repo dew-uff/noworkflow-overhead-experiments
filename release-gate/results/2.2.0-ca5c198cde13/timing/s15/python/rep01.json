@@ -1,0 +1,89 @@
+{
+ "sid": "s15",
+ "config": "python",
+ "cmd": "python test_belief_propagation.py 20000",
+ "status": 0,
+ "wall": 140.11855074299092,
+ "reported": 140.0454166970012,
+ "user": 140.049973,
+ "sys": 0.030990999999999998,
+ "peak_rss": 244039680,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-27T12:17:12+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 139,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199967,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 31.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.012014388489208633,
+   "max": 0.31
+  },
+  "foreign_on_run_cpu_s": 0.039,
+  "top_others": [
+   [
+    "root:kworker/u128:0-flush-259:1",
+    8.84
+   ],
+   [
+    "root:kworker/u128:0-thermal_events",
+    8.84
+   ],
+   [
+    "root:kworker/14:0-events",
+    8.37
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    5.6
+   ],
+   [
+    "root:kworker/u128:0-events_unbound",
+    4.42
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "140.0454166970012\n",
+ "stderr": "",
+ "files": {
+  "test_belief_propagation.py": "7908eae78c98d57a223909572dfa12a97ff58ada"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/test_belief_propagation.py"
+  ]
+ },
+ "repetition": 1,
+ "attempts": [
+  {
+   "started_at": "2026-10-27T12:17:12+00:00",
+   "status": 0,
+   "wall": 140.11855074299092,
+   "reported": 140.0454166970012,
+   "disturbed": []
+  }
+ ]
+}

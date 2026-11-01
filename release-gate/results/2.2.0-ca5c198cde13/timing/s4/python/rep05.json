@@ -1,0 +1,66 @@
+{
+ "sid": "s4",
+ "config": "python",
+ "cmd": "python export_rainfall.py --site MOS -d gage_data --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z",
+ "status": 0,
+ "wall": 0.10498425900004804,
+ "reported": 0.006790388986701146,
+ "user": 0.091975,
+ "sys": 0.012797,
+ "peak_rss": 61317120,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-28T11:51:38+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 0,
+  "nominal_khz": 3200000,
+  "freq_khz": null,
+  "temp_c_max": null,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": null,
+  "foreign_on_run_cpu_s": -0.005,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "Site: MOS\nDataset: MOS\nStart export: 2010-01-01 01:00:00\nEnd export: 2010-01-02 01:00:00\nExporting 97measurements...\nWrote output data to MOS_gage_data.csv\n\n0,006790388986701146\n",
+ "stderr": "",
+ "files": {
+  ".gitignore": "fc2272edce7781a3808a4f54aa074737103107a8",
+  "AguaSaludRainfall.h5": "7a6fe59a6771c8613f97f9390a999f37456d115b",
+  "MOS_gage_data.csv": "a3361c4ca54af0161de99d5c71e8bdedf815fb0f",
+  "README.md": "ee9fde5fea18b0616dde64d5567d84ea7039a262",
+  "export_rainfall.py": "4ecd7393ebd6d40eaf92460ffa6defb92351b739"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/export_rainfall.py"
+  ]
+ },
+ "repetition": 5,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T11:51:38+00:00",
+   "status": 0,
+   "wall": 0.10498425900004804,
+   "reported": 0.006790388986701146,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

@@ -1,0 +1,71 @@
+{
+ "sid": "s12",
+ "config": "e-none",
+ "cmd": "now run -e none mov_robots.py",
+ "status": 0,
+ "wall": 1.6283603990013944,
+ "reported": 0.03575041799922474,
+ "user": 1.187154,
+ "sys": 0.123332,
+ "peak_rss": 165986304,
+ "store_bytes": 41092275,
+ "store_disk_bytes": 41771008,
+ "started_at": "2026-10-27T10:51:30+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199968,
+   "median": 3199968,
+   "max": 3199968
+  },
+  "temp_c_max": 34.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.0,
+   "max": 0.0
+  },
+  "foreign_on_run_cpu_s": -0.01,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "0,03575041799922474\n",
+ "stderr": "",
+ "files": {
+  "mov_robots.py": "933acdab99197b7d1e0815211376098aa02718b5",
+  "source/leftWheelPositions.csv": "5f3401604c46566a356199cf816795f7df0e4a29",
+  "source/rightWheelPositions.csv": "02f91bbe4ee5d512773e981548c317bf5190bc72",
+  "source/straightWheelPositions.csv": "4df0e210721801c88213e2dc64575f00d8e5cf99"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/mov_robots.py"
+  ]
+ },
+ "repetition": 1,
+ "attempts": [
+  {
+   "started_at": "2026-10-27T10:51:30+00:00",
+   "status": 0,
+   "wall": 1.6283603990013944,
+   "reported": 0.03575041799922474,
+   "disturbed": []
+  }
+ ]
+}

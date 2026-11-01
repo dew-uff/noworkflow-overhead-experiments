@@ -1,0 +1,54 @@
+{
+ "sid": "s20",
+ "config": "python",
+ "cmd": "python metropolis_hastings.py 27000000",
+ "status": 0,
+ "wall": 42.25156575800065,
+ "reported": 42.193792534999375,
+ "user": 42.031203,
+ "sys": 0.21597999999999998,
+ "peak_rss": 44138496,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-26T20:10:09+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "42.193792534999375\n",
+ "stderr": "",
+ "files": {
+  "metropolis_hastings.py": "e08ac534a2416de85c8163fd3191e2ea366e6aed"
+ },
+ "digests": {
+  "globals": {
+   "N": "27000000",
+   "start": "26794.108026035"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "f": [
+    100000,
+    "d7372aaf6b9863d5e6c07eec"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "markov_chain_function": [
+    1,
+    "cc758f77c74c5f2b9f8bf20c"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/metropolis_hastings.py"
+  ]
+ }
+}

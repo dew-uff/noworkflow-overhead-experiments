@@ -1,0 +1,52 @@
+{
+ "sid": "s11",
+ "config": "d3",
+ "cmd": "now run -d 3 gc.py CR954253.fasta",
+ "status": 0,
+ "wall": 76.3511569809998,
+ "reported": 25.15006575699954,
+ "user": 73.475826,
+ "sys": 2.257995,
+ "peak_rss": 4583153664,
+ "store_bytes": 2003405536,
+ "store_disk_bytes": 2003636224,
+ "started_at": "2026-10-26T20:27:12+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "6.987601519270889\n25,15006575699954\n",
+ "stderr": "",
+ "files": {
+  "CR954253.fasta": "c8ce208679c6a08939a5ecdaf9d30a9b6ae95a5e",
+  "gc.py": "b28ab2cc12fa68e67031b00c3fdd0d2a300efca2"
+ },
+ "digests": {
+  "globals": {
+   "f": "_io.TextIOWrapper:unpicklable",
+   "start": "27817.365328972",
+   "texto": "str:c0f465195cb098450942f400"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "find_gc": [
+    1,
+    "c4d92f431ce3f605435f50bb"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/gc.py"
+  ]
+ }
+}

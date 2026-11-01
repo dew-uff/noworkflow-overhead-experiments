@@ -1,0 +1,219 @@
+scripts: ff3af301dbf3d73059bd3639d6f9d7506c69b977  overhead.py a9f5ce1daf6e838e5ad8849fcd66d63193ff3969  rdtlite_time.py 
+start 2026-10-30T09:50:22Z; pid 528908's current affinity list: 14; analysis 9d116ca; noWorkflow 2.2.0; R R version 4.5.2 (2025-10-31) rdtLite 1.4; cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0; strace -- version 6.19
+{"rep": 1, "cfg": "plain", "trial": 1, "wall": 32.738, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "plain", "trial": 2, "wall": 32.66, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "plain", "trial": 3, "wall": 32.69, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "plain", "store_bytes": 0}
+{"rep": 1, "cfg": "none", "trial": 1, "wall": 34.117, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "none", "trial": 2, "wall": 32.011, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "none", "trial": 3, "wall": 31.927, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "none", "store_bytes": 344629734}
+{"rep": 1, "cfg": "argv", "trial": 1, "wall": 34.347, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "argv", "trial": 2, "wall": 34.229, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "argv", "trial": 3, "wall": 32.269, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "argv", "store_bytes": 346461496}
+{"rep": 1, "cfg": "strace", "trial": 1, "wall": 34.688, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "strace", "trial": 2, "wall": 34.57, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "strace", "trial": 3, "wall": 34.74, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "cfg": "strace", "store_bytes": 346465592}
+{"rep": 2, "cfg": "none", "trial": 1, "wall": 34.155, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "none", "trial": 2, "wall": 34.046, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "none", "trial": 3, "wall": 34.106, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "none", "store_bytes": 344592870}
+{"rep": 2, "cfg": "argv", "trial": 1, "wall": 34.37, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "argv", "trial": 2, "wall": 34.217, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "argv", "trial": 3, "wall": 34.245, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "argv", "store_bytes": 346449208}
+{"rep": 2, "cfg": "strace", "trial": 1, "wall": 34.687, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "strace", "trial": 2, "wall": 34.605, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "strace", "trial": 3, "wall": 34.62, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "strace", "store_bytes": 346465592}
+{"rep": 2, "cfg": "plain", "trial": 1, "wall": 32.575, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "plain", "trial": 2, "wall": 32.51, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "plain", "trial": 3, "wall": 32.582, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "cfg": "plain", "store_bytes": 0}
+{"rep": 3, "cfg": "argv", "trial": 1, "wall": 34.447, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "argv", "trial": 2, "wall": 34.289, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "argv", "trial": 3, "wall": 34.47, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "argv", "store_bytes": 346481976}
+{"rep": 3, "cfg": "strace", "trial": 1, "wall": 34.867, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "strace", "trial": 2, "wall": 34.577, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "strace", "trial": 3, "wall": 34.926, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "strace", "store_bytes": 346428728}
+{"rep": 3, "cfg": "plain", "trial": 1, "wall": 32.588, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "plain", "trial": 2, "wall": 32.693, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "plain", "trial": 3, "wall": 32.763, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "plain", "store_bytes": 0}
+{"rep": 3, "cfg": "none", "trial": 1, "wall": 34.187, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "none", "trial": 2, "wall": 32.012, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "none", "trial": 3, "wall": 33.979, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 3, "cfg": "none", "store_bytes": 344629734}
+{"rep": 4, "cfg": "strace", "trial": 1, "wall": 34.837, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "strace", "trial": 2, "wall": 34.681, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "strace", "trial": 3, "wall": 34.698, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "strace", "store_bytes": 346486072}
+{"rep": 4, "cfg": "plain", "trial": 1, "wall": 32.527, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "plain", "trial": 2, "wall": 32.688, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "plain", "trial": 3, "wall": 30.627, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "plain", "store_bytes": 0}
+{"rep": 4, "cfg": "none", "trial": 1, "wall": 34.115, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "none", "trial": 2, "wall": 33.956, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "none", "trial": 3, "wall": 31.915, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "none", "store_bytes": 344629734}
+{"rep": 4, "cfg": "argv", "trial": 1, "wall": 34.469, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "argv", "trial": 2, "wall": 34.302, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "argv", "trial": 3, "wall": 34.276, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "cfg": "argv", "store_bytes": 346461496}
+{"rep": 5, "cfg": "plain", "trial": 1, "wall": 32.825, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "plain", "trial": 2, "wall": 32.591, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "plain", "trial": 3, "wall": 30.778, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "plain", "store_bytes": 0}
+{"rep": 5, "cfg": "none", "trial": 1, "wall": 34.237, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "none", "trial": 2, "wall": 34.103, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "none", "trial": 3, "wall": 33.961, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "none", "store_bytes": 344629734}
+{"rep": 5, "cfg": "argv", "trial": 1, "wall": 34.3, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "argv", "trial": 2, "wall": 34.2, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "argv", "trial": 3, "wall": 34.313, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "argv", "store_bytes": 346424632}
+{"rep": 5, "cfg": "strace", "trial": 1, "wall": 34.728, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "strace", "trial": 2, "wall": 34.715, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "strace", "trial": 3, "wall": 34.658, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "cfg": "strace", "store_bytes": 346531128}
+{"rep": 6, "cfg": "none", "trial": 1, "wall": 34.299, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "none", "trial": 2, "wall": 34.113, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "none", "trial": 3, "wall": 34.056, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "none", "store_bytes": 344654310}
+{"rep": 6, "cfg": "argv", "trial": 1, "wall": 34.415, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "argv", "trial": 2, "wall": 34.295, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "argv", "trial": 3, "wall": 34.36, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "argv", "store_bytes": 346461496}
+{"rep": 6, "cfg": "strace", "trial": 1, "wall": 34.687, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "strace", "trial": 2, "wall": 34.847, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "strace", "trial": 3, "wall": 34.633, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "strace", "store_bytes": 346428728}
+{"rep": 6, "cfg": "plain", "trial": 1, "wall": 32.577, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "plain", "trial": 2, "wall": 32.535, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "plain", "trial": 3, "wall": 32.682, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "cfg": "plain", "store_bytes": 0}
+{"rep": 7, "cfg": "argv", "trial": 1, "wall": 34.364, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "argv", "trial": 2, "wall": 34.397, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "argv", "trial": 3, "wall": 34.376, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "argv", "store_bytes": 346424632}
+{"rep": 7, "cfg": "strace", "trial": 1, "wall": 34.929, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "strace", "trial": 2, "wall": 34.595, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "strace", "trial": 3, "wall": 32.746, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "strace", "store_bytes": 346465592}
+{"rep": 7, "cfg": "plain", "trial": 1, "wall": 32.579, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "plain", "trial": 2, "wall": 32.656, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "plain", "trial": 3, "wall": 32.702, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "plain", "store_bytes": 0}
+{"rep": 7, "cfg": "none", "trial": 1, "wall": 34.094, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "none", "trial": 2, "wall": 33.97, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "none", "trial": 3, "wall": 32.136, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 7, "cfg": "none", "store_bytes": 344629734}
+{"rep": 8, "cfg": "strace", "trial": 1, "wall": 34.778, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "strace", "trial": 2, "wall": 34.773, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "strace", "trial": 3, "wall": 34.025, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "strace", "store_bytes": 346453304}
+{"rep": 8, "cfg": "plain", "trial": 1, "wall": 32.502, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "plain", "trial": 2, "wall": 32.687, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "plain", "trial": 3, "wall": 30.679, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "plain", "store_bytes": 0}
+{"rep": 8, "cfg": "none", "trial": 1, "wall": 34.239, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "none", "trial": 2, "wall": 33.916, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "none", "trial": 3, "wall": 34.165, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "none", "store_bytes": 344654310}
+{"rep": 8, "cfg": "argv", "trial": 1, "wall": 34.487, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "argv", "trial": 2, "wall": 34.225, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "argv", "trial": 3, "wall": 32.304, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "cfg": "argv", "store_bytes": 346449208}
+{"rep": 9, "cfg": "plain", "trial": 1, "wall": 32.601, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "plain", "trial": 2, "wall": 32.516, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "plain", "trial": 3, "wall": 32.712, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "plain", "store_bytes": 0}
+{"rep": 9, "cfg": "none", "trial": 1, "wall": 34.169, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "none", "trial": 2, "wall": 33.757, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "none", "trial": 3, "wall": 33.966, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "none", "store_bytes": 344592870}
+{"rep": 9, "cfg": "argv", "trial": 1, "wall": 34.311, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "argv", "trial": 2, "wall": 34.188, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "argv", "trial": 3, "wall": 34.226, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "argv", "store_bytes": 346481976}
+{"rep": 9, "cfg": "strace", "trial": 1, "wall": 34.884, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "strace", "trial": 2, "wall": 34.688, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "strace", "trial": 3, "wall": 34.597, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "cfg": "strace", "store_bytes": 346428728}
+{"rep": 10, "cfg": "none", "trial": 1, "wall": 34.158, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "none", "trial": 2, "wall": 33.862, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "none", "trial": 3, "wall": 31.997, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "none", "store_bytes": 344654310}
+{"rep": 10, "cfg": "argv", "trial": 1, "wall": 34.407, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "argv", "trial": 2, "wall": 34.201, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "argv", "trial": 3, "wall": 36.525, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "argv", "store_bytes": 346449208}
+{"rep": 10, "cfg": "strace", "trial": 1, "wall": 34.845, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "strace", "trial": 2, "wall": 34.773, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "strace", "trial": 3, "wall": 34.795, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "strace", "store_bytes": 346486072}
+{"rep": 10, "cfg": "plain", "trial": 1, "wall": 33.087, "status": 0, "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "plain", "trial": 2, "wall": 32.565, "status": 0, "out_sha1": "d7f35c36b6a3473e77df96783bff603541e4db2a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "plain", "trial": 3, "wall": 32.588, "status": 0, "out_sha1": "89a8be2374477c6541884582e71c9347ee9c7f8a", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "cfg": "plain", "store_bytes": 0}
+
+cfg    median T1/T2/T3 (s)        median of the sum (s)  vs plain
+plain    32.58   32.62   32.64      97.81 (min 95.84, max 98.24)  +0.0%
+none     34.16   33.94   33.96     101.05 (min 98.06, max 102.47)  +3.3%
+argv     34.39   34.23   34.29     102.94 (min 100.84, max 105.13)  +5.2%
+strace   34.81   34.68   34.65     104.13 (min 102.27, max 104.41)  +6.5%
+statuses: [0] out.txt digests per trial: {1: ['b8ac639875'], 2: ['d7f35c36b6'], 3: ['89a8be2374']}
+store bytes: {'plain': 0, 'none': 344654310, 'argv': 346449208, 'strace': 346486072}
+overhead.py exit 0 at 2026-10-30T10:57:55Z
+{"rep": 1, "measure": "trial4", "wall": 356.668, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197999}
+{"rep": 1, "measure": "trial4-plain", "wall": 359.454, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 1, "measure": "r", "wall": 22.766, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 1, "measure": "r-rdtlite", "wall": 345.107, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 2, "measure": "trial4-plain", "wall": 354.672, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 2, "measure": "r", "wall": 22.646, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 2, "measure": "r-rdtlite", "wall": 342.312, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 2, "measure": "trial4", "wall": 356.323, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197999}
+{"rep": 3, "measure": "r", "wall": 20.789, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 3, "measure": "r-rdtlite", "wall": 296.349, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 3, "measure": "trial4", "wall": 356.821, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197998}
+{"rep": 3, "measure": "trial4-plain", "wall": 354.44, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "measure": "r-rdtlite", "wall": 351.306, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 4, "measure": "trial4", "wall": 354.554, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197999}
+{"rep": 4, "measure": "trial4-plain", "wall": 354.175, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 4, "measure": "r", "wall": 22.716, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 5, "measure": "trial4", "wall": 354.757, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197999}
+{"rep": 5, "measure": "trial4-plain", "wall": 353.748, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 5, "measure": "r", "wall": 22.735, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 5, "measure": "r-rdtlite", "wall": 342.322, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 6, "measure": "trial4-plain", "wall": 353.026, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 6, "measure": "r", "wall": 22.48, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 6, "measure": "r-rdtlite", "wall": 342.074, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 6, "measure": "trial4", "wall": 354.966, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197999}
+{"rep": 7, "measure": "r", "wall": 20.699, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 7, "measure": "r-rdtlite", "wall": 293.763, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 7, "measure": "trial4", "wall": 356.443, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197999}
+{"rep": 7, "measure": "trial4-plain", "wall": 354.25, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "measure": "r-rdtlite", "wall": 344.489, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 8, "measure": "trial4", "wall": 354.687, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197998}
+{"rep": 8, "measure": "trial4-plain", "wall": 354.102, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 8, "measure": "r", "wall": 22.794, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 9, "measure": "trial4", "wall": 354.5, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345197999}
+{"rep": 9, "measure": "trial4-plain", "wall": 359.976, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 9, "measure": "r", "wall": 22.618, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 9, "measure": "r-rdtlite", "wall": 341.563, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 10, "measure": "trial4-plain", "wall": 354.382, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"]}
+{"rep": 10, "measure": "r", "wall": 22.7, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 10, "measure": "r-rdtlite", "wall": 345.019, "status": 0, "out": "pred.csv", "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5", "stderr_tail": []}
+{"rep": 10, "measure": "trial4", "wall": 359.71, "status": 0, "out": "out.txt", "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45", "stderr_tail": ["      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"], "store_bytes": 345198004}
+
+measure     median (s)  min-max (s)
+trial4        355.64  354.50-359.71
+trial4-plain    354.32  353.03-359.98
+r              22.67  20.70-22.79
+r-rdtlite     342.32  293.76-351.31
+statuses: [0] digests: {'trial4': ['b8ac639875'], 'trial4-plain': ['b8ac639875'], 'r': ['7812511f74'], 'r-rdtlite': ['7812511f74']}
+rdtlite_time.py exit 0 at 2026-10-30T13:56:07Z

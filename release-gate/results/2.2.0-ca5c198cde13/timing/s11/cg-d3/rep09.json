@@ -1,0 +1,91 @@
+{
+ "sid": "s11",
+ "config": "cg-d3",
+ "cmd": "now run -cg -d 3 gc.py CR954253.fasta",
+ "status": 0,
+ "wall": 102.12737526698038,
+ "reported": 30.667637296020985,
+ "user": 97.886531,
+ "sys": 3.43831,
+ "peak_rss": 4571607040,
+ "store_bytes": 2000312722,
+ "store_disk_bytes": 2000543744,
+ "started_at": "2026-10-29T13:19:26+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 101,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3143024,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 35.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.008811881188118813,
+   "max": 0.08
+  },
+  "foreign_on_run_cpu_s": 0.035,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    108.88
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    72.59
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    72.57
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    44.71
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    44.7
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "6.987601519270889\n30,667637296020985\n",
+ "stderr": "",
+ "files": {
+  "CR954253.fasta": "c8ce208679c6a08939a5ecdaf9d30a9b6ae95a5e",
+  "gc.py": "b28ab2cc12fa68e67031b00c3fdd0d2a300efca2"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/gc.py"
+  ]
+ },
+ "repetition": 9,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T13:19:26+00:00",
+   "status": 0,
+   "wall": 102.12737526698038,
+   "reported": 30.667637296020985,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

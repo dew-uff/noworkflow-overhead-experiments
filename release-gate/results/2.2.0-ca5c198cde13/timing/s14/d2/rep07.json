@@ -1,0 +1,94 @@
+{
+ "sid": "s14",
+ "config": "d2",
+ "cmd": "now run -d 2 menger_sponge2.py",
+ "status": 0,
+ "wall": 1796.2616009210178,
+ "reported": 1435.3647979990055,
+ "user": 1779.704069,
+ "sys": 14.798132,
+ "peak_rss": 29434875904,
+ "store_bytes": 10891576380,
+ "store_disk_bytes": 10892369920,
+ "started_at": "2026-10-29T01:23:54+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1786,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 2599974,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 38.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.016752519596864503,
+   "max": 1.03
+  },
+  "foreign_on_run_cpu_s": 0.408,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    1957.81
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    1090.6
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    895.06
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    582.5
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    533.84
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "1435.3647979990055\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "f8ca4c9fbad30a84aa89244e7ef044a9ec793b62",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ },
+ "repetition": 7,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T01:23:54+00:00",
+   "status": 0,
+   "wall": 1796.2616009210178,
+   "reported": 1435.3647979990055,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

@@ -1,0 +1,13 @@
+{
+ "summary": "clean: 10 repetitions, every run computes what plain Python computes",
+ "complete": true,
+ "candidate": {
+  "wheel": "noworkflow-2.2.0-py3-none-any.whl",
+  "sha256": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+  "version": "noWorkflow 2.2.0",
+  "python": "3.12.15",
+  "scripts_commit": "e08cbef717653f63345e61393edb94ce8cd7eb52",
+  "scripts_dirty": false
+ },
+ "at": "2026-10-30T01:18:26+00:00"
+}

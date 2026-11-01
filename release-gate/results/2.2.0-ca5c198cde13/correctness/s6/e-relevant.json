@@ -1,0 +1,50 @@
+{
+ "sid": "s6",
+ "config": "e-relevant",
+ "cmd": "now run -e relevant cvar.py 500",
+ "status": 0,
+ "wall": 1.4576851810015796,
+ "reported": 0.1209882449984434,
+ "user": 1.021532,
+ "sys": 0.086338,
+ "peak_rss": 118001664,
+ "store_bytes": 24079507,
+ "store_disk_bytes": 24309760,
+ "started_at": "2026-10-26T20:26:40+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "959364222.88\n0,1209882449984434\n",
+ "stderr": "",
+ "files": {
+  "cvar.py": "0d23817510c5ad16acefdee026e9bd55a84834d3"
+ },
+ "digests": {
+  "globals": {
+   "n": "list[500]:bc3d46465543f30cef5106da",
+   "start": "27785.275314126"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "get_empirical_CVaR": [
+    1,
+    "917d8cb2e6f1a7b7a129ac7f"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/cvar.py"
+  ]
+ }
+}

@@ -70,7 +70,11 @@ sudo python3 prepare.py restore          # when it ends, before the reservation 
 ```
 
 **5. The results**: `python3 compare.py $R`, and `$R` committed here, run records and machine
-records included (they hold no user or host name).
+records included (they hold no user or host name; a path under a home directory in a log is
+written `~/`). The case study of the paper's section "Beyond Python" (`../beyond-python/`) runs
+on the prepared machine after the timing pass, in a unit confined to the run CPU like the
+gate's, and its results go in `$R/casestudy/`, next to the script that launched them and the
+copies of the scripts that ran.
 
 **6. The paper's tables** (needs numpy and scipy):
 
@@ -136,7 +140,10 @@ each run) and the paper's methodology states them.
   new store per run, was measured a few hundredths of a second slower on the SSD. The gate
   waits that long before the first run of each repetition that still has runs, and each run
   records the rest it came after (`rest_s`), so that runs made before and after the option
-  was turned on can be told apart.
+  was turned on can be told apart. In the pass of 2.2.0, whose repetitions 1 and 2 ran without
+  it and 3 to 10 with it, the two groups did not differ: across the 169 pairs, the median ratio
+  of the first group's mean to the second group's median is 1.001 on the scripts' times and
+  1.000 on the wall-clock times.
 - **Interference** is sampled every second during a timing run: other work on the run's CPU
   (its busy time beyond the run's own CPU time), the CPUs busy elsewhere, the run CPU's
   frequency against its maximum, thermal throttling, and the processes that used the CPU

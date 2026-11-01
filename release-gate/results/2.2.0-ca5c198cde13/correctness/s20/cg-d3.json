@@ -1,0 +1,27 @@
+{
+ "sid": "s20",
+ "config": "cg-d3",
+ "cmd": "now run -cg -d 3 metropolis_hastings.py 27000000",
+ "status": "oom",
+ "wall": 1476.7181075900007,
+ "reported": null,
+ "user": 1447.59369,
+ "sys": 28.544684,
+ "peak_rss": 128609308672,
+ "store_bytes": 16110998,
+ "store_disk_bytes": 16343040,
+ "started_at": "2026-10-27T06:21:57+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": true,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "",
+ "stderr": "",
+ "files": {
+  "metropolis_hastings.py": "e08ac534a2416de85c8163fd3191e2ea366e6aed"
+ },
+ "digests": null
+}

@@ -1,0 +1,27 @@
+{
+ "sid": "s21",
+ "config": "d2",
+ "cmd": "now run -d 2 test_pernicious_numbers.py 20000000",
+ "status": "oom",
+ "wall": 2975.8955380219995,
+ "reported": null,
+ "user": 2946.035919,
+ "sys": 28.778158,
+ "peak_rss": 128608546816,
+ "store_bytes": 16345542,
+ "store_disk_bytes": 16584704,
+ "started_at": "2026-10-27T07:29:13+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": true,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "",
+ "stderr": "",
+ "files": {
+  "test_pernicious_numbers.py": "fd5a55a92ed500da107585437c7aa1e04a01f7e6"
+ },
+ "digests": null
+}

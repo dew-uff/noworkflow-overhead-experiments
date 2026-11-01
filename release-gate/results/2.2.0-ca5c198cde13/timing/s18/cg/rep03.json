@@ -1,0 +1,90 @@
+{
+ "sid": "s18",
+ "config": "cg",
+ "cmd": "now run -cg gauss_legendre_quadrature_py3.py 10000",
+ "status": 0,
+ "wall": 71.99912110099103,
+ "reported": 71.00240565498825,
+ "user": 71.211604,
+ "sys": 0.390302,
+ "peak_rss": 1711640576,
+ "store_bytes": 16710084,
+ "store_disk_bytes": 16961536,
+ "started_at": "2026-10-28T01:54:44+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 71,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3132365,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 36.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.007183098591549296,
+   "max": 0.05
+  },
+  "foreign_on_run_cpu_s": 0.008,
+  "top_others": [
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    33.83
+   ],
+   [
+    "root:kworker/14:0-events",
+    33.83
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    11.27
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    6.53
+   ],
+   [
+    "root:kworker/u128:3-events_power_efficient",
+    1.0
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "71.00240565498825\n",
+ "stderr": "",
+ "files": {
+  "gauss_legendre_quadrature_py3.py": "6e6a2ed95834e30f12af11692d11f7294cf3748c"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/gauss_legendre_quadrature_py3.py"
+  ]
+ },
+ "repetition": 3,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T01:54:44+00:00",
+   "status": 0,
+   "wall": 71.99912110099103,
+   "reported": 71.00240565498825,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

@@ -1,0 +1,73 @@
+{
+ "sid": "s5",
+ "config": "cg-d2",
+ "cmd": "now run -cg -d 2 export_discharge.py --site FOR -d discharge_sharp --first 2010-01-01T01:00Z --last 2010-01-02T01:00Z",
+ "status": 0,
+ "wall": 1.1875828290067147,
+ "reported": 0.03313737999997102,
+ "user": 0.762597,
+ "sys": 0.09265699999999999,
+ "peak_rss": 135069696,
+ "store_bytes": 27661312,
+ "store_disk_bytes": 28057600,
+ "started_at": "2026-10-29T13:11:14+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199963,
+   "median": 3199963,
+   "max": 3199963
+  },
+  "temp_c_max": 32.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.01,
+   "max": 0.01
+  },
+  "foreign_on_run_cpu_s": 0.005,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "Site: FOR\nDataset: discharge_sharp\nStart export: 2010-01-01 01:00:00\nEnd export: 2010-01-02 01:00:00\nExporting 289 measurements...\nWrote output data to FOR_discharge_sharp.csv\n\n0,03313737999997102\n",
+ "stderr": "",
+ "files": {
+  ".gitignore": "a4ef1a680591d3b95a9f44948d690395cacb59f3",
+  "AguaSaludDischarge.h5": "edf64722abe181a30daf7cad44db97d846f9d545",
+  "FOR_discharge_sharp.csv": "acff98fc2c4b56d84f161a539d173897c8cc4744",
+  "README.md": "3152f2197d29713e9afb8a96d90e6a134fc70a8b",
+  "export_discharge.py": "e9b1fa8e9d9e23e0bfc4c8ad994efe7d5b434ba1"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/export_discharge.py"
+  ]
+ },
+ "repetition": 9,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T13:11:14+00:00",
+   "status": 0,
+   "wall": 1.1875828290067147,
+   "reported": 0.03313737999997102,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

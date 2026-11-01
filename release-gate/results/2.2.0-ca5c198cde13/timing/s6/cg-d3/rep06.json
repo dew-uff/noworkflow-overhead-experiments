@@ -1,0 +1,69 @@
+{
+ "sid": "s6",
+ "config": "cg-d3",
+ "cmd": "now run -cg -d 3 cvar.py 500",
+ "status": 0,
+ "wall": 1.1926509340119082,
+ "reported": 0.09759553198819049,
+ "user": 0.820349,
+ "sys": 0.075427,
+ "peak_rss": 118349824,
+ "store_bytes": 24374104,
+ "store_disk_bytes": 24604672,
+ "started_at": "2026-10-28T18:12:12+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3200000,
+   "median": 3200000,
+   "max": 3200000
+  },
+  "temp_c_max": 33.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.0,
+   "max": 0.0
+  },
+  "foreign_on_run_cpu_s": -0.016,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "959364222.88\n0,09759553198819049\n",
+ "stderr": "",
+ "files": {
+  "cvar.py": "0d23817510c5ad16acefdee026e9bd55a84834d3"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/cvar.py"
+  ]
+ },
+ "repetition": 6,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T18:12:12+00:00",
+   "status": 0,
+   "wall": 1.1926509340119082,
+   "reported": 0.09759553198819049,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

@@ -1,0 +1,63 @@
+{
+ "sid": "s13",
+ "config": "cg-d3",
+ "cmd": "now run -cg -d 3 test_laplace_jacobi2.py 105",
+ "status": 0,
+ "wall": 168.16658984400055,
+ "reported": 161.1570429329986,
+ "user": 167.230957,
+ "sys": 0.5079549999999999,
+ "peak_rss": 606351360,
+ "store_bytes": 249894112,
+ "store_disk_bytes": 250130432,
+ "started_at": "2026-10-26T20:16:57+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "161.1570429329986\n",
+ "stderr": "",
+ "files": {
+  "README.md": "0f80c9d221c794805deaef804bdbbecdaaedd32b",
+  "__pycache__/module.cpython-312.pyc": "4d5c048f40d5ba911662d905afd715d4b1b9c157",
+  "module.py": "a88fd238addef7931facf28adf82cdcedbf39c16",
+  "test_laplace_jacobi.py": "3405918d7fadaa95cb77f35d087e9c41f5fefc4a",
+  "test_laplace_jacobi2.py": "260b1246b1c161b11c72f52c7130170ccb4c60d4"
+ },
+ "digests": {
+  "globals": {},
+  "returns": {
+   "<module>": [
+    2,
+    "82c87f822b872395716065ae"
+   ],
+   "loop_solver": [
+    1,
+    "c357fcbb1ed8f5868840018a"
+   ],
+   "loop_time_step": [
+    17381,
+    "6a8a3523d370ec159bf04fe1"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "vector_time_step": [
+    33539,
+    "9b03d94c44635dc2777901c2"
+   ],
+   "vectorized_solver": [
+    1,
+    "e492d08afee1b566a9a0532d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/test_laplace_jacobi2.py"
+  ]
+ }
+}

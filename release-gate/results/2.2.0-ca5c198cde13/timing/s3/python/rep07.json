@@ -1,0 +1,64 @@
+{
+ "sid": "s3",
+ "config": "python",
+ "cmd": "python main.py",
+ "status": 0,
+ "wall": 0.6956455710169394,
+ "reported": 0.18429315701359883,
+ "user": 0.644353,
+ "sys": 0.047951,
+ "peak_rss": 129986560,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-29T00:30:18+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 0,
+  "nominal_khz": 3200000,
+  "freq_khz": null,
+  "temp_c_max": null,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": null,
+  "foreign_on_run_cpu_s": -0.012,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "0,18429315701359883\n",
+ "stderr": "",
+ "files": {
+  "main.py": "0d7edbd719bee2fc626fd2e22f62aae39ad28b2d",
+  "main_speedupy.bin": "0874f4893dd2765b9ca75ab3833f54c18171cb97",
+  "out.png": "72931faab7fa673808ca267fcdadab3ba57349f8"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/main.py"
+  ]
+ },
+ "repetition": 7,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T00:30:18+00:00",
+   "status": 0,
+   "wall": 0.6956455710169394,
+   "reported": 0.18429315701359883,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

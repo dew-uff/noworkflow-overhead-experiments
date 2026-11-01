@@ -1,0 +1,94 @@
+{
+ "sid": "s14",
+ "config": "d2",
+ "cmd": "now run -d 2 menger_sponge2.py",
+ "status": 0,
+ "wall": 1837.5258517760085,
+ "reported": 1468.2346373129985,
+ "user": 1820.398964,
+ "sys": 15.128106,
+ "peak_rss": 29428224000,
+ "store_bytes": 10891576380,
+ "store_disk_bytes": 10892374016,
+ "started_at": "2026-10-29T20:25:16+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1827,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 2599973,
+   "median": 3200000,
+   "max": 3200255
+  },
+  "temp_c_max": 35.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.017334428024083196,
+   "max": 1.02
+  },
+  "foreign_on_run_cpu_s": 0.423,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    2858.53
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    1574.31
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    1491.6
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    729.55
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    629.99
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "1468.2346373129985\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "4e517cf38a36a6361e4f9b829fb547a57adec27e",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ },
+ "repetition": 10,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T20:25:16+00:00",
+   "status": 0,
+   "wall": 1837.5258517760085,
+   "reported": 1468.2346373129985,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

@@ -1,0 +1,50 @@
+{
+ "sid": "s19",
+ "config": "e-none",
+ "cmd": "now run -e none test_evaluate_functions.py 80000",
+ "status": 0,
+ "wall": 30.941231052001967,
+ "reported": 24.151835898999707,
+ "user": 23.230791,
+ "sys": 7.248478,
+ "peak_rss": 39182053376,
+ "store_bytes": 246450301,
+ "store_disk_bytes": 246681600,
+ "started_at": "2026-10-26T20:41:13+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": true,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "24.151835898999707\n",
+ "stderr": "",
+ "files": {
+  "test_evaluate_functions.py": "da692205aec8300da922ba64f4f47e18c1bf097c"
+ },
+ "digests": {
+  "globals": {
+   "dti": "28658.722483343",
+   "n": "80000"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "evaluate_functions": [
+    1,
+    "f8919e19319861789488eb94"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/test_evaluate_functions.py"
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "sid": "s21",
+ "config": "python",
+ "cmd": "python test_pernicious_numbers.py 20000000",
+ "status": 0,
+ "wall": 16.691946005001228,
+ "reported": 16.64021185299862,
+ "user": 16.205789,
+ "sys": 0.48499299999999995,
+ "peak_rss": 43778048,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-26T20:11:34+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "16.64021185299862\n",
+ "stderr": "",
+ "files": {
+  "test_pernicious_numbers.py": "fd5a55a92ed500da107585437c7aa1e04a01f7e6"
+ },
+ "digests": {
+  "globals": {
+   "N": "20000000",
+   "dti": "26879.088859862"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "find_pernicious_numbers": [
+    1,
+    "c8928d45b7e5b7399251be8e"
+   ],
+   "get_number_of_ones": [
+    100000,
+    "d77f6b9c7bc9669e52f44f7b"
+   ],
+   "is_prime_number": [
+    100000,
+    "4b72f772f18b9218e67ca6ac"
+   ],
+   "is_prime_number.<locals>.<lambda>": [
+    3,
+    "cb11438f74647919876621d6"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/test_pernicious_numbers.py"
+  ]
+ }
+}

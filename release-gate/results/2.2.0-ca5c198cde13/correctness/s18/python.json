@@ -1,0 +1,54 @@
+{
+ "sid": "s18",
+ "config": "python",
+ "cmd": "python gauss_legendre_quadrature_py3.py 10000",
+ "status": 0,
+ "wall": 92.8357370019985,
+ "reported": 92.78032727199752,
+ "user": 92.628466,
+ "sys": 0.199983,
+ "peak_rss": 1651466240,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-26T20:08:58+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "92.78032727199752\n",
+ "stderr": "",
+ "files": {
+  "gauss_legendre_quadrature_py3.py": "6e6a2ed95834e30f12af11692d11f7294cf3748c"
+ },
+ "digests": {
+  "globals": {
+   "dti": "26722.850916947",
+   "order": "10000"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "compute_quadrature": [
+    1,
+    "40ca14a6a03359323b905afd"
+   ],
+   "integrand": [
+    1,
+    "38490eb864df10a07a08881b"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/gauss_legendre_quadrature_py3.py"
+  ]
+ }
+}

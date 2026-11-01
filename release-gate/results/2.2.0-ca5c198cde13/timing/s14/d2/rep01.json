@@ -1,0 +1,93 @@
+{
+ "sid": "s14",
+ "config": "d2",
+ "cmd": "now run -d 2 menger_sponge2.py",
+ "status": 0,
+ "wall": 1761.091813318999,
+ "reported": 1414.0263990380045,
+ "user": 1744.861097,
+ "sys": 14.426159,
+ "peak_rss": 29428330496,
+ "store_bytes": 10891576380,
+ "store_disk_bytes": 10892374016,
+ "started_at": "2026-10-27T11:32:51+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1751,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 800000,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 38.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.014334665905197032,
+   "max": 1.04
+  },
+  "foreign_on_run_cpu_s": 0.403,
+  "top_others": [
+   [
+    "root:kworker/u128:3-flush-259:1",
+    197.82
+   ],
+   [
+    "root:kworker/u128:3-thermal_events",
+    152.55
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    149.4
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    124.6
+   ],
+   [
+    "root:kworker/10:0-events",
+    89.25
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "1414.0263990380045\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "9d5a7e589b1252bd7e3f58608aebf26602b4d510",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ },
+ "repetition": 1,
+ "attempts": [
+  {
+   "started_at": "2026-10-27T11:32:51+00:00",
+   "status": 0,
+   "wall": 1761.091813318999,
+   "reported": 1414.0263990380045,
+   "disturbed": []
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "sid": "s14",
+ "config": "python",
+ "cmd": "python menger_sponge2.py",
+ "status": 0,
+ "wall": 162.35379942099098,
+ "reported": 161.95171214599395,
+ "user": 162.222407,
+ "sys": 0.09497799999999999,
+ "peak_rss": 805924864,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-29T20:22:34+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 161,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199967,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 34.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.006956521739130435,
+   "max": 0.06
+  },
+  "foreign_on_run_cpu_s": 0.033,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    123.72
+   ],
+   [
+    "root:kworker/14:0+usb_hub_wq",
+    82.49
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    82.48
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    41.23
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    33.04
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "161.95171214599395\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "b16be3ae1a1037ea361f93b915760b9f11e78972",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ },
+ "repetition": 10,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T20:22:34+00:00",
+   "status": 0,
+   "wall": 162.35379942099098,
+   "reported": 161.95171214599395,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

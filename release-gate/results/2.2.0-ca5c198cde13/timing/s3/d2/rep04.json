@@ -1,0 +1,71 @@
+{
+ "sid": "s3",
+ "config": "d2",
+ "cmd": "now run -d 2 main.py",
+ "status": 0,
+ "wall": 1.9712886449997313,
+ "reported": 0.24310591100947931,
+ "user": 1.486929,
+ "sys": 0.16328099999999998,
+ "peak_rss": 241999872,
+ "store_bytes": 69199299,
+ "store_disk_bytes": 70684672,
+ "started_at": "2026-10-28T05:31:52+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 1,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3200000,
+   "median": 3200000,
+   "max": 3200000
+  },
+  "temp_c_max": 34.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.01,
+   "max": 0.01
+  },
+  "foreign_on_run_cpu_s": -0.01,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "0,24310591100947931\n",
+ "stderr": "",
+ "files": {
+  "main.py": "0d7edbd719bee2fc626fd2e22f62aae39ad28b2d",
+  "main_speedupy.bin": "0874f4893dd2765b9ca75ab3833f54c18171cb97",
+  "out.png": "72931faab7fa673808ca267fcdadab3ba57349f8"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/main.py"
+  ]
+ },
+ "repetition": 4,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T05:31:52+00:00",
+   "status": 0,
+   "wall": 1.9712886449997313,
+   "reported": 0.24310591100947931,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

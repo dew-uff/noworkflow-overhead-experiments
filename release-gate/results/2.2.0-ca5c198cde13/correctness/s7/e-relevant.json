@@ -1,0 +1,54 @@
+{
+ "sid": "s7",
+ "config": "e-relevant",
+ "cmd": "now run -e relevant eq_solver.py 500",
+ "status": 0,
+ "wall": 2.66943740699935,
+ "reported": 0.46784533399841166,
+ "user": 2.207608,
+ "sys": 0.152746,
+ "peak_rss": 223109120,
+ "store_bytes": 84352455,
+ "store_disk_bytes": 85520384,
+ "started_at": "2026-10-26T20:26:57+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "0,46784533399841166\n",
+ "stderr": "",
+ "files": {
+  "eq_solver.py": "0cb02dbb67b6a0fcbdb4ed9efce00f463d24ae48"
+ },
+ "digests": {
+  "globals": {
+   "F_solution": "50.0",
+   "start": "27803.238916077"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "main": [
+    1,
+    "e9a3d1a8ef613e0de458a52d"
+   ],
+   "solve": [
+    200,
+    "77d9b1f32b160967b24ff17a"
+   ],
+   "solve.<locals>.<lambda>": [
+    1245,
+    "0bc068293c81ddea38666bef"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/eq_solver.py"
+  ]
+ }
+}

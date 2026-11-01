@@ -1,0 +1,65 @@
+{
+ "sid": "s12",
+ "config": "cg-d2",
+ "cmd": "now run -cg -d 2 mov_robots.py",
+ "status": 0,
+ "wall": 1.3547925540005963,
+ "reported": 0.062346384998818394,
+ "user": 0.9549449999999999,
+ "sys": 0.114993,
+ "peak_rss": 160772096,
+ "store_bytes": 37488305,
+ "store_disk_bytes": 38166528,
+ "started_at": "2026-10-26T20:28:36+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "0,062346384998818394\n",
+ "stderr": "",
+ "files": {
+  "mov_robots.py": "933acdab99197b7d1e0815211376098aa02718b5",
+  "source/leftWheelPositions.csv": "5f3401604c46566a356199cf816795f7df0e4a29",
+  "source/rightWheelPositions.csv": "02f91bbe4ee5d512773e981548c317bf5190bc72",
+  "source/straightWheelPositions.csv": "4df0e210721801c88213e2dc64575f00d8e5cf99"
+ },
+ "digests": {
+  "globals": {
+   "iteration": "nd:float64(1, 20):ebc62d931008496626ac11cd",
+   "t1": "27901.78722692"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "finalPoseEstimation": [
+    3,
+    "f35501791b499a745a1d55a1"
+   ],
+   "finalVisualization": [
+    1,
+    "f10f00e7928f78181707a14b"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "readData": [
+    12,
+    "42fcef179ffa132ef563d006"
+   ],
+   "typeConverter": [
+    12,
+    "53373bc41afb22f8e207ede9"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/mov_robots.py"
+  ]
+ }
+}

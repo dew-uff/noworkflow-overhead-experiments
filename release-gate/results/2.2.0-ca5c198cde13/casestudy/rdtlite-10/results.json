@@ -1,0 +1,412 @@
+[
+ {
+  "rep": 1,
+  "measure": "trial4",
+  "wall": 356.668,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197999
+ },
+ {
+  "rep": 1,
+  "measure": "trial4-plain",
+  "wall": 359.454,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 1,
+  "measure": "r",
+  "wall": 22.766,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 1,
+  "measure": "r-rdtlite",
+  "wall": 345.107,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 2,
+  "measure": "trial4-plain",
+  "wall": 354.672,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 2,
+  "measure": "r",
+  "wall": 22.646,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 2,
+  "measure": "r-rdtlite",
+  "wall": 342.312,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 2,
+  "measure": "trial4",
+  "wall": 356.323,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197999
+ },
+ {
+  "rep": 3,
+  "measure": "r",
+  "wall": 20.789,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 3,
+  "measure": "r-rdtlite",
+  "wall": 296.349,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 3,
+  "measure": "trial4",
+  "wall": 356.821,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197998
+ },
+ {
+  "rep": 3,
+  "measure": "trial4-plain",
+  "wall": 354.44,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 4,
+  "measure": "r-rdtlite",
+  "wall": 351.306,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 4,
+  "measure": "trial4",
+  "wall": 354.554,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197999
+ },
+ {
+  "rep": 4,
+  "measure": "trial4-plain",
+  "wall": 354.175,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 4,
+  "measure": "r",
+  "wall": 22.716,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 5,
+  "measure": "trial4",
+  "wall": 354.757,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197999
+ },
+ {
+  "rep": 5,
+  "measure": "trial4-plain",
+  "wall": 353.748,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 5,
+  "measure": "r",
+  "wall": 22.735,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 5,
+  "measure": "r-rdtlite",
+  "wall": 342.322,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 6,
+  "measure": "trial4-plain",
+  "wall": 353.026,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 6,
+  "measure": "r",
+  "wall": 22.48,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 6,
+  "measure": "r-rdtlite",
+  "wall": 342.074,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 6,
+  "measure": "trial4",
+  "wall": 354.966,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197999
+ },
+ {
+  "rep": 7,
+  "measure": "r",
+  "wall": 20.699,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 7,
+  "measure": "r-rdtlite",
+  "wall": 293.763,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 7,
+  "measure": "trial4",
+  "wall": 356.443,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197999
+ },
+ {
+  "rep": 7,
+  "measure": "trial4-plain",
+  "wall": 354.25,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 8,
+  "measure": "r-rdtlite",
+  "wall": 344.489,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 8,
+  "measure": "trial4",
+  "wall": 354.687,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197998
+ },
+ {
+  "rep": 8,
+  "measure": "trial4-plain",
+  "wall": 354.102,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 8,
+  "measure": "r",
+  "wall": 22.794,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 9,
+  "measure": "trial4",
+  "wall": 354.5,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345197999
+ },
+ {
+  "rep": 9,
+  "measure": "trial4-plain",
+  "wall": 359.976,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 9,
+  "measure": "r",
+  "wall": 22.618,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 9,
+  "measure": "r-rdtlite",
+  "wall": 341.563,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 10,
+  "measure": "trial4-plain",
+  "wall": 354.382,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ]
+ },
+ {
+  "rep": 10,
+  "measure": "r",
+  "wall": 22.7,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 10,
+  "measure": "r-rdtlite",
+  "wall": 345.019,
+  "status": 0,
+  "out": "pred.csv",
+  "out_sha1": "7812511f74b98e779812aef838bd61b78d6951f5",
+  "stderr_tail": []
+ },
+ {
+  "rep": 10,
+  "measure": "trial4",
+  "wall": 359.71,
+  "status": 0,
+  "out": "out.txt",
+  "out_sha1": "b8ac6398755ce3d0dcd216906ab258f25b7bdc45",
+  "stderr_tail": [
+   "      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "store_bytes": 345198004
+ }
+]

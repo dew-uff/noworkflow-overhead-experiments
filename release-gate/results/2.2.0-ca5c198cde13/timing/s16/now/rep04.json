@@ -1,0 +1,90 @@
+{
+ "sid": "s16",
+ "config": "now",
+ "cmd": "now run test_compute_FFT.py 20000",
+ "status": 0,
+ "wall": 21.825035696994746,
+ "reported": 20.76249543801532,
+ "user": 18.500653,
+ "sys": 2.895496,
+ "peak_rss": 19307356160,
+ "store_bytes": 16961352,
+ "store_disk_bytes": 17199104,
+ "started_at": "2026-10-28T07:38:18+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 21,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3133111,
+   "median": 3200000,
+   "max": 3200031
+  },
+  "temp_c_max": 35.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.008571428571428572,
+   "max": 0.05
+  },
+  "foreign_on_run_cpu_s": 0.004,
+  "top_others": [
+   [
+    "root:kworker/u128:1-thermal_events",
+    17.62
+   ],
+   [
+    "root:kworker/14:0-events",
+    15.28
+   ],
+   [
+    "root:kworker/u128:1-flush-259:1",
+    8.81
+   ],
+   [
+    "root:kworker/u128:1-writeback",
+    8.81
+   ],
+   [
+    "root:kworker/10:0-events",
+    3.63
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "20.76249543801532\n",
+ "stderr": "",
+ "files": {
+  "test_compute_FFT.py": "6311dc06cbe13e6805fdf0c4ac9c64dd267b119d"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/test_compute_FFT.py"
+  ]
+ },
+ "repetition": 4,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T07:38:18+00:00",
+   "status": 0,
+   "wall": 21.825035696994746,
+   "reported": 20.76249543801532,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

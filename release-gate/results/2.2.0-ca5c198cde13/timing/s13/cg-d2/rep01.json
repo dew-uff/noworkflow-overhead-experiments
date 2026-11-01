@@ -1,0 +1,93 @@
+{
+ "sid": "s13",
+ "config": "cg-d2",
+ "cmd": "now run -cg -d 2 test_laplace_jacobi2.py 105",
+ "status": 0,
+ "wall": 231.33036720199743,
+ "reported": 229.98028075200273,
+ "user": 230.842079,
+ "sys": 0.094002,
+ "peak_rss": 127807488,
+ "store_bytes": 28504883,
+ "store_disk_bytes": 28741632,
+ "started_at": "2026-10-27T11:13:11+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 230,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3002780,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 38.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.03973913043478261,
+   "max": 1.07
+  },
+  "foreign_on_run_cpu_s": 0.044,
+  "top_others": [
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    17.29
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    13.83
+   ],
+   [
+    "root:kworker/5:2+usb_hub_wq",
+    6.92
+   ],
+   [
+    "other:landscape-packa",
+    5.0
+   ],
+   [
+    "root:kworker/14:0-events",
+    4.19
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "229.98028075200273\n",
+ "stderr": "",
+ "files": {
+  "README.md": "0f80c9d221c794805deaef804bdbbecdaaedd32b",
+  "__pycache__/module.cpython-312.pyc": "be4649abbcb4c916b806082308933147c0e66e66",
+  "module.py": "a88fd238addef7931facf28adf82cdcedbf39c16",
+  "test_laplace_jacobi.py": "3405918d7fadaa95cb77f35d087e9c41f5fefc4a",
+  "test_laplace_jacobi2.py": "260b1246b1c161b11c72f52c7130170ccb4c60d4"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/test_laplace_jacobi2.py"
+  ]
+ },
+ "repetition": 1,
+ "attempts": [
+  {
+   "started_at": "2026-10-27T11:13:11+00:00",
+   "status": 0,
+   "wall": 231.33036720199743,
+   "reported": 229.98028075200273,
+   "disturbed": []
+  }
+ ]
+}

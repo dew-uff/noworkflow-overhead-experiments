@@ -1,0 +1,62 @@
+{
+ "sid": "s10",
+ "config": "python",
+ "cmd": "python median.py 500",
+ "status": 0,
+ "wall": 0.07188119398779236,
+ "reported": 0.0002939690020866692,
+ "user": 0.061551999999999996,
+ "sys": 0.009927,
+ "peak_rss": 44482560,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-29T00:31:56+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 0,
+  "nominal_khz": 3200000,
+  "freq_khz": null,
+  "temp_c_max": null,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": null,
+  "foreign_on_run_cpu_s": -0.001,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "500791958400.5\n0,0002939690020866692\n",
+ "stderr": "",
+ "files": {
+  "median.py": "9e8bd9728e75af3449ed809889a004bf002eb6a3"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/median.py"
+  ]
+ },
+ "repetition": 7,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T00:31:56+00:00",
+   "status": 0,
+   "wall": 0.07188119398779236,
+   "reported": 0.0002939690020866692,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

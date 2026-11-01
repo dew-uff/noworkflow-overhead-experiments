@@ -1,0 +1,50 @@
+{
+ "sid": "s16",
+ "config": "cg-d3",
+ "cmd": "now run -cg -d 3 test_compute_FFT.py 20000",
+ "status": 0,
+ "wall": 22.08576900800108,
+ "reported": 21.04346084399731,
+ "user": 19.084195,
+ "sys": 2.710293,
+ "peak_rss": 25708044288,
+ "store_bytes": 16928858,
+ "store_disk_bytes": 17166336,
+ "started_at": "2026-10-26T20:29:33+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "21.04346084399731\n",
+ "stderr": "",
+ "files": {
+  "test_compute_FFT.py": "6311dc06cbe13e6805fdf0c4ac9c64dd267b119d"
+ },
+ "digests": {
+  "globals": {
+   "dt1": "27958.472062992",
+   "n": "20000"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "compute_FFT": [
+    1,
+    "f31e19cd809ff3d817bc50d0"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/test_compute_FFT.py"
+  ]
+ }
+}

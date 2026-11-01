@@ -1,0 +1,90 @@
+{
+ "sid": "s18",
+ "config": "python",
+ "cmd": "python gauss_legendre_quadrature_py3.py 10000",
+ "status": 0,
+ "wall": 72.06732905999525,
+ "reported": 71.99403350701323,
+ "user": 71.704607,
+ "sys": 0.34391099999999997,
+ "peak_rss": 1648246784,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-28T08:20:47+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 71,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3131801,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 36.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.025211267605633803,
+   "max": 0.86
+  },
+  "foreign_on_run_cpu_s": 0.011,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    63.31
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    47.47
+   ],
+   [
+    "root:kworker/u128:1-flush-259:1",
+    18.23
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    15.83
+   ],
+   [
+    "root:kworker/14:0+usb_hub_wq",
+    15.82
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "71.99403350701323\n",
+ "stderr": "",
+ "files": {
+  "gauss_legendre_quadrature_py3.py": "6e6a2ed95834e30f12af11692d11f7294cf3748c"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/gauss_legendre_quadrature_py3.py"
+  ]
+ },
+ "repetition": 4,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T08:20:47+00:00",
+   "status": 0,
+   "wall": 72.06732905999525,
+   "reported": 71.99403350701323,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

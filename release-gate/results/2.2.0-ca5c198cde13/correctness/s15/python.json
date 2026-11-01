@@ -1,0 +1,50 @@
+{
+ "sid": "s15",
+ "config": "python",
+ "cmd": "python test_belief_propagation.py 20000",
+ "status": 0,
+ "wall": 181.90567370400095,
+ "reported": 181.86164160200133,
+ "user": 181.872757,
+ "sys": 0.020998,
+ "peak_rss": 246194176,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-26T20:08:57+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "181.86164160200133\n",
+ "stderr": "",
+ "files": {
+  "test_belief_propagation.py": "7908eae78c98d57a223909572dfa12a97ff58ada"
+ },
+ "digests": {
+  "globals": {
+   "N": "20000",
+   "dti": "26721.453912307"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "belief_propagation": [
+    1,
+    "df02497e23203df877171910"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/test_belief_propagation.py"
+  ]
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "sid": "s20",
+ "config": "python",
+ "cmd": "python metropolis_hastings.py 27000000",
+ "status": 0,
+ "wall": 71.34417452401249,
+ "reported": 71.27180873599718,
+ "user": 71.324448,
+ "sys": 0.005998,
+ "peak_rss": 44580864,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-28T16:09:28+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 70,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199967,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 35.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.15857142857142856,
+   "max": 1.05
+  },
+  "foreign_on_run_cpu_s": 0.01,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    64.17
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    21.39
+   ],
+   [
+    "root:kworker/14:0-rcu_gp",
+    21.39
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    19.68
+   ],
+   [
+    "root:kworker/u128:4-thermal_events",
+    11.25
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "71.27180873599718\n",
+ "stderr": "",
+ "files": {
+  "metropolis_hastings.py": "e08ac534a2416de85c8163fd3191e2ea366e6aed"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/metropolis_hastings.py"
+  ]
+ },
+ "repetition": 5,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T16:09:28+00:00",
+   "status": 0,
+   "wall": 71.34417452401249,
+   "reported": 71.27180873599718,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

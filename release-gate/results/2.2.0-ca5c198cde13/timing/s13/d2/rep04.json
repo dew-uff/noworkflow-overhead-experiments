@@ -1,0 +1,94 @@
+{
+ "sid": "s13",
+ "config": "d2",
+ "cmd": "now run -d 2 test_laplace_jacobi2.py 105",
+ "status": 0,
+ "wall": 232.86263979499927,
+ "reported": 231.45664293400478,
+ "user": 232.320931,
+ "sys": 0.101855,
+ "peak_rss": 127578112,
+ "store_bytes": 28594992,
+ "store_disk_bytes": 28831744,
+ "started_at": "2026-10-28T06:18:59+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 231,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3005409,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 36.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.02718614718614719,
+   "max": 0.83
+  },
+  "foreign_on_run_cpu_s": 0.037,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    128.69
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    57.18
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    57.17
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    53.18
+   ],
+   [
+    "root:kworker/u128:1-flush-259:1",
+    52.68
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "231.45664293400478\n",
+ "stderr": "",
+ "files": {
+  "README.md": "0f80c9d221c794805deaef804bdbbecdaaedd32b",
+  "__pycache__/module.cpython-312.pyc": "93f28e4a49911ff3a4c5d8ea004b6630a210cb3c",
+  "module.py": "a88fd238addef7931facf28adf82cdcedbf39c16",
+  "test_laplace_jacobi.py": "3405918d7fadaa95cb77f35d087e9c41f5fefc4a",
+  "test_laplace_jacobi2.py": "260b1246b1c161b11c72f52c7130170ccb4c60d4"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/test_laplace_jacobi2.py"
+  ]
+ },
+ "repetition": 4,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T06:18:59+00:00",
+   "status": 0,
+   "wall": 232.86263979499927,
+   "reported": 231.45664293400478,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

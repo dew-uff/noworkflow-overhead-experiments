@@ -1,0 +1,50 @@
+{
+ "sid": "s10",
+ "config": "cg-d2",
+ "cmd": "now run -cg -d 2 median.py 500",
+ "status": 0,
+ "wall": 1.2432639559992822,
+ "reported": 0.06760001000293414,
+ "user": 0.698928,
+ "sys": 0.115809,
+ "peak_rss": 149618688,
+ "store_bytes": 20336102,
+ "store_disk_bytes": 20566016,
+ "started_at": "2026-10-26T20:27:09+00:00",
+ "pass": "correctness",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": null,
+ "alone": false,
+ "interference": null,
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "500791958400.5\n0,06760001000293414\n",
+ "stderr": "",
+ "files": {
+  "median.py": "9e8bd9728e75af3449ed809889a004bf002eb6a3"
+ },
+ "digests": {
+  "globals": {
+   "start": "27814.932780899",
+   "unsort_list": "list[500]:d5cf7adf295a6ed67d618894"
+  },
+  "returns": {
+   "<module>": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "main": [
+    1,
+    "79bdf2fc4c6455e049b3b53d"
+   ],
+   "median": [
+    1,
+    "602da36a07a14e3d2af1d683"
+   ]
+  },
+  "returns_cap": 100000,
+  "seeded": [
+   "<run>/median.py"
+  ]
+ }
+}

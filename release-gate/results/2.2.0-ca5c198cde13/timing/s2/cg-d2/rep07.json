@@ -1,0 +1,74 @@
+{
+ "sid": "s2",
+ "config": "cg-d2",
+ "cmd": "now run -cg -d 2 main.py",
+ "status": 0,
+ "wall": 3.435478487983346,
+ "reported": 1.1960714360175189,
+ "user": 2.889248,
+ "sys": 0.186523,
+ "peak_rss": 265162752,
+ "store_bytes": 88120091,
+ "store_disk_bytes": 89481216,
+ "started_at": "2026-10-29T00:30:06+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 3,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199968,
+   "median": 3199968,
+   "max": 3200000
+  },
+  "temp_c_max": 35.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.01,
+   "max": 0.02
+  },
+  "foreign_on_run_cpu_s": -0.006,
+  "top_others": [],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "1,1960714360175189\n",
+ "stderr": "",
+ "files": {
+  ".gitignore": "9aaae3fc7f669c65b7d62f4a52fc6d775ddd8e2e",
+  "DailyAverageWQStats.ipynb": "94ba5cd4241882712a0ca9cab81763e60921bde2",
+  "cee6440_ex3_loganriver.sqlite": "241e48bde5b6e8cc81b6cfda0ca87c3fe60a6f14",
+  "cee6440_ex3_loganriver.zip": "d9a56c20370d44d3186aa5ada2804b322f87986c",
+  "main.py": "4b9ce5ff87f533013690103232339916fe15d282",
+  "out.png": "f75569c76a54f6f01135c31ec5945f5c79d08555"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/main.py"
+  ]
+ },
+ "repetition": 7,
+ "attempts": [
+  {
+   "started_at": "2026-10-29T00:30:06+00:00",
+   "status": 0,
+   "wall": 3.435478487983346,
+   "reported": 1.1960714360175189,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}

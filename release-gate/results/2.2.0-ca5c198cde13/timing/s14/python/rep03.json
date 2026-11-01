@@ -1,0 +1,94 @@
+{
+ "sid": "s14",
+ "config": "python",
+ "cmd": "python menger_sponge2.py",
+ "status": 0,
+ "wall": 162.0438124779903,
+ "reported": 161.6410312240041,
+ "user": 161.922256,
+ "sys": 0.08998199999999999,
+ "peak_rss": 805978112,
+ "store_bytes": 0,
+ "store_disk_bytes": 0,
+ "started_at": "2026-10-28T00:45:56+00:00",
+ "pass": "timing",
+ "candidate": "ca5c198cde13731625ecce5a42734094825590fc1b587b9f60ba492410a04540",
+ "cpu": 14,
+ "alone": false,
+ "interference": {
+  "run_cpu": 14,
+  "harness_cpu": 12,
+  "samples": 161,
+  "nominal_khz": 3200000,
+  "freq_khz": {
+   "min": 3199967,
+   "median": 3200000,
+   "max": 3200032
+  },
+  "temp_c_max": 36.0,
+  "throttle": {
+   "core": 0,
+   "package": 0
+  },
+  "others_cpus": {
+   "mean": 0.01329192546583851,
+   "max": 0.72
+  },
+  "foreign_on_run_cpu_s": 0.028,
+  "top_others": [
+   [
+    "root:kworker/14:0-events",
+    72.43
+   ],
+   [
+    "root:kworker/14:0-events_freezable",
+    41.4
+   ],
+   [
+    "root:kworker/14:0-mm_percpu_wq",
+    31.05
+   ],
+   [
+    "root:kworker/5:2-usb_hub_wq",
+    25.06
+   ],
+   [
+    "root:kworker/5:2-mm_percpu_wq",
+    25.06
+   ]
+  ],
+  "thresholds": {
+   "foreign_on_run_cpu_fraction": 0.01,
+   "foreign_on_run_cpu_floor_s": 0.1,
+   "others_cpus_mean": 0.5,
+   "frequency_tolerance": 0.02
+  }
+ },
+ "disturbed": [],
+ "sampler_error": null,
+ "stdout": "161.6410312240041\n",
+ "stderr": "",
+ "files": {
+  "README.md": "cdf170ae875e1da17dce06e4d1517e4e27cec294",
+  "__pycache__/module.cpython-312.pyc": "a42229d9e882199719c8c1f50710bab830bb076d",
+  "menger_sponge.py": "ee86d2eac71baf37abab25bf57bfbe35b061538e",
+  "menger_sponge2.py": "2efb778d37c53f20e4061b24814ceb9b6b87b398",
+  "module.py": "2c46045b73cb2b207ee2f228e9888138a862c9ca"
+ },
+ "digests": {
+  "seeded": [
+   "<run>/menger_sponge2.py"
+  ]
+ },
+ "repetition": 3,
+ "attempts": [
+  {
+   "started_at": "2026-10-28T00:45:56+00:00",
+   "status": 0,
+   "wall": 162.0438124779903,
+   "reported": 161.6410312240041,
+   "disturbed": []
+  }
+ ],
+ "rest_s": 600
+}
