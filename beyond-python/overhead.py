@@ -43,7 +43,8 @@ def du(path):
 results = []
 names = list(CFGS)
 for rep in range(1, reps + 1):
-    order = names[rep - 1:] + names[:rep - 1]
+    k = (rep - 1) % len(names)
+    order = names[k:] + names[:k]
     for cfg in order:
         d = os.path.join(work, f"r{rep}-{cfg}")
         shutil.rmtree(d, ignore_errors=True)
