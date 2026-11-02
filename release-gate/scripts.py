@@ -1,6 +1,6 @@
 """The scripts of the paper's evaluation and the configurations it runs them under."""
 
-# id (Table 1 of the paper), folder, arguments: those of run.sh, the original inputs
+# id (Table 1 of the paper), folder, the arguments each script runs with (its original inputs)
 # (no reduced input: the gate runs s14, s20 and s21 as the paper did, without a time limit).
 SCRIPTS = [
     ("s1", "03dataoneexps/03dataoneexps_exp01_32_Accessing_Hydrologic_Data", "main.py"),

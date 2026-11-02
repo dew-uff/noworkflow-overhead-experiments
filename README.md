@@ -1,32 +1,37 @@
 # noWorkflow 2 — Overhead Experiments
 
-This repository contains the scripts, execution harness, and results of the **overhead evaluation**
-of noWorkflow 2, reported in the article *The Conception and Evolution of noWorkflow* (submitted to
-*Information Systems*, Elsevier). It is the companion artifact cited in the paper as
-`noworkflow-overhead-experiments`.
+This repository holds the scripts, the execution harness, the measurement results and the
+analysis code of the **overhead evaluation** of noWorkflow 2, reported in the article *The
+Conception and Evolution of noWorkflow* (Information Systems, Elsevier). It is the companion
+artifact the article cites as `noworkflow-overhead-experiments`, and the article's numbers are
+reproduced from what is committed here.
 
-The evaluation measures how much **execution time** and **storage** noWorkflow 2 adds to 21 Python
-scripts, comparing pure Python execution against several provenance collection configurations.
+The evaluation measures how much **execution time** and **storage** noWorkflow 2 adds to 21
+Python scripts, comparing plain Python against eight provenance collection configurations.
+Since the article's revision R1 it is also the **release gate** of noWorkflow: the candidate
+wheel of a release runs the 21 scripts, must compute what plain Python computes, and only then
+is tagged and uploaded, so that the numbers of the article are those of the released
+[noWorkflow 2.2.0](https://github.com/gems-uff/noworkflow/releases/tag/2.2.0).
 
-- Tool under evaluation: [noWorkflow](https://github.com/gems-uff/noworkflow) **2.1.3**
+- Tool under evaluation: noWorkflow **2.2.0** (the wheel of the release, sha256 `ca5c198c…`)
 - Scripts: 21, obtained from public repositories and research data sites (see *Scripts*)
-- Repetitions: each script × configuration pair was executed **10 times**; the paper reports the median
-- Time limit: executions were interrupted after **30 minutes** (`timeout 30m` in `run.sh`)
+- Repetitions: each script × configuration pair ran **10 times** on a machine prepared for the
+  measurement; the article reports the median
+- Time limit: **none**; a run that does not fit in 120 GiB of memory ends and is reported as such
+- Results: `release-gate/results/2.2.0-ca5c198cde13/` (the correctness pass, the timing pass
+  and the case study of the article's section "Beyond Python")
+- Environment: `paper-environment/`, every version pinned, the same for every execution of
+  noWorkflow the article reports or shows
 
 ## Repository structure
 
 | Path | Content |
 |---|---|
-| `03dataoneexps/` | Scripts from hydrology/environmental data experiments (5 scripts) |
-| `04benchproglangs/` | Numerical and algorithmic benchmark scripts (8 scripts) |
-| `05msrgithubexps/` | Small scripts collected from GitHub (7 scripts) |
-| `menger-sponge/` | Menger Sponge script (1 script) |
-| `run.sh` | Execution harness: runs every script under every configuration |
-| `experimental_analysis/results/` | Raw output of the 10 executions (`output_trial1.txt` … `output_trial10.txt`) |
-| `experimental_analysis/scripts/` | `summarize_results_to_csv_file.py`, which parses the raw output into CSV |
-| `noWorkflow 2 experiments.xlsx` | Spreadsheet with the consolidated measurements |
-| `release-gate/` | From noWorkflow 2.2.0 on: the evaluation run on each release candidate, which must compute what plain Python computes before the release is tagged (its README), and the measurement of 2.1.3 that led to it |
-| `beyond-python/` | `overhead.py`: the overhead of the case study of the paper's section "Beyond Python" (the three trials of `noworkflow-analysis/beyond-python/run.sh` without noWorkflow, with `--external-tracer none`, with the default `argv` and, on Linux, with `strace`; `now` from a venv given on the command line, the release candidate's wheel), fresh directory per repetition, order of the configurations rotated; `rdtlite_time.py`: the fourth trial, `model.R` under rdtLite, with `now run` and with plain Python, and the R step alone, with and without rdtLite's `prov.run`, fresh directory per repetition and measure, order of the measures rotated |
+| `release-gate/` | The harness of the evaluation from 2.2.0 on: the 21 scripts and their arguments (`scripts.py`), the candidate's environment (`setup.py`), the correctness and timing passes (`gate.py`), the preparation of the machine (`prepare.py`), the verdicts (`compare.py`) and the tables of the article (`paper_tables.py`); its README says how to run it |
+| `release-gate/results/2.2.0-ca5c198cde13/` | The results the article reports: one JSON per run of the two passes, the machine records, and `casestudy/` (the overhead of the case study of "Beyond Python" and of its rdtLite trial, with the scripts that measured them) |
+| `paper-environment/` | The environment of every noWorkflow execution of the article: `measurement.txt` (the venv of the gate, frozen) and `requirements.txt` (the same plus the ML stack of the running example), which the reproducibility package [`dew-uff/noworkflow-analysis`](https://github.com/dew-uff/noworkflow-analysis) installs |
+| `03dataoneexps/`, `04benchproglangs/`, `05msrgithubexps/`, `menger-sponge/` | The 21 evaluated scripts, with their data (see *Scripts*) |
+| `beyond-python/` | `overhead.py` and `rdtlite_time.py`: the measurement of the case study of "Beyond Python" (the three trials of `noworkflow-analysis/beyond-python/run.sh` without noWorkflow, with `--external-tracer none`, with the default `argv` and with `strace`; and the fourth trial, `model.R` under rdtLite, with and without `now run`, next to the R step alone with and without `prov.run`), fresh directory per repetition, order rotated |
 
 ## Scripts
 
@@ -62,26 +67,26 @@ public repositories that do not include a license file, and are redistributed he
 measurements reproducible. If you are an author of one of these scripts and want it removed or
 relicensed, please open an issue.
 
-## Requirements
+## Reproducing the article's evaluation (noWorkflow 2.2.0)
 
-- **Conda**, which `run.sh` requires to activate the environment of each experiment
-- **Python 3** with the dependencies of each script (some folders have their own `README.md` listing them)
-- **noWorkflow 2.1.3**: `pip install noworkflow[all]==2.1.3`
-- **Git LFS**, needed for `03dataoneexps/03dataoneexps_exp05_37_Agua_Salud_Discharge_Data/AguaSaludDischarge.h5`,
-  which is stored with LFS. Without `git lfs install` followed by `git lfs pull`, that file is only a
-  pointer and script s5 does not run.
-
-## Running the experiments
+The harness, its requirements and the two passes are described in
+[`release-gate/README.md`](release-gate/README.md): Linux with systemd and cgroup v2, Python
+3.12, `uv` (or `venv` and pip), Git LFS for the HDF5 file of s5, and the wheel of the release.
+In short:
 
 ```bash
-./run.sh
+cd release-gate
+python3 setup.py <wheel> ~/gate/env-2.2.0-ca5c198cde13 --python python3.12   # the environment
+sudo python3 prepare.py launch correctness results/2.2.0-ca5c198cde13 -- ...  # the correctness pass
+sudo python3 prepare.py apply && sudo python3 prepare.py launch timing ...    # the timing pass, machine prepared
+uv run --with scipy python3 paper_tables.py results/2.2.0-ca5c198cde13 --out <paper>/tables --min-repetitions 10
 ```
 
-`run.sh` iterates over every experiment and executes it under the baseline and the eight noWorkflow configurations reported in the article, in this order:
+The nine configurations of a script, in the order of the article:
 
 | Configuration | Command |
 |---|---|
-| Pure Python (baseline) | `python <script>` |
+| Plain Python (baseline) | `python <script>` |
 | Fine-grained | `now run <script>` |
 | Fine-grained, depth 2 | `now run -d 2 <script>` |
 | Fine-grained, depth 3 | `now run -d 3 <script>` |
@@ -91,33 +96,25 @@ relicensed, please open an issue.
 | No values | `now run -e none <script>` |
 | Function values | `now run -e relevant <script>` |
 
-After each execution, the harness measures the size of the `.noworkflow` directory with `du` and then
-removes it, so that every execution starts from a clean state. Each run of `run.sh` produces one
-`output_trialN.txt` file; the ten files in `experimental_analysis/results/` correspond to the ten
-repetitions reported in the paper.
-
-## Analysing the results
-
-```bash
-python experimental_analysis/scripts/summarize_results_to_csv_file.py
-```
-
-The script parses the `output_trialN.txt` files and produces a CSV with one row per
-experiment/configuration/repetition. The consolidated numbers, together with the tables of the
-article, are in `noWorkflow 2 experiments.xlsx`.
+Every run starts from a fresh copy of the script's folder, and the size of its `.noworkflow`
+directory is measured before it is removed. `paper_tables.py` writes the tables of Section 7.3
+of the article and the numbers its prose cites from the results directory; its docstring states
+each computation.
 
 ## Citation
 
 If you use this material, please cite the article:
 
-> J. F. Pimentel, A. Paiva, J. P. Lopez, E. Jandre, R. Marzo, B. Gonçalves, M. Lobo, F. Coutinho,
-> J. Freire, L. Murta, V. Braganholo. The Conception and Evolution of noWorkflow. ⚠️ TO FILL
-> (venue and year once published).
+> J. F. Pimentel, A. Paiva, J. P. Lopez, E. Jandre, R. Marzo, B. Gonçalves, M. Lobo,
+> F. Coutinho, J. Freire, L. Murta, V. Braganholo. The Conception and Evolution of noWorkflow.
+> Information Systems, Elsevier, 2026 (to appear; the DOI will be added here once published).
+
+The tag `is-2026-r1` of this repository is the state the article cites.
 
 ## License
 
-The execution harness and the analysis scripts written by us (`run.sh`,
-`experimental_analysis/`) are distributed under the MIT License; see [LICENSE](LICENSE).
+The harnesses and the analysis scripts written by us (`release-gate/`, `beyond-python/`,
+`paper-environment/`) are distributed under the MIT License; see [LICENSE](LICENSE).
 
 **The evaluated scripts and their data are third-party material**, collected from public
 repositories and research data sites, and each one remains under the license of its original

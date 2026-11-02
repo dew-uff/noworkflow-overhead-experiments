@@ -1,14 +1,11 @@
 """The tables of the paper's Section 7.3, from a results directory of the gate.
 
 usage: python3 paper_tables.py RESULTS --out DIR [--min-repetitions N] [--correction holm|bonferroni]
-       python3 paper_tables.py --legacy ../experimental_analysis/results --out DIR --correction bonferroni
 
 Needs numpy and scipy (`uv run --with scipy python3 paper_tables.py ...`).
 
 RESULTS is a directory gate.py wrote (`correctness/<sid>/<config>.json` and
-`timing/<sid>/<config>/rep<NN>.json`); `--legacy` reads instead the `output_trialN.txt` files of
-the evaluation of 2.1.3, whose numbers the submitted paper reports, so that the arithmetic can
-be checked against it (`test_paper_tables.py`). DIR receives LaTeX fragments, each the
+`timing/<sid>/<config>/rep<NN>.json`). DIR receives LaTeX fragments, each the
 body of one table of the paper, which `main.tex` includes with `\\input`:
 
   overhead-times.tex        tab:experimentsTableTimes          times, shading, markers
@@ -16,29 +13,29 @@ body of one table of the paper, which `main.tex` includes with `\\input`:
   overhead-space.tex        tab:experimentsTableProvenanceStored  store sizes in MiB
   overhead-space-tests.tex  tab:statisticalTestSpaceOverhead   three paired comparisons
   overhead-process-times.tex tab:experimentsTableProcessTimes  wall-clock time of the whole
-                                                               process (gate results only)
+                                                               process
 
 and `overhead-summary.json`, the numbers the prose of the section cites (ranks, extremes,
 counts, the runs that did not finish), so that the text can be checked against the data.
 
-What the tables hold, and how it is computed (the same for both sources):
+What the tables hold, and how it is computed:
 
 - The time of a run is the one the script prints on its last line (`reported`), measured by
   the script around its own body with `perf_counter`: it excludes the start of the interpreter
   and of noWorkflow and the writing of the store. The gate also records the wall-clock time of
   the whole process (`wall`), which includes them; `overhead-process-times.tex` is the same
   table for that time, and the summary holds its tests and its difference to the reported time
-  (the legacy source has no wall-clock time, so that fragment is not written for it). A script
+. A script
   and configuration pair gets the median over the complete repetitions: a repetition counts only when it holds every pair the pass timed
   (the pairs that did not finish in the correctness pass are not timed). The table prints
   three decimals, `$<$ 0.001` below 0.0005, and marks with a dagger the plain Python times
   that print below 0.010, whose slowdown factors are inflated by the short baseline.
 - The slowdown factor of a cell is its time over the plain Python time of the same script,
   both unrounded; the shading is `\\ovhA` from 2x, `\\ovhB` from 10x and `\\ovhC` from 100x.
-- A pair that did not finish is marked instead of a number: `--` for the 30-minute limit of
-  the evaluation of 2.1.3, `$\\ddagger$` for a run the memory cap ended (status `oom`).
+- A pair that did not finish is marked instead of a number: `$\\ddagger$` for a run the memory
+  cap ended (status `oom`).
 - The store of a pair is the size of `.noworkflow/` in bytes (`store_bytes` of the run of
-  the correctness pass; the `du -s` of the legacy output, in KiB), which does not depend on
+  the correctness pass), which does not depend on
   the repetition (a run of the timing pass that differs by more than 0.1% is reported); the
   table prints it in MiB rounded to the nearest integer, `$<$1` when it rounds to zero, and
   the tests use the unrounded sizes. The accessed data size column is a property of the
@@ -49,20 +46,19 @@ What the tables hold, and how it is computed (the same for both sources):
 - The paired comparisons follow the paper's methodology: n = the scripts that finished under
   both configurations; Shapiro-Wilk on the paired differences; Wilcoxon signed-rank test,
   two-sided by default (`--alternative greater` tests that the first configuration of each
-  pair is the slower, or the larger, as the submitted paper did), on the exact distribution
+  pair is the slower, or the larger), on the exact distribution
   of the statistic (`--method approx` is the normal approximation without continuity
   correction and with the zero differences kept in the ranking; `--method scipy` is
-  `scipy.stats.wilcoxon` with its defaults, zero differences dropped, which is what the
-  submitted paper used); on the differences of the logarithms, that is, on the ratio between
+  `scipy.stats.wilcoxon` with its defaults, zero differences dropped); on the differences of the logarithms, that is, on the ratio between
   the two configurations: a halving and a doubling are then the same distance from no change,
   and the test is about the slowdown factors the tables show rather than about seconds, where
-  the longest scripts would dominate (`--scale linear` tests the differences as they are, as
-  the submitted paper did). The p-values are
+  the longest scripts would dominate (`--scale linear` tests the differences as they are).
+  The p-values are
   adjusted within each set of comparisons the paper describes: the three that contrast fine-
   and coarse-grained collection, and the two against plain Python (time only), with Holm's
   step-down procedure, which controls the family-wise error rate as Bonferroni does and
-  rejects at least as much (`--correction bonferroni` gives the submitted paper's
-  adjustment). The effect size is the rank-biserial correlation
+  rejects at least as much (`--correction bonferroni` is the classical alternative). The
+  effect size is the rank-biserial correlation
   r = (W+ - W-) / (W+ + W-) over the non-zero differences, labelled small below 0.3, medium
   below 0.5 and large from 0.5. The Wilcoxon test is used because the differences are not
   normal (the Shapiro-Wilk column shows it) and the sample is small; it is a test of the
@@ -193,55 +189,6 @@ def load_gate(root, min_repetitions=1):
     return Dataset(str(root), cells, complete, note)
 
 
-def load_legacy(root):
-    """The output_trialN.txt files of the evaluation of 2.1.3 (`run.sh` of this repository):
-    one block per run, the script's time on the line before `noWorkflow folder not found!`
-    (plain Python) or before `Executing command: du .noworflow/`, the store on the line after;
-    a run the 30-minute limit ended prints no time."""
-    root = pathlib.Path(root)
-    folder_to_sid = {folder: sid for sid, folder, _ in SCRIPTS}
-    cells = {sid: {cfg: Cell() for cfg in ["python"] + COLUMNS} for sid in SIDS}
-    files = sorted(root.glob("output_trial*.txt"), key=lambda p: int(re.search(r"(\d+)", p.stem).group(1)))
-    for p in files:
-        for block in p.read_text().split(">" * 38)[1:]:
-            lines = [ln.strip() for ln in block.splitlines()]
-            folder = next(ln for ln in lines if ln.startswith("Entering experiment folder: ")).split("/noworkflow-core-experiments/")[1]
-            cmd = next(ln for ln in lines if ln.startswith("Executing command: ") and " du " not in ln)
-            cell = cells[folder_to_sid[folder]][_legacy_config(cmd[len("Executing command: "):])]
-            for i, ln in enumerate(lines):
-                if ln in ("noWorkflow folder not found!", "Executing command: du .noworflow/"):
-                    if TIME.match(lines[i - 1]):
-                        cell.times.append(float(lines[i - 1].replace(",", ".")))
-                    else:
-                        cell.unfinished = "timeout"
-                    if ln.startswith("Executing command: du"):
-                        cell.store_bytes = int(lines[i + 1].split()[0]) * 1024
-    for sid in SIDS:
-        for cfg, cell in cells[sid].items():
-            if cell.unfinished:
-                cell.times = []
-    return Dataset(str(root), cells, list(range(1, len(files) + 1)), "noWorkflow 2.1.3, the evaluation of the submitted paper")
-
-
-def _legacy_config(cmd):
-    toks = cmd.split()
-    if toks[0] == "python":
-        return "python"
-    opts, i = [], 2
-    while i < len(toks) and toks[i].startswith("-"):
-        opts.append(toks[i])
-        if toks[i] in ("-d", "-e"):
-            opts.append(toks[i + 1])
-            i += 1
-        i += 1
-    for cfg in COLUMNS:
-        if CONFIGS[cfg][1:] == opts:
-            return cfg
-    raise ValueError(cmd)
-
-
-# ----------------------------------------------------------------------------- numbers
-
 def fmt_time(t):
     return r"$<$ 0.001" if t < 0.0005 else f"{t:.3f}"
 
@@ -273,9 +220,8 @@ def paired_test(x, y, method="exact", scale="log", alternative="two-sided"):
     method: "exact" enumerates the 2^n sign assignments of the ranks (no ties, no zeros);
     "approx" is the normal approximation without continuity correction, zeros kept (Pratt);
     "scipy" is scipy.stats.wilcoxon with its defaults (zeros dropped, the exact distribution
-    or the normal approximation as scipy chooses), the call of the notebook that produced the
-    tests of the submitted paper. alternative: "two-sided", or "greater" (x > y, the one-sided
-    test of the submitted paper). scale: "log" tests the differences of the logarithms,
+    or the normal approximation as scipy chooses). alternative: "two-sided", or "greater"
+    (x > y, one-sided). scale: "log" tests the differences of the logarithms,
     that is, the ratio between the two configurations, on the scale where a halving and a
     doubling are the same distance from no change; "linear" tests the differences as they are.
     """
@@ -493,16 +439,15 @@ def generate(ds, out, correction="holm", method="exact", scale="log", alternativ
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("results", help="a results directory of gate.py, or of output_trialN.txt files with --legacy")
+    ap.add_argument("results", help="a results directory of gate.py")
     ap.add_argument("--out", required=True, help="where the fragments go (the paper's tables/ directory)")
-    ap.add_argument("--legacy", action="store_true", help="read the output_trialN.txt files of the evaluation of 2.1.3")
     ap.add_argument("--min-repetitions", type=int, default=1, help="refuse fewer complete repetitions (gate results)")
     ap.add_argument("--correction", choices=["holm", "bonferroni"], default="holm", help="adjustment of the p-values of each table")
-    ap.add_argument("--method", choices=["exact", "approx", "scipy"], default="exact", help="the Wilcoxon p-value: the exact distribution, the normal approximation, or scipy's defaults (the submitted paper)")
-    ap.add_argument("--alternative", choices=["two-sided", "greater"], default="two-sided", help="two-sided, or one-sided: the first configuration of each pair is the slower or larger (the submitted paper)")
-    ap.add_argument("--scale", choices=["linear", "log"], default="log", help="test the differences of the logarithms (the ratio between configurations), or the differences as they are (the submitted paper)")
+    ap.add_argument("--method", choices=["exact", "approx", "scipy"], default="exact", help="the Wilcoxon p-value: the exact distribution, the normal approximation, or scipy's defaults")
+    ap.add_argument("--alternative", choices=["two-sided", "greater"], default="two-sided", help="two-sided, or one-sided: the first configuration of each pair is the slower or larger")
+    ap.add_argument("--scale", choices=["linear", "log"], default="log", help="test the differences of the logarithms (the ratio between configurations), or the differences as they are")
     args = ap.parse_args()
-    ds = load_legacy(args.results) if args.legacy else load_gate(args.results, args.min_repetitions)
+    ds = load_gate(args.results, args.min_repetitions)
     s = generate(ds, args.out, args.correction, args.method, args.scale, args.alternative)
     print(f"{ds.note}: median over repetitions {ds.repetitions}; {len(s['scripts_finished_under_all'])} scripts finished under all configurations")
     for u in s["unfinished"]:

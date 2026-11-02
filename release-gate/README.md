@@ -5,19 +5,18 @@ From 2.2.0 on, the paper's evaluation is also a gate of the release
 step 4 of noWorkflow's `release` skill builds and inspects runs the 21 scripts of this
 repository with plain Python and under the eight configurations of the paper, and **a run that
 computes something other than plain Python stops the release**. Only a wheel that passes is
-tagged and uploaded, and the paper's numbers are this wheel's. `measurement-2.1.3/` holds the
-measurement of 2.1.3 that led here.
+tagged and uploaded, and the paper's numbers are this wheel's.
 
 | File | What it does |
 |---|---|
-| `scripts.py` | The 21 scripts with the arguments of `../run.sh`, the configurations, which scripts run alone |
+| `scripts.py` | The 21 scripts and the arguments each one runs with, the configurations, which scripts run alone |
 | `requirements.txt` | What the scripts import, pinned (`requirements.in`, resolved for Linux and Python 3.12) |
 | `setup.py` | The candidate's environment: the scripts ready to run, a venv with the wheel, `env.json` |
 | `gate.py` | The two passes, correctness and timing; one JSON per run |
 | `hook/sitecustomize.py` | Loaded into every run: seeds, and records what the script's functions returned |
 | `compare.py` | The verdicts and the times, per script and configuration |
 | `prepare.py` | The measurement machine: checks it, prepares it for timing, launches a pass, undoes it all |
-| `paper_tables.py` | The tables of the paper's Section 7.3 from a results directory, as LaTeX fragments (the scripts' own times, the wall-clock times of the processes, the stores and the paired tests), with the numbers its prose cites; `test_paper_tables.py` shows the same arithmetic on the evaluation of 2.1.3 reproduces the submitted paper |
+| `paper_tables.py` | The tables of the paper's Section 7.3 from a results directory, as LaTeX fragments (the scripts' own times, the wall-clock times of the processes, the stores and the paired tests), with the numbers its prose cites |
 
 ## Running the gate
 
@@ -92,11 +91,7 @@ prints (`reported`), the median over the complete repetitions, and the wall-cloc
 process (`wall`) is reported next to it; a run the memory cap ended is marked, not timed; the paired comparisons use the two-sided Wilcoxon
 signed-rank test on the exact distribution, applied to the logarithms of the times and of the
 store sizes (that is, to the ratio between the two configurations), with Holm's adjustment
-within each set of comparisons and the rank-biserial correlation as effect size;
-`--scale linear --method scipy --alternative greater --correction bonferroni` is the procedure
-of the submitted paper.
-`uv run --with pytest --with scipy python3 -m pytest test_paper_tables.py` checks the
-arithmetic against the tables of the submitted paper, from `../experimental_analysis/results`.
+within each set of comparisons and the rank-biserial correlation as effect size.
 
 ## What is compared
 
@@ -117,9 +112,8 @@ of the evaluation. Killed while other runs shared the cap, it runs again alone f
 These choices are recorded with every result (`machine-*.json` of each pass, the fields of
 each run) and the paper's methodology states them.
 
-- **No time limit.** The paper's evaluation stopped every run at 30 minutes, and s14, s20 and
-  s21 never finished under noWorkflow; here they run with the original input until they end,
-  or until the memory cap ends them.
+- **No time limit.** Every script runs with its original input until it ends, or until the
+  memory cap ends it; s14, s20 and s21 take hours under some configurations.
 - **Two times per run**: `reported`, what the script prints on its last line (a
   `perf_counter` around its own body, which is what the paper's evaluation reported), and
   `wall`, the whole process, noWorkflow's start and the writing of the store included. Also
